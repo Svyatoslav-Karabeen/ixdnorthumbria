@@ -41,7 +41,7 @@ global $pageKeywords;
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet">
 	<link href="<?php echo url ?>assets/css/styles.css" rel="stylesheet" >
 
-
+	<?php if ($_SERVER['SERVER_NAME'] != 'localhost') { ?>
 	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120677393-1"></script>
 	<script>
@@ -51,6 +51,7 @@ global $pageKeywords;
 
 		gtag('config', 'UA-120677393-1');
 	</script>
+	<?php }; ?>
 
 	<!-- Easter egg -->
 	<?php include path . 'header-egg.php'; ?>

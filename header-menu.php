@@ -6,14 +6,35 @@
  * @author Svyatoslav Polishchuk (year 2018)
  * @version 1.1
  */
+
+global $pageTitle;
+$navPages = array('home', 'about', 'faces', 'works');
 ?>
 
 <div class="menu-wrapper">
     <nav id="global-navigation">
-        <a class="link" href="<?php echo url ?>">home</a>
-        <a class="link" href="<?php echo url . 'about' ?>">about</a>
-        <a class="link" href="<?php echo url . 'faces' ?>">faces</a>
-        <a class="link" href="<?php echo url . 'works' ?>">works</a>
+        <?php
+            foreach ($navPages as $page) {
+                $class = 'nav-link';
+
+                // don't show 'home' link on home page
+                if ($page == $pageTitle && $page == 'home') {
+                    continue;
+                };
+
+                // if it's not a home page, make sure 'home' link goes to '/'
+                if ($page == 'home') {
+                    echo '<a class="' . $class . '" href="' . url . '">' . $page . '</a>';
+                } else {
+
+                    // add 'current' class to current page link
+                    if ($page == $pageTitle) {
+                        $class = $class . ' current';
+                    };
+                    echo '<a class="' . $class . '" href="' . url . $page . '">' . $page . '</a>';
+                }
+            };
+        ?>
     </nav>
     <div class="dropdown-wrapper">
         <button class="button arrow" onclick="showDropdown()">previous</button>

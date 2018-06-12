@@ -274,10 +274,10 @@ body .container {
   body .container .heading-main {
     color: #1d1d1d;
     font-weight: 700;
-    font-size: 4rem; }
+    font-size: 3rem; }
   body .container .heading-caption {
     font-weight: 400;
-    font-size: 1.5rem; }
+    font-size: 1rem; }
 
 /*  Header and Footer
 --------------------------------------------------------------- */
@@ -332,13 +332,13 @@ header {
       font-size: .75rem; }
   header .menu-wrapper {
     display: inline-block; }
-    header .menu-wrapper a.menu-link {
+    header .menu-wrapper a.nav-link {
       margin-left: 1rem;
       padding: .5rem;
       color: #1d1d1d;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
-      header .menu-wrapper a.menu-link:hover {
+      header .menu-wrapper a.nav-link:hover {
         color: #f56140;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
