@@ -1,0 +1,65 @@
+header {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+    .logo-wrapper {
+        display: inline-block;
+
+        .logo-link {
+            display: block;
+            height: 4rem;
+            line-height: 1;
+
+            svg {
+                padding: .125rem;
+                width: auto;
+                height: 4rem;
+
+                #app, #experiental, #hybrid {
+                    transition: all 1s ease-in-out;
+                }
+
+                &:hover #app {
+                    transition: all 0.2s ease-in-out;
+                    transform: translate(-1px,1px);
+                }
+
+                &:hover #experiental {
+                    transition: all 0.2s ease-in-out;
+                    transform: translate(1px,1px);
+                }
+
+                &:hover #hybrid {
+                    transition: all 0.2s ease-in-out;
+                    transform: translate(0,-1px);
+                }
+            }
+        }
+
+        .dates {
+            margin: -0.5rem 0 0 4rem;
+            letter-spacing: -0.05rem;
+            font-size: .75rem;
+        }
+    }
+
+    .menu-wrapper {
+        display: inline-block;
+
+        .menu-link {
+            margin-left: 1rem;
+            padding: .5rem;
+            color: $primary-black;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $primary-hybrid;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+/*  Reset, variables and general layout
+--------------------------------------------------------------- */
+@import "global/variables";
+@import "global/reset";
+@import "global/layout";
+
+/*  Header and Footer
+--------------------------------------------------------------- */
+@import "general/header";
+@import "general/socials";
+@import "general/footer";
+
+/*  Pages
+--------------------------------------------------------------- */
+@import "home";
