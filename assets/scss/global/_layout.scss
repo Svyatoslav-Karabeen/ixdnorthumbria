@@ -1,24 +1,26 @@
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
 
-.container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-    
-    .heading-main {
-        color: $primary-black;
-        font-weight: 700;
-        font-size: 4rem;
-    }
+body {
+    .container {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        height: 100%;
 
-    .heading-caption {
-        font-weight: 400;
-        font-size: 1.5rem;
+        .heading-main {
+            color: $primary-black;
+            font-weight: 700;
+            font-size: 4rem;
+        }
 
+        .heading-caption {
+            font-weight: 400;
+            font-size: 1.5rem;
+
+        }
     }
 }

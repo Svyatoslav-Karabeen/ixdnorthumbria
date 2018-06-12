@@ -1,7 +1,14 @@
 .links-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-flow: row nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
 
     .link-item {
         position: relative;
@@ -12,6 +19,7 @@
         height: 2.5rem;
         vertical-align: middle;
         text-align: center;
+        -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
 
         img {
@@ -19,8 +27,10 @@
             height: 1rem;
             height: auto;
             opacity: 0.5;
+            -webkit-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
-            transition-delay: 0.1s;
+            -webkit-transition-delay: 0.1s;
+                    transition-delay: 0.1s;
         }
 
         &::before {
@@ -35,23 +45,32 @@
             background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJjdWJlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMzYgNDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM2IDQwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+IDxwYXRoIGZpbGw9IiNmMWYyZjMiIGQ9Ik0zNiwxMHYyMEwxOCw0MEwwLDMwVjEwTDE4LDBMMzYsMTB6Ii8+PC9zdmc+) no-repeat center;
             content: "";
             opacity: 0;
+            -webkit-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
-            transform: translate(0, .5rem);
+            -webkit-transform: translate(0, .5rem);
+                    transform: translate(0, .5rem);
         }
 
         &:hover{
 
             img {
                 opacity: 1;
+                -webkit-transition: -webkit-transform 0.3s ease-in-out;
+                transition: -webkit-transform 0.3s ease-in-out;
                 transition: transform 0.3s ease-in-out;
-                transition-delay: 0.1s;
-                transform: scale(0.8);
+                transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+                -webkit-transition-delay: 0.1s;
+                        transition-delay: 0.1s;
+                -webkit-transform: scale(0.8);
+                        transform: scale(0.8);
             }
 
             &::before {
                 opacity: 1;
+                -webkit-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
-                transform: translate(0,0);
+                -webkit-transform: translate(0,0);
+                        transform: translate(0,0);
             }
         }
 

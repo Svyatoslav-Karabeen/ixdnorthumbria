@@ -256,32 +256,41 @@ template {
 [hidden] {
   display: none !important; }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%; }
 
-.container {
+body .container {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
   width: 100%;
   height: 100%; }
-  .container .heading-main {
+  body .container .heading-main {
     color: #1d1d1d;
     font-weight: 700;
     font-size: 4rem; }
-  .container .heading-caption {
+  body .container .heading-caption {
     font-weight: 400;
     font-size: 1.5rem; }
 
 /*  Header and Footer
 --------------------------------------------------------------- */
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 4rem 4rem 2rem;
   width: 100%;
   height: auto; }
   header .logo-wrapper {
@@ -295,15 +304,22 @@ header {
         width: auto;
         height: 4rem; }
         header .logo-wrapper .logo-link svg #app, header .logo-wrapper .logo-link svg #experiental, header .logo-wrapper .logo-link svg #hybrid {
+          -webkit-transition: all 1s ease-in-out;
           transition: all 1s ease-in-out; }
         header .logo-wrapper .logo-link svg:hover #app {
+          -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
+          -webkit-transform: translate(-1px, 1px);
           transform: translate(-1px, 1px); }
         header .logo-wrapper .logo-link svg:hover #experiental {
+          -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
+          -webkit-transform: translate(1px, 1px);
           transform: translate(1px, 1px); }
         header .logo-wrapper .logo-link svg:hover #hybrid {
+          -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
+          -webkit-transform: translate(0, -1px);
           transform: translate(0, -1px); }
     header .logo-wrapper .dates {
       margin: -0.5rem 0 0 4rem;
@@ -315,14 +331,23 @@ header {
       margin-left: 1rem;
       padding: .5rem;
       color: #1d1d1d;
+      -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
       header .menu-wrapper .menu-link:hover {
         color: #f56140;
+        -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
 
 .links-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap; }
   .links-wrapper .link-item {
     position: relative;
@@ -333,13 +358,16 @@ header {
     height: 2.5rem;
     vertical-align: middle;
     text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
     .links-wrapper .link-item img {
       width: 1rem;
       height: 1rem;
       height: auto;
       opacity: 0.5;
+      -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
+      -webkit-transition-delay: 0.1s;
       transition-delay: 0.1s; }
     .links-wrapper .link-item::before {
       position: absolute;
@@ -353,16 +381,25 @@ header {
       background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJjdWJlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMzYgNDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM2IDQwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+IDxwYXRoIGZpbGw9IiNmMWYyZjMiIGQ9Ik0zNiwxMHYyMEwxOCw0MEwwLDMwVjEwTDE4LDBMMzYsMTB6Ii8+PC9zdmc+) no-repeat center;
       content: "";
       opacity: 0;
+      -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
+      -webkit-transform: translate(0, 0.5rem);
       transform: translate(0, 0.5rem); }
     .links-wrapper .link-item:hover img {
       opacity: 1;
+      -webkit-transition: -webkit-transform 0.3s ease-in-out;
+      transition: -webkit-transform 0.3s ease-in-out;
       transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+      -webkit-transition-delay: 0.1s;
       transition-delay: 0.1s;
+      -webkit-transform: scale(0.8);
       transform: scale(0.8); }
     .links-wrapper .link-item:hover::before {
       opacity: 1;
+      -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
+      -webkit-transform: translate(0, 0);
       transform: translate(0, 0); }
     .links-wrapper .link-item:first-child {
       margin-left: -.5rem; }
@@ -370,22 +407,45 @@ header {
 /*  Pages
 --------------------------------------------------------------- */
 .page-home main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 2rem 6rem;
+  padding: 2rem 4rem 4rem 8rem;
   width: auto;
   height: 100%; }
   .page-home main .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 1rem 0;
     height: 100%; }
     .page-home main .content #countdown-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
       justify-content: flex-start; }
       .page-home main .content #countdown-container .section-wrapper {
         padding: 4rem 8rem 4rem 0; }

@@ -15,16 +15,16 @@ global $socialLinks;
 
 
 <div class="links-wrapper">
-        <?php
-            foreach ($socialLinks as $name => $link) {
-                if (!empty($link)) {
+    <?php
+        foreach ($socialLinks as $name => $link) {
+            if (!empty($link)) {
 
-                    if ($name == 'email') {
-                        $link = 'mailto:' . $link;
-                    };
-
-                    echo '<a class="link-item" href="' . $link . '" target="_blank"><img src="' . url . 'assets/img/icon-' . $name . '.svg" alt="' . $name . ' icon "></a>';
+                if ($name == 'email') {
+                    $link = 'mailto:' . $link;
                 };
+
+                echo '<a class="link-item" href="' . $link . '" target="_blank"><img src="' . url . 'assets/img/icon-' . $name . '.svg" alt="' . $name . ' icon "></a>';
             };
-        ?>
+        };
+    ?>
 </div>

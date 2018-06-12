@@ -1,11 +1,21 @@
 header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 4rem 4rem 2rem;
     width: 100%;
     height: auto;
+
     .logo-wrapper {
         display: inline-block;
 
@@ -20,22 +30,29 @@ header {
                 height: 4rem;
 
                 #app, #experiental, #hybrid {
+                    -webkit-transition: all 1s ease-in-out;
                     transition: all 1s ease-in-out;
                 }
 
                 &:hover #app {
+                    -webkit-transition: all 0.2s ease-in-out;
                     transition: all 0.2s ease-in-out;
-                    transform: translate(-1px,1px);
+                    -webkit-transform: translate(-1px,1px);
+                            transform: translate(-1px,1px);
                 }
 
                 &:hover #experiental {
+                    -webkit-transition: all 0.2s ease-in-out;
                     transition: all 0.2s ease-in-out;
-                    transform: translate(1px,1px);
+                    -webkit-transform: translate(1px,1px);
+                            transform: translate(1px,1px);
                 }
 
                 &:hover #hybrid {
+                    -webkit-transition: all 0.2s ease-in-out;
                     transition: all 0.2s ease-in-out;
-                    transform: translate(0,-1px);
+                    -webkit-transform: translate(0,-1px);
+                            transform: translate(0,-1px);
                 }
             }
         }
@@ -54,10 +71,12 @@ header {
             margin-left: 1rem;
             padding: .5rem;
             color: $primary-black;
+            -webkit-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
 
             &:hover {
                 color: $primary-hybrid;
+                -webkit-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
             }
         }
