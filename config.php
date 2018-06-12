@@ -27,7 +27,7 @@ $eventDates     = '14th - 28th June 2018';
 $socialLinks    = array(
     'facebook'     => 'https://facebook.com/ixdnorthumbria',
     'instagram'    => 'https://instagram.com/ixdnorthumbria',
-    'twitter'      => 'https://tiwtter.com/ixdnorthumbria',
+    'twitter'      => 'https://twitter.com/ixdnorthumbria',
     'email'        => 'imdreveal@gmail.com',
 );
 
