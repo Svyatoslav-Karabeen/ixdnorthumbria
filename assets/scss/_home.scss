@@ -1,12 +1,14 @@
 .page-home {
+
+    // main content
     main {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
             -ms-flex-flow: column nowrap;
                 flex-flow: column nowrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
@@ -18,10 +20,10 @@
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
                 -ms-flex-flow: column nowrap;
                     flex-flow: column nowrap;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center;
@@ -33,12 +35,12 @@
                 display: -ms-flexbox;
                 display: flex;
                 -webkit-box-align: center;
-                    -ms-flex-align: center;
                         align-items: center;
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
+                    -ms-flex-align: center;
                     -ms-flex-flow: row wrap;
                         flex-flow: row wrap;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
                 -webkit-box-pack: start;
                     -ms-flex-pack: start;
                         justify-content: flex-start;
@@ -56,13 +58,25 @@
                     }
                 }
             }
+
+            #info-buttons-container {
+
+            }
         }
     }
 
     #particles-js {
         position: absolute;
+        z-index: -99;
         width: 100%;
         height: 100%;
-        z-index: -99;
+    }
+
+    #info-sidebar {
+
+    }
+
+    #info-location {
+
     }
 }

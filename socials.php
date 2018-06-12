@@ -19,11 +19,12 @@ global $socialLinks;
         foreach ($socialLinks as $name => $link) {
             if (!empty($link)) {
 
+                // if it's an email, then add 'mailto:' to it
                 if ($name == 'email') {
                     $link = 'mailto:' . $link;
                 };
 
-                echo '<a class="link-item" href="' . $link . '" target="_blank"><img src="' . url . 'assets/img/icon-' . $name . '.svg" alt="' . $name . ' icon "></a>';
+                echo '<a class="social" href="' . $link . '" target="_blank"><img src="' . url . 'assets/img/icon-' . $name . '.svg" alt="' . $name . ' icon "></a>';
             };
         };
     ?>

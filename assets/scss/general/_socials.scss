@@ -3,14 +3,14 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
+        -ms-flex-align: center;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
 
-    .link-item {
+    a.social {
         position: relative;
         display: block;
         margin-right: .5rem;
@@ -27,10 +27,8 @@
             height: 1rem;
             height: auto;
             opacity: 0.5;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            -webkit-transition-delay: 0.1s;
-                    transition-delay: 0.1s;
+            -webkit-transition: all 0.8s ease-in-out;
+            transition: all 0.8s ease-in-out;
         }
 
         &::before {
@@ -59,8 +57,6 @@
                 transition: -webkit-transform 0.3s ease-in-out;
                 transition: transform 0.3s ease-in-out;
                 transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-                -webkit-transition-delay: 0.1s;
-                        transition-delay: 0.1s;
                 -webkit-transform: scale(0.8);
                         transform: scale(0.8);
             }

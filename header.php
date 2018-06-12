@@ -5,7 +5,7 @@
  * up until <main>
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @version 1.0
+ * @version 1.1
  *
  **==========================================================================**/
 
@@ -60,7 +60,7 @@ global $pageKeywords;
 		<header>
 			<div class="logo-wrapper">
 				<a href="<?php echo url ?>" class="logo-link">
-					<svg class="logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 						 viewBox="0 0 104 40" style="enable-background:new 0 0 104 40;" xml:space="preserve">
 						<style type="text/css">
 							.st0{fill:#08F6FF;}
@@ -154,7 +154,7 @@ global $pageKeywords;
 
 			<?php
 				// do not include the menu if it's teaser website with a countdown
-				if ($pageTitle != 'home') {
+				if ($environment != 'countdown') {
 					include path . 'header-menu.php';
 				};
 			?>

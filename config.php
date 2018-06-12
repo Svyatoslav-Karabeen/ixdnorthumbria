@@ -22,7 +22,7 @@
  * NOTE: If you're 2019 and above year student, change to 'past' please!
  **/
 
-$environment    = 'countdown';
+$environment    = 'newcastle';
 $eventDates     = '14th - 28th June 2018';
 $socialLinks    = array(
     'facebook'     => 'https://facebook.com/ixdnorthumbria',

@@ -5,7 +5,7 @@
  * up until </html>
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @version 1.0
+ * @version 1.1
  *
  **==========================================================================**/
 
@@ -15,7 +15,7 @@ global $pageTitle;
 
         <footer>
             <?php
-                if ($pageTitle='home'){
+                if ($environment == 'countdown' && $pageTitle == 'home'){
                     echo '<script src="' . url . 'assets/js/lib/particles.min.js"></script>';
                     echo '<script src="' . url . 'assets/js/particle-app.js"></script>';
                     echo '<script src="' . url . 'assets/js/countdown.min.js"></script>';
