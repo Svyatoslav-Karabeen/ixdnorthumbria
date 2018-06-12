@@ -1,0 +1,3 @@
+As part of one of our modules, we worked with Sage One for a live brief. The project was a collaborative project, i worked with Bradley Smith to create our project.
+<br>
+We created a payroll app that Sage One could potentially use for their employees in their business.

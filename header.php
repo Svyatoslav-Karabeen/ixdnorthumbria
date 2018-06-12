@@ -59,7 +59,7 @@ global $pageKeywords;
 <body class="page-<?php echo $pageTitle ?>">
 	<div class="container">
 		<header>
-			<div class="logo-wrapper">
+			<div class="logo-container">
 				<a href="<?php echo url ?>" class="logo-link">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 						 viewBox="0 0 104 40" style="enable-background:new 0 0 104 40;" xml:space="preserve">

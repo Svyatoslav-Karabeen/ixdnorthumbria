@@ -1,0 +1,67 @@
+.social-container {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        .social-link {
+            position: relative;
+            display: block;
+            margin-right: .5rem;
+            padding: .5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            vertical-align: middle;
+            text-align: center;
+            transition: all 0.2s ease-in-out;
+
+            img {
+                width: 1rem;
+                height: 1rem;
+                height: auto;
+                opacity: 0.5;
+                transition: all 0.8s ease-in-out;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                width: 2.5rem;
+                height: 2.5rem;
+                background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJjdWJlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMzYgNDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM2IDQwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+IDxwYXRoIGZpbGw9IiNmMWYyZjMiIGQ9Ik0zNiwxMHYyMEwxOCw0MEwwLDMwVjEwTDE4LDBMMzYsMTB6Ii8+PC9zdmc+) no-repeat center;
+                content: "";
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+                transform: translate(0, .5rem);
+            }
+
+            &:hover{
+
+                img {
+                    opacity: 1;
+                    transition: transform 0.3s ease-in-out;
+                    transform: scale(0.8);
+                }
+
+                &::before {
+                    opacity: 1;
+                    transition: all 0.3s ease-in-out;
+                    transform: translate(0,0);
+                }
+            }
+
+            &:first-child {
+                margin-left: -.5rem;
+            }
+        }
+    }
+}

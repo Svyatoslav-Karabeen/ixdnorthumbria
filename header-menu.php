@@ -11,8 +11,9 @@ global $pageTitle;
 $navPages = array('home', 'about', 'faces', 'works');
 ?>
 
-<div class="menu-wrapper">
-    <nav id="global-navigation">
+<div class="menu-container">
+    <nav class="nav-wrapper" id="nav-global">
+        <ul>
         <?php
             foreach ($navPages as $page) {
                 $class = 'nav-link';
@@ -24,25 +25,30 @@ $navPages = array('home', 'about', 'faces', 'works');
 
                 // if it's not a home page, make sure 'home' link goes to '/'
                 if ($page == 'home') {
-                    echo '<a class="' . $class . '" href="' . url . '">' . $page . '</a>';
+                    echo '<li><a class="' . $class . '" href="' . url . '">' . $page . '</a></li>';
                 } else {
 
                     // add 'current' class to current page link
                     if ($page == $pageTitle) {
                         $class = $class . ' current';
                     };
-                    echo '<a class="' . $class . '" href="' . url . $page . '">' . $page . '</a>';
+                    echo '<li><a class="' . $class . '" href="' . url . $page . '">' . $page . '</a></li>';
                 }
             };
         ?>
+        </ul>
     </nav>
+
     <div class="dropdown-wrapper">
-        <button class="button arrow" onclick="showDropdown()">previous</button>
-        <div class="content" id="previous-years">
-            <a class="previous-year" href="<?php echo url . '2017' ?>">2017</a>
-            <a class="previous-year" href="<?php echo url . '2016' ?>">2016</a>
-            <a class="previous-year" href="<?php echo url . '2015' ?>">2015</a>
-            <a class="previous-year" href="<?php echo url . '2014' ?>">2014</a>
+        <button class="dropdown-button" id="previous-years-button" onclick="showDropdown()">previous years</button>
+        <div class="dropdown-body" id="previous-years-list">
+            <div class="dropdown-arrow"></div>
+            <ul>
+                <li><a class="dropdown-link" href="<?php echo url . '2017' ?>">2017</a></li>
+                <li><a class="dropdown-link" href="<?php echo url . '2016' ?>">2016</a></li>
+                <li><a class="dropdown-link" href="<?php echo url . '2015' ?>">2015</a></li>
+                <li><a class="dropdown-link" href="<?php echo url . '2014' ?>">2014</a></li>
+            </ul>
         </div>
     </div>
 </div>

@@ -14,7 +14,8 @@ global $socialLinks;
 ?>
 
 
-<div class="links-wrapper">
+<div class="social-container">
+    <ul>
     <?php
         foreach ($socialLinks as $name => $link) {
             if (!empty($link)) {
@@ -24,8 +25,9 @@ global $socialLinks;
                     $link = 'mailto:' . $link;
                 };
 
-                echo '<a class="social" href="' . $link . '" target="_blank"><img src="' . url . 'assets/img/icon-' . $name . '.svg" alt="' . $name . ' icon "></a>';
+                echo '<li><a class="social-link" href="' . $link . '" target="_blank"><img src="' . url . 'assets/img/icon-' . $name . '.svg" alt="' . $name . ' icon "></a></li>';
             };
         };
     ?>
+    </ul>
 </div>

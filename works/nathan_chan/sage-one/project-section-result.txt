@@ -1,0 +1,5 @@
+Our finished project consisted of a mobile app with a prototype as well as a desktop app with a prototype. We believe we tackled the problem of businesses finding it hard to manage a large amount of employees payroll data. 
+<br>
+We created an app for the business manager to use as well as an employee app. The business manager would be able to access information about all employees such as personal information as well as scheduled shifts and payroll.
+<br>
+The employee app was more like an employee portal which consisted of all the information they wanted to see such as shifts, payroll and extra hours.

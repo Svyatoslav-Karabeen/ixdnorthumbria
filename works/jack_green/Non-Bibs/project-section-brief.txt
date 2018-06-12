@@ -1,0 +1,4 @@
+* Brief section *
+
+Replace the content of this file with the information about the given brief and
+the problem you decided to tackle. To start new paragraph use <br> tag.

@@ -1,0 +1,5 @@
+Prototyping software didn’t give me the control I needed when visualising my new digital experience. Because of this, I decided to complete the full app walkthrough in After Effects. I timed the walkthrough activity to the beat of my favourite song. This way, I knew exactly where to press when recording. 
+
+<br>
+
+In the end, I had created a real time coaching application for accuracy based team sports, to train precision creatively and track progress efficiently. The USP was a live target creation tool, linking to an immersive training area for players to physically smash the digital targets. A players performance would influence suggested target speed, size and type for future training sessions.

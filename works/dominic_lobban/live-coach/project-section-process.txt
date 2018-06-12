@@ -1,0 +1,5 @@
+I know I wanted a fun drill style for players, that challenged them in a way that physical drills cannot. Initially I considered a digital AI goalkeeper on a projected surface, to challenge player psychology and decision making, however technically this wasn’t achievable and would be expensive to produce. I then thought about a coach controlled experience rather than an automated one. This gives the coach quick and easy control of a drill and can tailor each shot to a specific individual. I had to visualise and design a new way for coaches to create targets on their application, for it to then be projected on to the motion tracked area ready to be hit.
+
+<br>
+
+These initial sketches influenced the large card layout that runs consistently throughout the design. This is suitable for busy training environments where instructions and design should be clear and easily visible. Once these wireframes tested as intuitive and logical, I created the slick, sporty interface to bring the design to life.

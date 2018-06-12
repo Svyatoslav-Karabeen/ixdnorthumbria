@@ -1,0 +1,1 @@
+For this project I decided to create a projection mapping interface that allowed the user to customise various sections of a car using a midi interface (ipad). I wanted to create something that could be used in a car showroom as a sales tool.

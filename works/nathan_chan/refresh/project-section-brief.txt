@@ -1,0 +1,4 @@
+This was an open brief and we were free to create anything we wanted to. I decided to create an app based on a problem that happens quite frequently.
+<br>
+When food shopping, I always forget what items I still have at home as well as remembering when they go out of date.
+The idea was to create an app which kept track of all this data and would be accessible on your phone.

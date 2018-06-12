@@ -1,0 +1,1 @@
+The idea behind this project was inspired by the existing desktop configurator most high end dealerships use.This product would encourage users to experiment with multiple vehicle configurations in a virtual space.The virtual vehicle configurator is designed to change the existing car sales experience.
