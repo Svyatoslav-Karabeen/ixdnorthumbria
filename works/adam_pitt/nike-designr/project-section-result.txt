@@ -1,0 +1,5 @@
+From the brief for this project, I was asked to identify a specific area of technology that is on the rise. As huge, globally known brands such as Audi making virtual reality product customisers for their cars (as a concept). I think it is perfectly reasonable to think that other companies will follow suit in the future. In terms of my project as a prototype specifically I am confident in saying that I achieved the desired outcome. Starting the semester with no knowledge of Unity or virtual reality technology, I produced a system which allows a user to walk up, put a headset on, and customise a product within a virtual environment, without any prior knowledge of how it works. Overall I am extremely happy with the work I produced for this project.
+
+<br>
+
+The following playlist of videos shows my finished prototype in action.
