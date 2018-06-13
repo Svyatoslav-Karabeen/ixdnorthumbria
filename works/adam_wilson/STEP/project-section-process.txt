@@ -1,0 +1,9 @@
+* Process section *
+
+Replace the content of this file with the information about your process,
+solution, how the project works and how your target audience benefits from
+your solution. To start new paragraph use <br> tag.
+
+<br> This shoe will allow individuals who are blind/have a visual disability to be able to walk around the streets knowing they are safe. Using an ‘ultrasonic range finder’ and a ‘3V Coin Vibrator Micro Motor’, the shoe will sensor when the individual is in close proximity to a curb, wall or any other object that might be in their way. The small coin vibrator will emit a small vibration as to the closeness of the object, giving the user enough notice. </br>
+
+<br> The target audience; visually impaired individuals, will be able to walk around with a sense of freedom and safety. </br> 
