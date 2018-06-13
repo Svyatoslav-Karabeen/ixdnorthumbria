@@ -57,7 +57,7 @@ global $pageKeywords;
 	<?php include path . 'header-egg.php'; ?>
 </head>
 <body class="page-<?php echo $pageTitle ?>">
-	<div class="container">
+	<div class="content-container" id="container">
 		<header>
 			<div class="logo-container">
 				<a href="<?php echo url ?>" class="logo-link">

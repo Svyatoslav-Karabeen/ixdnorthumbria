@@ -50,4 +50,10 @@ $pageKeywords       = 'keywords go here';
 
     // include footer
     get_footer();
+
+    // include sidebar with event information
+    get_sidebar();
+
+    // include popup with location information
+    get_popup();
 ?>

@@ -30,11 +30,3 @@ global $pageTitle;
             get_socials();
         ?>
     </main>
-
-    <?php
-        // include sidebar with event information
-        get_sidebar();
-
-        // include popup with location information
-        get_popup();
-    ?>
