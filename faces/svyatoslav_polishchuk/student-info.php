@@ -19,8 +19,8 @@ $links = array(
 
 $openToOffers       = 'yes';
 $openToRelocation   = 'yes';
-$currentLocation    = 'REPLACE_WITH_YOUR_CURRENT_CITY';
-$preferableLocation = 'REPLACE_WITH_PREFERABLE_CITY_TO_MOVE_OR_LEAVE_BLANK_IF_NOT_OPEN_TO_OFFERS_OR_RELOCATION';
+$currentLocation    = 'Newcastle';
+$preferableLocation = 'London, Berilin, Toronto or Vancouver';
 $preferableCompany  = 'any';
 
 ?>
