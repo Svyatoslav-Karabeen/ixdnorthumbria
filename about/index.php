@@ -6,15 +6,15 @@
  *
  * @author Svyatoslav Polishchuk (year 2018)
  * @version 1.2
- */
+ **/
 
-// include config
 include_once '../config.php';
 
-// defina and set necessary variables for this page
 $pageTitle          = 'about';
 $pageDescription    = 'description';
+$pageKeywords       = 'keywords go here';
 
+/**==========================================================================**/
 ?>
 
 <?php

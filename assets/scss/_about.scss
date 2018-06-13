@@ -11,49 +11,50 @@
         }
 
         .content {
-            width: 100%;
-            max-width: 60rem;
-            margin: 4rem auto;
-            color: $primary-black;
             display: flex;
             flex-flow: column nowrap;
+            margin: 4rem auto;
+            padding: 0 3rem;
+            max-width: 66rem;
+            width: 100%;
+            color: $primary-black;
 
             .section {
                 display: flex;
+                align-items: flex-start;
                 flex-flow: row wrap;
                 justify-content: space-between;
                 padding-bottom: 4rem;
-                align-items: flex-start;
 
                 &:not(:first-child)::before {
-                    content: "";
                     position: relative;
-                    width: 100%;
                     top: 0;
+                    padding-bottom: 2rem;
+                    width: 100%;
                     height: auto;
                     border-top: 1px solid rgba($primary-gray, .25);
-                    padding-bottom: 2rem;
+                    content: "";
                 }
 
                 .section-title {
-                    font-size: .875rem;
                     width: 50%;
                     color: $primary-gray;
+                    font-size: .875rem;
                 }
 
                 .section-content {
                     width: 50%;
-                    line-height: 1.6;
                     font-size: 1rem;
+                    line-height: 1.6;
 
                     .content-subsection {
                         margin-bottom: 2rem;
                     }
 
                     .subsection-title {
-                        font-weight: 700;
                         display: block;
                         margin-bottom: .5rem;
+                        font-weight: 700;
                     }
 
                     .content-tutors-wrapper {
@@ -65,14 +66,14 @@
                             display: flex;
                             flex-flow: column nowrap;
                             margin-bottom: 1rem;
-                            text-align: center;
-                            width: 33%;
                             padding: .0625rem;
+                            width: 33%;
+                            text-align: center;
 
                             .tutor-photo {
+                                display: inline-block;
                                 width: 100%;
                                 height: auto;
-                                display: inline-block;
                                 box-shadow: 0 4px 6px rgba(50,50,93,0),
                                             0 1px 3px rgba(0,0,0,0);
                                 transition: all .6s ease-in-out;
@@ -80,24 +81,24 @@
                             }
 
                             .tutor-name {
+                                display: inline-block;
                                 margin-top: .5rem;
                                 font-size: .875rem;
-                                display: inline-block;
                             }
 
                             .tutor-title {
-                                font-size: .75rem;
-                                color: $primary-gray;
                                 display: inline-block;
+                                color: $primary-gray;
+                                font-size: .75rem;
                             }
 
                             &:hover .tutor-photo {
+                                z-index: 9;
                                 box-shadow: 0 50px 100px rgba(50,50,93,.1),
                                             0 15px 35px rgba(50,50,93,.15),
                                             0 5px 15px rgba(0,0,0,.1);
                                 transition: all 0.2s ease-in-out;
                                 transform: translateY(-.25rem);
-                                z-index: 9;
                             }
                         }
                     }

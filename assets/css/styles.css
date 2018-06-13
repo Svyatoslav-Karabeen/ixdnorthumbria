@@ -663,7 +663,7 @@ footer.footer-on {
         transform: scale(1); }
         .page-home #container main.gradient #info-buttons-container .button-large:hover {
           background: #ffffff;
-          box-shadow: 0 7px 14px rgba(50, 50, 93, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
           color: #1d1d1d;
           transition: all 0.2s ease-in-out;
           transform: translateY(-0.25rem); }
@@ -690,7 +690,7 @@ footer.footer-on {
         .page-home #container main.gradient #info-buttons-container .button-icon:hover {
           border: 1px solid transparent;
           background: #ffffff;
-          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
           transition: all 0.2s ease-in-out;
           transform: translateY(-0.25rem); }
           .page-home #container main.gradient #info-buttons-container .button-icon:hover img {
@@ -833,40 +833,41 @@ footer.footer-on {
   padding: 4rem;
   background: rgba(241, 242, 243, 0.5); }
 .page-about #container main .content {
-  width: 100%;
-  max-width: 60rem;
-  margin: 4rem auto;
-  color: #1d1d1d;
   display: flex;
-  flex-flow: column nowrap; }
+  flex-flow: column nowrap;
+  margin: 4rem auto;
+  padding: 0 3rem;
+  max-width: 66rem;
+  width: 100%;
+  color: #1d1d1d; }
   .page-about #container main .content .section {
     display: flex;
+    align-items: flex-start;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding-bottom: 4rem;
-    align-items: flex-start; }
+    padding-bottom: 4rem; }
     .page-about #container main .content .section:not(:first-child)::before {
-      content: "";
       position: relative;
-      width: 100%;
       top: 0;
+      padding-bottom: 2rem;
+      width: 100%;
       height: auto;
       border-top: 1px solid rgba(156, 156, 156, 0.25);
-      padding-bottom: 2rem; }
+      content: ""; }
     .page-about #container main .content .section .section-title {
-      font-size: .875rem;
       width: 50%;
-      color: #9c9c9c; }
+      color: #9c9c9c;
+      font-size: .875rem; }
     .page-about #container main .content .section .section-content {
       width: 50%;
-      line-height: 1.6;
-      font-size: 1rem; }
+      font-size: 1rem;
+      line-height: 1.6; }
       .page-about #container main .content .section .section-content .content-subsection {
         margin-bottom: 2rem; }
       .page-about #container main .content .section .section-content .subsection-title {
-        font-weight: 700;
         display: block;
-        margin-bottom: .5rem; }
+        margin-bottom: .5rem;
+        font-weight: 700; }
       .page-about #container main .content .section .section-content .content-tutors-wrapper {
         display: flex;
         flex-flow: row wrap; }
@@ -874,28 +875,28 @@ footer.footer-on {
           display: flex;
           flex-flow: column nowrap;
           margin-bottom: 1rem;
-          text-align: center;
+          padding: .0625rem;
           width: 33%;
-          padding: .0625rem; }
+          text-align: center; }
           .page-about #container main .content .section .section-content .content-tutors-wrapper .tutor-item .tutor-photo {
+            display: inline-block;
             width: 100%;
             height: auto;
-            display: inline-block;
             box-shadow: 0 4px 6px rgba(50, 50, 93, 0), 0 1px 3px rgba(0, 0, 0, 0);
             transition: all .6s ease-in-out;
             transform: scale(1); }
           .page-about #container main .content .section .section-content .content-tutors-wrapper .tutor-item .tutor-name {
+            display: inline-block;
             margin-top: .5rem;
-            font-size: .875rem;
-            display: inline-block; }
+            font-size: .875rem; }
           .page-about #container main .content .section .section-content .content-tutors-wrapper .tutor-item .tutor-title {
-            font-size: .75rem;
+            display: inline-block;
             color: #9c9c9c;
-            display: inline-block; }
+            font-size: .75rem; }
           .page-about #container main .content .section .section-content .content-tutors-wrapper .tutor-item:hover .tutor-photo {
+            z-index: 9;
             box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.2s ease-in-out;
-            transform: translateY(-0.25rem);
-            z-index: 9; }
+            transform: translateY(-0.25rem); }
 
 /*# sourceMappingURL=styles.css.map */

@@ -7,7 +7,6 @@
  * @version 1.1
  **/
 
-// include_once '../config.php';
 global $pageTitle;
 
 $tutorNames = array(

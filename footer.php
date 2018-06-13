@@ -126,7 +126,7 @@ $navPages = array('home', 'about', 'faces', 'works');
                             </div>
 
                             <div class="years-container">
-                                years
+                                previous years
                                 <ul>
                                     <li><a class="year-link" href="<?php echo url . '2017' ?>">2017</a></li>
                                     <li><a class="year-link" href="<?php echo url . '2016' ?>">2016</a></li>
