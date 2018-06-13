@@ -1,0 +1,154 @@
+footer {
+    position: relative;
+    padding: 4rem 2.5rem;
+    width: 100%;
+    height: auto;
+    background: $primary-black;
+    font-weight: 300;
+    font-size: .875rem;
+
+    .footer-container {
+        display: flex;
+        align-items: flex-start;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 60rem;
+
+        .ixd-container {
+            display: inline-block;
+
+            .logo-link {
+                display: block;
+                height: 4rem;
+                line-height: 1;
+
+                svg {
+                    padding: .125rem;
+                    width: auto;
+                    height: 4rem;
+                    opacity: .6;
+                    filter: grayscale(1);
+                    transition: all 1s ease-in-out;
+
+                    .st14 {
+                        fill: $primary-white !important;
+                    }
+
+                    #app, #experiental, #hybrid { transition: all 1s ease-in-out; }
+
+                    &:hover {
+                        opacity: 1;
+                        filter: grayscale(0);
+                        transition: all 0.2s ease-in-out;
+
+                        #app, #experiental, #hybrid { transition: all 0.2s ease-in-out; }
+                        #app { transform: translate(-1px,1px); }
+                        #experiental { transform: translate(1px,1px); }
+                        #hybrid { transform: translate(0,-1px); }
+                    }
+                }
+            }
+
+            .social-container {
+                margin: 2rem 0 0 3.5rem;
+                img {
+                    filter: invert(1);
+                }
+            }
+        }
+
+        .links-container {
+            display: flex;
+            flex-flow: column nowrap;
+            margin-top: 1rem;
+            color: rgba($primary-gray, .5);
+
+            ul {
+                display: flex;
+                flex-flow: row nowrap;
+                margin: 0;
+                margin: 0 0 1rem -.5rem;
+                padding: 0;
+                list-style-type: none;
+
+                li:not(:first-child) {
+                    margin-left: 1rem;
+                }
+
+                a {
+                    display: inline-block;
+                    padding: .5rem;
+                    color: $primary-gray;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: $primary-white;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        position: absolute;
+        bottom: 1rem;
+        padding: 1rem 2.5rem;
+        width: 100%;
+        color: rgba($primary-gray, .5);
+        text-align: center;
+
+        .dots {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            font-size: 2rem;
+            line-height: 1;
+            opacity: 1;
+            transition: all 1s ease-in-out;
+            transform: translateY(-.5rem) scaleX(1);
+        }
+
+        .link {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 99;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+
+            a {
+                color: rgba($primary-gray, .5);
+
+                &:hover {
+                    color: $primary-gray;
+                }
+            }
+        }
+
+        &:hover {
+            .dots {
+                opacity: 0;
+                transition: all .5s ease-in-out;
+                transform: translateY(-.5rem) scaleX(3);;
+            }
+
+            .link {
+                z-index: 99;
+                opacity: 1;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+}

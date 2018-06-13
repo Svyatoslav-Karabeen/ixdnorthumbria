@@ -8,6 +8,7 @@
  */
 
 global $pageTitle;
+
 $navPages = array('home', 'about', 'faces', 'works');
 ?>
 

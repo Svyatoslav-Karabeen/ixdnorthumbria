@@ -1,19 +1,28 @@
 <?php
 /**
- * The header for our theme
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * ABOUT PAGE
+ * This is the template that collects and displays everything from the <html>
+ * up to </html> on '/about/'
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @version 1.1
+ * @version 1.2
  */
 
-include_once ('../config.php');
+// include config
+include_once '../config.php';
+
+// defina and set necessary variables for this page
+$pageTitle          = 'about';
+$pageDescription    = 'description';
+
 ?>
 
-<?php get_header(); ?>
+<?php
+    // include header
+    get_header();
 
-<main>
-    <?php include 'content-about.php'; ?>
-</main>
+    include 'content-about.php';
 
-<?php get_footer(); ?>
+    // include footer
+    get_footer();
+?>

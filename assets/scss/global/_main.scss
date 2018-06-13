@@ -1,7 +1,34 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    #container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+
+        main .heading-main {
+            color: $primary-black;
+            font-weight: 300;
+            font-size: 3rem;
+        }
+
+        main .heading-caption {
+            font-weight: 300;
+            font-size: 1rem;
+        }
+    }
+}
+
 main {
     display: flex;
     flex-flow: column nowrap;
-    width: auto;
+    width: 100%;
     height: 100%;
 }
 
