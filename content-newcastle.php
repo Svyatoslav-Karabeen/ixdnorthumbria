@@ -12,15 +12,15 @@ global $pageTitle;
 /**==========================================================================**/
 ?>
 
-    <main>
+    <main class="gradient">
         <div class="content">
             <h1 class="heading-main">final_final_final.show</h1>
             <h2 class="heading-caption">we're pleased to invite you to the annual Interaction Design reveal show</h2>
 
             <div id="info-buttons-container">
-                <button class="button-large sidebar" onclick="showSidebar()">about show</button>
-                <button class="button-icon location" onclick="showLocation()">
-                    <img src="<?php url . 'assets/img/icon-location.svg' ?>" alt="location icon">
+                <button class="button-large" id="sidebar-button" onclick="showSidebar()">More info</button>
+                <button class="button-icon" id="location-button" onclick="showLocation()">
+                    <img src="<?php echo url . 'assets/img/icon-location.svg' ?>" alt="location icon">
                 </button>
             </div>
         </div>
@@ -31,10 +31,10 @@ global $pageTitle;
         ?>
     </main>
 
-    <div id="info-sidebar" class="hidden">
+    <?php
+        // include sidebar with event information
+        get_sidebar();
 
-    </div>
-
-    <div id="info-location" class="hidden">
-
-    </div>
+        // include popup with location information
+        get_popup();
+    ?>

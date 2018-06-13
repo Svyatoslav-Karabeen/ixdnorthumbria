@@ -56,4 +56,14 @@ function get_socials() {
 function get_footer() {
     include path . 'footer.php';
 };
+
+function get_sidebar() {
+    global $environment;
+    include path . 'content-' . $environment . '-sidebar.php';
+};
+
+function get_popup() {
+    global $environment;
+    include path . 'content-' . $environment . '-popup.php';
+};
 ?>

@@ -6,25 +6,20 @@ body {
 
 body {
     .container {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-            -ms-flex-flow: column nowrap;
-                flex-flow: column nowrap;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
+        flex-flow: column nowrap;
         width: 100%;
         height: 100%;
 
         .heading-main {
             color: $primary-black;
-            font-weight: 700;
-            font-size: 3rem;
+            font-weight: 300;
+            font-size: 4rem;
         }
 
         .heading-caption {
-            font-weight: 400;
-            font-size: 1rem;
+            font-weight: 300;
+            font-size: 1.25rem;
 
         }
     }

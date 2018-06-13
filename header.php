@@ -38,7 +38,7 @@ global $pageKeywords;
 	<link rel="apple-touch-icon" href="<?php echo url ?>assets/images/apple-touch-icon.png" sizes="144x144" type="image/x-icon">
 
 	<!-- CSS -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,500,700" rel="stylesheet">
 	<link href="<?php echo url ?>assets/css/styles.css" rel="stylesheet" >
 
 	<?php if ($_SERVER['SERVER_NAME'] != 'localhost') { ?>

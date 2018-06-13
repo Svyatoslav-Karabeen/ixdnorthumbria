@@ -12,7 +12,7 @@ global $pageTitle;
 /**==========================================================================**/
 ?>
 
-    <main>
+    <main class="countdown">
         <div class="content">
             <h1 class="heading-main">watch this space</h1>
             <h2 class="heading-caption">we're about to announce something exciting in</h2>
