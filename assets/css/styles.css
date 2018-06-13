@@ -449,7 +449,7 @@ button {
       .social-container ul .social-link:first-child {
         margin-left: -.5rem; }
 
-footer {
+footer.footer-on {
   position: relative;
   padding: 4rem 2.5rem;
   width: 100%;
@@ -457,76 +457,76 @@ footer {
   background: #1d1d1d;
   font-weight: 300;
   font-size: .875rem; }
-  footer .footer-container {
+  footer.footer-on .footer-container {
     display: flex;
     align-items: flex-start;
     flex-flow: row wrap;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 60rem; }
-    footer .footer-container .ixd-container {
+    footer.footer-on .footer-container .ixd-container {
       display: inline-block; }
-      footer .footer-container .ixd-container .logo-link {
+      footer.footer-on .footer-container .ixd-container .logo-link {
         display: block;
         height: 4rem;
         line-height: 1; }
-        footer .footer-container .ixd-container .logo-link svg {
+        footer.footer-on .footer-container .ixd-container .logo-link svg {
           padding: .125rem;
           width: auto;
           height: 4rem;
           opacity: .6;
           filter: grayscale(1);
           transition: all 1s ease-in-out; }
-          footer .footer-container .ixd-container .logo-link svg .st14 {
+          footer.footer-on .footer-container .ixd-container .logo-link svg .st14 {
             fill: #f1f2f3 !important; }
-          footer .footer-container .ixd-container .logo-link svg #app, footer .footer-container .ixd-container .logo-link svg #experiental, footer .footer-container .ixd-container .logo-link svg #hybrid {
+          footer.footer-on .footer-container .ixd-container .logo-link svg #app, footer.footer-on .footer-container .ixd-container .logo-link svg #experiental, footer.footer-on .footer-container .ixd-container .logo-link svg #hybrid {
             transition: all 1s ease-in-out; }
-          footer .footer-container .ixd-container .logo-link svg:hover {
+          footer.footer-on .footer-container .ixd-container .logo-link svg:hover {
             opacity: 1;
             filter: grayscale(0);
             transition: all 0.2s ease-in-out; }
-            footer .footer-container .ixd-container .logo-link svg:hover #app, footer .footer-container .ixd-container .logo-link svg:hover #experiental, footer .footer-container .ixd-container .logo-link svg:hover #hybrid {
+            footer.footer-on .footer-container .ixd-container .logo-link svg:hover #app, footer.footer-on .footer-container .ixd-container .logo-link svg:hover #experiental, footer.footer-on .footer-container .ixd-container .logo-link svg:hover #hybrid {
               transition: all 0.2s ease-in-out; }
-            footer .footer-container .ixd-container .logo-link svg:hover #app {
+            footer.footer-on .footer-container .ixd-container .logo-link svg:hover #app {
               transform: translate(-1px, 1px); }
-            footer .footer-container .ixd-container .logo-link svg:hover #experiental {
+            footer.footer-on .footer-container .ixd-container .logo-link svg:hover #experiental {
               transform: translate(1px, 1px); }
-            footer .footer-container .ixd-container .logo-link svg:hover #hybrid {
+            footer.footer-on .footer-container .ixd-container .logo-link svg:hover #hybrid {
               transform: translate(0, -1px); }
-      footer .footer-container .ixd-container .social-container {
+      footer.footer-on .footer-container .ixd-container .social-container {
         margin: 2rem 0 0 3.5rem; }
-        footer .footer-container .ixd-container .social-container img {
+        footer.footer-on .footer-container .ixd-container .social-container img {
           filter: invert(1); }
-    footer .footer-container .links-container {
+    footer.footer-on .footer-container .links-container {
       display: flex;
       flex-flow: column nowrap;
       margin-top: 1rem;
       color: rgba(156, 156, 156, 0.5); }
-      footer .footer-container .links-container ul {
+      footer.footer-on .footer-container .links-container ul {
         display: flex;
         flex-flow: row nowrap;
         margin: 0;
         margin: 0 0 1rem -.5rem;
         padding: 0;
         list-style-type: none; }
-        footer .footer-container .links-container ul li:not(:first-child) {
+        footer.footer-on .footer-container .links-container ul li:not(:first-child) {
           margin-left: 1rem; }
-        footer .footer-container .links-container ul a {
+        footer.footer-on .footer-container .links-container ul a {
           display: inline-block;
           padding: .5rem;
           color: #9c9c9c;
           transition: all 0.3s ease-in-out; }
-          footer .footer-container .links-container ul a:hover {
+          footer.footer-on .footer-container .links-container ul a:hover {
             color: #f1f2f3;
             transition: all 0.3s ease-in-out; }
-  footer .copyright {
+  footer.footer-on .copyright {
     position: absolute;
     bottom: 1rem;
     padding: 1rem 2.5rem;
     width: 100%;
     color: rgba(156, 156, 156, 0.5);
     text-align: center; }
-    footer .copyright .dots {
+    footer.footer-on .copyright .dots {
       position: absolute;
       top: 0;
       right: 0;
@@ -540,7 +540,7 @@ footer {
       opacity: 1;
       transition: all 1s ease-in-out;
       transform: translateY(-0.5rem) scaleX(1); }
-    footer .copyright .link {
+    footer.footer-on .copyright .link {
       position: absolute;
       top: 0;
       right: 0;
@@ -552,15 +552,15 @@ footer {
       text-align: center;
       opacity: 0;
       transition: all 1s ease-in-out; }
-      footer .copyright .link a {
+      footer.footer-on .copyright .link a {
         color: rgba(156, 156, 156, 0.5); }
-        footer .copyright .link a:hover {
+        footer.footer-on .copyright .link a:hover {
           color: #9c9c9c; }
-    footer .copyright:hover .dots {
+    footer.footer-on .copyright:hover .dots {
       opacity: 0;
       transition: all .5s ease-in-out;
       transform: translateY(-0.5rem) scaleX(3); }
-    footer .copyright:hover .link {
+    footer.footer-on .copyright:hover .link {
       z-index: 99;
       opacity: 1;
       transition: all .5s ease-in-out; }
