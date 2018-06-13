@@ -511,7 +511,7 @@ button {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding-top: 6rem;
+    padding-top: 8rem;
     height: 100%;
     color: rgba(255, 255, 255, 0.6); }
     .page-home main.gradient .content .heading-main {
