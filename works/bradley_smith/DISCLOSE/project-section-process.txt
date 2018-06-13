@@ -1,0 +1,3 @@
+Throughout the project, I set myself goals that I could follow allowing me to focus on what was important as well as meeting the deadlines. <br>
+I began by narrowing down my target audience and developing my concept to make it strong enough for people to give me feedback on it. Once I had gathered my feedback I then looked at WordPress and the variety of possible routes that I could go down in terms of style and appearance.<br>
+After selecting my theme and downloading the correct plugins that would allow me to build on my wireframes I tested the prototype to gain valuable feedback so I could make the right changes.
