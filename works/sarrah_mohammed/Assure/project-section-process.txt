@@ -1,0 +1,13 @@
+During my final year of university, I had chosen to live in a two bed flat with a friend. We had both received the inventory report before our tenancy was due to begin. The estate agents comments and photographs were attached, and from their evidence, the property looked in great condition and professionally cleaned. However, when I got my keys to move into the property, it was a completely different story. I was shocked to see the inventory did not match the property at all. There was some serious problems such as damp, which I could not understand how it was missed out on the estate agents inspection.
+
+<br>
+
+From speaking to fellow students and other tenants, it was highlighted this was a common problem as relationships seemed to be damaged from experience. I also interviewed a managing partner of an estate agent who gave me insight that tenants are also at fault due to lack of knowledge and understanding. “Educating students of life skills regarding properties is something which I think is missing on the market.”
+
+<br>
+
+It was evident I needed to produce a solution to benefit both tenant and estate agent/landlord. A simplistic process to complete an inventory report with little hassle as possible. Using the student property was I living in at the time, I began to divide and sort out contents of the app. Each room has subcategories such as wall ceiling, skirting etc.
+
+<br>
+
+Wireframing and functionality needed to be self explanatory. Each of the subsections of the rooms contains photographs, and the tenants decide if they agree or disagree with what see at the property. If they select disagree, they would be directed to a camera, allowing them to take pictures and add comments.
