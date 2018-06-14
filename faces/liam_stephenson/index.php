@@ -27,8 +27,20 @@ $project_info       = glob('../../works/' . strtolower($firstName) . '_' . strto
         <!-- <div class="backlink-wrapper">
             <?php echo '<a class="backlink" href="' . dirname($_SERVER['HTTP_REFERER']) . '">Back to all faces</a>'; ?>
         </div> -->
+
+        <?php
+        $personalUserpic = dirname($file) . 'userpic.jpg';
+        $defaultUserpic = url . 'assets/img/userpic-default.jpg';
+        $emptyUserpic = url . 'assets/img/userpic-empty.png';
+
+        if (file_exists($personalUserpic)) {
+            $userpic = $personalUserpic;
+        } else {
+            $userpic = $defaultUserpic;
+        };
+        ?>
         <div class="profile-photo">
-            <img class="photo" src="userpic.jpg" alt="<?php echo $firstName . ' ' . $lastName ?>">
+            <img class="photo" src="<?php echo $userpic ?>" alt="<?php echo $firstName . ' ' . $lastName ?>">
             <div class="background"></div>
         </div>
 
@@ -90,8 +102,8 @@ $project_info       = glob('../../works/' . strtolower($firstName) . '_' . strto
             </div>
         </div>
     </div>
-    
-    <div class="works-container">
+
+    <!-- <div class="works-container">
         <div class="work-wrapper">
             <?php
                 if ($sex = 'male') {
@@ -123,7 +135,7 @@ $project_info       = glob('../../works/' . strtolower($firstName) . '_' . strto
         <?php
         }};
         ?>
-    </div>
+    </div> -->
 </main>
 
 <?php get_footer(); ?>

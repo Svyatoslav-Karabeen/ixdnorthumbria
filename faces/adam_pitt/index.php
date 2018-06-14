@@ -90,15 +90,15 @@ $project_info       = glob('../../works/' . strtolower($firstName) . '_' . strto
             </div>
         </div>
     </div>
-    
+
     <div class="works-container">
         <div class="work-wrapper">
             <?php
                 if ($sex = 'male') {
-            $herOrHis = 'his';
-        } else {
-            $herOrHis = 'her';
-        };
+                    $herOrHis = 'his';
+                } else {
+                    $herOrHis = 'her';
+                };
             ?>
             <h4 class="work-main"><?php echo ucfirst($firstName) . "'s works"?></h4>
             <h4 class="work-caption"><?php echo "just look at this, " . $herOrHis . " works are stunning, aren't they?" ; ?></h4>

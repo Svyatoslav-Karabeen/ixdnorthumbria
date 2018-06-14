@@ -90,7 +90,7 @@ $project_info       = glob('../../works/' . strtolower($firstName) . '_' . strto
             </div>
         </div>
     </div>
-    
+
     <div class="works-container">
         <div class="work-wrapper">
             <?php

@@ -28,6 +28,7 @@ var visual = "visual designers";
 function changeExpertise(x) {
     document.getElementById("expertise-button").innerHTML = x;
     document.getElementById("expertise-array").classList.toggle("expertise-shown");
+    // document.getElementById("students-array").classList.toggle();
 }
 
 window.onclick = function(event) {
@@ -76,4 +77,15 @@ window.onclick = function(event) {
       }
     }
   }
+}
+
+function expandCard(div) {
+    var className = div.getAttribute("class");
+    document.getElementById("overlay").classList.toggle("overlay-on");
+    
+    if (className == "student-single collapsed") {
+        div.className = "student-single expanded";
+    } else{
+        div.className = "student-single collapsed";
+    }
 }

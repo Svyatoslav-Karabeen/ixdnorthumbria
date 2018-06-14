@@ -63,7 +63,7 @@ $student_info       = glob('*/student-info.php');
         </div>
     </div>
 
-    <div class="students-container">
+    <div class="students-container" id="students-array">
         <?php
             foreach ($student_info as $file) {
                 include $file;
@@ -77,22 +77,19 @@ $student_info       = glob('*/student-info.php');
                 } else {
                     $userpic = $defaultUserpic;
                 };
-
-                if (strtolower($title) == 'ux/ui') {
-                    $title = 'ux';
-                };
         ?>
-
-            <div class="student-single" expertise="<?php echo strtolower($title) ?>">
-                <div class="single-collapsed">
-                    <img class="single-photo" src="<?php echo $userpic ?>" alt="<?php echo ucfirst($firstName) . ' ' . ucfirst($lastName) ?>">
-                    <div class="collapsed-name-wrapper">
-                        <h3 class="name"><?php echo ucfirst($firstName) . ' ' . ucfirst($lastName) ?></h3>
-                        <span class="title"><?php echo ucfirst($title) ?> Designer</span>
+            <div class="student-single collapsed" onclick="expandCard(this)" expertise="<?php echo strtolower($title) ?>">
+                <a class="profile-link" href="<?php echo dirname($file) ?>" target="_self">
+                    <div class="single-collapsed">
+                        <img class="single-photo" src="<?php echo $userpic ?>" alt="<?php echo ucfirst($firstName) . ' ' . ucfirst($lastName) ?>">
+                        <div class="collapsed-name-wrapper">
+                            <h3 class="name"><?php echo ucfirst($firstName) . ' ' . ucfirst($lastName) ?></h3>
+                            <span class="title"><?php echo ucfirst($title) ?> Designer</span>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="single-expanded">
+                <!-- <div class="single-expanded">
                     <div class="expanded-name-wrapper">
                         <h3 class="name"><?php echo ucfirst($firstName) . ' ' . ucfirst($lastName) ?></h3>
                         <span class="title"><?php echo ucfirst($title) ?> Designer</span>
@@ -117,12 +114,15 @@ $student_info       = glob('*/student-info.php');
                     <div class="profile-link-wrapper">
                         <a class="profile-link" href="<?php echo dirname($file) ?>" target="_self">show profile</a>
                     </div>
-                </div>
+                </div> -->
             </div>
+            </a>
         <?php
             };
         ?>
     </div>
 </main>
+
+<div class="overlay" id="overlay"></div>
 
 <?php get_footer(); ?>

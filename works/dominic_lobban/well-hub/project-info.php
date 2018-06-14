@@ -9,7 +9,7 @@ $mateName           = 'Sarrah Mohammed';
 
 $projectName        = 'Well Hub';
 $projectType        = 'mobile app';
-$projectScope       = array('Service Design', 'Interface Design', 'User Research' 'Big Data');
+$projectScope       = array('Service Design', 'Interface Design', 'User Research', 'Big Data');
 
 $hasBannerVideo     = 'No';
 $BannerVideoURL     = '';

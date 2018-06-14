@@ -1,6 +1,6 @@
 <?php
 
-$firstName          = 'Bradley James';
+$firstName          = 'Bradley';
 $lastName           = 'Smith';
 $sex                = 'male';
 $title              = 'UX/UI';

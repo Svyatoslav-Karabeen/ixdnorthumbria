@@ -1026,4 +1026,205 @@ footer.footer-on {
       .page-faces #container main .students-container .student-single .single-expanded {
         display: none; }
 
+.page-profile {
+  margin: 0 auto;
+  max-width: 98rem;
+  height: auto; }
+  .page-profile #container main .profile-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-flow: row nowrap; }
+    .page-profile #container main .profile-container .profile-photo {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      flex-flow: row nowrap;
+      width: 100%;
+      opacity: .5;
+      filter: grayscale(0.5);
+      transition: all .6s ease-in-out; }
+      .page-profile #container main .profile-container .profile-photo:hover {
+        opacity: 1;
+        filter: grayscale(0);
+        transition: all .6s ease-in-out; }
+      .page-profile #container main .profile-container .profile-photo .photo {
+        max-width: 50%; }
+      .page-profile #container main .profile-container .profile-photo .background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 22rem;
+        background-color: #e8e9eb; }
+    .page-profile #container main .profile-container .profile-content {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      z-index: 9;
+      display: flex;
+      flex-flow: column nowrap;
+      margin: 4rem 0;
+      margin-left: 2rem;
+      max-width: 30rem;
+      width: 50%;
+      height: auto; }
+      .page-profile #container main .profile-container .profile-content .name-wrapper {
+        margin-bottom: 2rem; }
+        .page-profile #container main .profile-container .profile-content .name-wrapper .name {
+          color: #1d1d1d;
+          font-weight: 500;
+          font-size: 3rem; }
+        .page-profile #container main .profile-container .profile-content .name-wrapper .title {
+          font-weight: 300;
+          font-size: 1.25rem; }
+      .page-profile #container main .profile-container .profile-content .bio-wrapper {
+        margin-bottom: 1rem; }
+        .page-profile #container main .profile-container .profile-content .bio-wrapper .bio-full {
+          max-width: 40rem;
+          color: #1d1d1d;
+          line-height: 1.6; }
+      .page-profile #container main .profile-container .profile-content .employment-wrapper {
+        margin-bottom: 2rem; }
+        .page-profile #container main .profile-container .profile-content .employment-wrapper .employment-content {
+          max-width: 40rem;
+          color: #1d1d1d;
+          line-height: 1.6; }
+      .page-profile #container main .profile-container .profile-content .links-wrapper {
+        display: flex;
+        align-items: center;
+        flex-flow: row nowrap;
+        margin-left: -.5rem;
+        line-height: 1.278; }
+        .page-profile #container main .profile-container .profile-content .links-wrapper .resume {
+          margin-right: 1rem;
+          padding: .875rem 1.5rem;
+          border-radius: 4rem;
+          background-color: #0d9cff;
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.21), 0 1px 3px rgba(0, 0, 0, 0.15);
+          color: rgba(255, 255, 255, 0.9);
+          font-weight: 500;
+          transition: all .6s ease-in-out;
+          transform: scale(1); }
+          .page-profile #container main .profile-container .profile-content .links-wrapper .resume img {
+            margin-right: .875rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            height: auto;
+            opacity: 0.8;
+            filter: invert(1);
+            transition: all 0.8s ease-in-out; }
+          .page-profile #container main .profile-container .profile-content .links-wrapper .resume:hover {
+            background: #27a6ff;
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+            transition: all 0.2s ease-in-out;
+            transform: translateY(-0.25rem); }
+            .page-profile #container main .profile-container .profile-content .links-wrapper .resume:hover img {
+              opacity: 1;
+              transition: transform 0.3s ease-in-out; }
+          .page-profile #container main .profile-container .profile-content .links-wrapper .resume:active {
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.21), 0 1px 3px rgba(0, 0, 0, 0.15);
+            transition: all 0.2s ease-in-out;
+            transform: scale(0.98); }
+        .page-profile #container main .profile-container .profile-content .links-wrapper ul {
+          display: flex;
+          align-items: center;
+          margin: 0;
+          padding: 0;
+          list-style-type: none; }
+          .page-profile #container main .profile-container .profile-content .links-wrapper ul li {
+            margin-left: .5rem; }
+          .page-profile #container main .profile-container .profile-content .links-wrapper ul .social-link {
+            position: relative;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .5rem;
+            width: 3rem;
+            height: 3rem;
+            vertical-align: middle;
+            text-align: center;
+            transition: all 0.2s ease-in-out; }
+            .page-profile #container main .profile-container .profile-content .links-wrapper ul .social-link img {
+              width: 1.25rem;
+              height: 1.25rem;
+              height: auto;
+              opacity: 0.6;
+              transition: all 0.8s ease-in-out;
+              transform: scale(1); }
+            .page-profile #container main .profile-container .profile-content .links-wrapper ul .social-link:hover img {
+              opacity: 1;
+              transition: transform 0.3s ease-in-out;
+              transform: scale(0.9); }
+            .page-profile #container main .profile-container .profile-content .links-wrapper ul .social-link:first-child {
+              margin-left: -.5rem; }
+  .page-profile #container main .works-container {
+    margin: 4rem auto;
+    padding: 0 4rem;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative; }
+    .page-profile #container main .works-container .work-wrapper {
+      display: flex;
+      width: 100%;
+      height: auto;
+      margin: 2rem 1rem 4rem;
+      flex-flow: column nowrap; }
+      .page-profile #container main .works-container .work-wrapper .work-main {
+        color: #1d1d1d;
+        font-weight: 500;
+        font-size: 3rem; }
+      .page-profile #container main .works-container .work-wrapper .work-caption {
+        font-weight: 300;
+        font-size: 1.25rem; }
+    .page-profile #container main .works-container .project-card {
+      display: flex;
+      max-width: 32%;
+      width: 50%;
+      height: auto;
+      margin: .125rem;
+      position: relative;
+      border-radius: .5rem;
+      box-shadow: 0 4px 6px rgba(50, 50, 93, 0), 0 1px 3px rgba(0, 0, 0, 0);
+      transition: all .6s ease-in-out;
+      transform: scale(1);
+      overflow: hidden; }
+      .page-profile #container main .works-container .project-card img {
+        width: 100%;
+        height: auto;
+        border-radius: .5rem; }
+      .page-profile #container main .works-container .project-card .project-name-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 1.5rem 2rem;
+        border-radius: 0 0 .5rem .5rem;
+        opacity: 0;
+        transform: translateY(6rem);
+        transition: all .6s ease-in-out; }
+        .page-profile #container main .works-container .project-card .project-name-wrapper .name {
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: #1d1d1d;
+          margin-bottom: .25rem; }
+        .page-profile #container main .works-container .project-card .project-name-wrapper .type {
+          font-size: .875rem;
+          font-size: 300;
+          color: #959697; }
+      .page-profile #container main .works-container .project-card:hover {
+        z-index: 9;
+        box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+        transform: translateY(-1rem); }
+        .page-profile #container main .works-container .project-card:hover .project-name-wrapper {
+          opacity: 1;
+          transform: translateY(0);
+          transition: all 0.2s ease-in-out; }
+
 /*# sourceMappingURL=styles.css.map */

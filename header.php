@@ -56,7 +56,7 @@ global $pageKeywords;
 	<!-- Easter egg -->
 	<?php include path . 'header-egg.php'; ?>
 </head>
-<body class="page-<?php echo $pageTitle ?>">
+<body class="page-<?php echo strtolower($pageTitle) ?>">
 	<div class="content-container" id="container">
 		<header>
 			<div class="logo-container">
