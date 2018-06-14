@@ -1,0 +1,5 @@
+* Process section *
+
+Replace the content of this file with the information about your process,
+solution, how the project works and how your target audience benefits from
+your solution. To start new paragraph use <br> tag.

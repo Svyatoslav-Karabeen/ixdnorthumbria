@@ -1,0 +1,12 @@
+
+To begin the process of coming up with the solution restARant rush, I decided to look into the cutting-edge technology that is currently on the market. From this I discovered more information about augmented reality and how popular this type of technology is becoming. 
+<br>
+I came up with numerous augmented reality ideas and was originally going to go with an augmented reality toy. However. When I started to think when a good time would be to use an AR game. Waiting in restaurants was a good time to play games as it will make waiting on food fun.
+<br>
+I then looked into the technology required to develop this AR restaurant game. I had to get familiar using Unity so that could use the tools to create AR content. I also used Vuforia to produce the AR project. I used QR codes so the user can scan this to download and begin playing the game. 
+<br>
+It was then time to start developing the concept. For this I started to think name, branding for the game. I also sketched up the wireframes of the application so I could vision how this could look. When it came to branding I stuck to yellow and red as this combination of colours phycological makes people feel hungry. 
+<br>
+I then started to work with Unity to get the QR and my contents working simultaneously. 
+<br>
+The idea of restARant rush is that the user will download this application when they are sat in the restaurant, by playing this game they can compete against their friends and try to win discount and prizes in the restaurant. 
