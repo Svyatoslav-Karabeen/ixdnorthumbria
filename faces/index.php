@@ -21,54 +21,81 @@ $student_info       = glob('*/student-info.php');
 
 <?php get_header();?>
 
-<main class="page-<?php echo $pageTitle ?>">
-    <div class="intro">
-        <h1>this is our year</h1>
-        <div class="expertise-wrapper">
-            show <span class="selected">all designers</span>
-            <div class="options">
-                <ul>
-                    <?php
-                        // create array for titles
-                        $expertiseArray = array('all');
+<main>
+    <div class="headings">
+        <div class="headings-wrapper">
+            <h1 class="heading-main">our year</h1>
+            <h2 class="heading-caption">show <button class="button-text" id="expertise-button" onclick="showExpertise()">all designers</button></h2>
+        </div>
+        <div class="expertise-wrapper" id="expertise-array">
+            <ul>
+                <?php
+                    $expertiseArray = array('all');
 
-                        // extract all titles from student info and add it to the array
-                        foreach ($student_info as $file) {
-                            include $file;
-                            array_push($expertiseArray, $title);
+                    foreach($student_info as $file){
+                        include $file;
+
+                        if(!in_array(strtolower($title), $expertiseArray)) {
+                            $expertiseArray[]=strtolower($title);
+                        }
+                    };
+
+                    sort($expertiseArray);
+
+                    foreach ($expertiseArray as $expertise) {
+
+                        if ($expertise == 'all') {
+                            $expertiseJS = 'everyone';
+                        } elseif ($expertise == 'ux/ui') {
+                            $expertiseJS = 'ux';
+                        } else {
+                            $expertiseJS = $expertise;
                         }
 
-                        // print all titles
-                        foreach ($expertiseArray as $expertise) {
-                            echo '<li class="expertise-item" expertise="' . $expertise . '"><a class="expertise-link" href="#' . $expertise . '">' . $expertise . '</a></li>';
-                        };
-                    ?>
-                </ul>
-            </div>
+                        if ($expertise == 'ux/ui') {
+                            echo '<li expertise="' . $expertise . '"><button class="expertise-link" onclick="changeExpertise(' . $expertiseJS .')">' . strtoupper($expertise) . ' Designers</button></li>';
+                        } else {
+                            echo '<li expertise="' . $expertise . '"><button class="expertise-link" onclick="changeExpertise(' . $expertiseJS .')">' . $expertise . ' Designers</button></li>';
+                        }
+                    };
+                ?>
+            </ul>
         </div>
     </div>
 
     <div class="students-container">
         <?php
-            // include and extract content from all student info files
             foreach ($student_info as $file) {
                 include $file;
+
+                $personalUserpic = dirname($file) . '/userpic.jpg';
+                $defaultUserpic = url . 'assets/img/userpic-default.jpg';
+                $emptyUserpic = url . 'assets/img/userpic-empty.png';
+
+                if (file_exists($personalUserpic)) {
+                    $userpic = $personalUserpic;
+                } else {
+                    $userpic = $defaultUserpic;
+                };
+
+                if (strtolower($title) == 'ux/ui') {
+                    $title = 'ux';
+                };
         ?>
 
-            <div class="single-card" expertise="<?php echo $title ?>">
-                <div class="card-collapsed">
-                    <img class="student-photo" src="<?php echo dirname($file) . '/userpic.jpg' ?>" alt="<?php echo $firstName . ' ' . $lastName ?>">
-
-                    <div class="name-wrapper-small">
-                        <h3 class="name"><?php echo $firstName . ' ' . $lastName ?></h3>
-                        <span class="title"><?php echo $title ?></span>
+            <div class="student-single" expertise="<?php echo strtolower($title) ?>">
+                <div class="single-collapsed">
+                    <img class="single-photo" src="<?php echo $userpic ?>" alt="<?php echo ucfirst($firstName) . ' ' . ucfirst($lastName) ?>">
+                    <div class="collapsed-name-wrapper">
+                        <h3 class="name"><?php echo ucfirst($firstName) . ' ' . ucfirst($lastName) ?></h3>
+                        <span class="title"><?php echo ucfirst($title) ?> Designer</span>
                     </div>
                 </div>
 
-                <div class="card-expanded">
-                    <div class="name-wrapper-large">
-                        <h2 class="name"><?php echo $firstName . ' ' . $lastName ?></h2>
-                        <span class="title"><?php echo $title ?></span>
+                <div class="single-expanded">
+                    <div class="expanded-name-wrapper">
+                        <h3 class="name"><?php echo ucfirst($firstName) . ' ' . ucfirst($lastName) ?></h3>
+                        <span class="title"><?php echo ucfirst($title) ?> Designer</span>
                     </div>
 
                     <div class="bioShort">
@@ -76,9 +103,8 @@ $student_info       = glob('*/student-info.php');
                     </div>
 
                     <div class="lisks-wrapper">
-                        <ul class="links">
+                        <ul>
                             <?php
-                                // print all links that are not empty
                                 foreach ($links as $name => $link) {
                                     if (!empty($link)) {
                                         echo '<li class="link-item"><a class="' . $name . '" href="' . $link . '" target="_blank"></a></li>';

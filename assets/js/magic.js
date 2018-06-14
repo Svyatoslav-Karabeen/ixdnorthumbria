@@ -15,6 +15,21 @@ function hideLocation() {
     document.getElementById("popup-close").classList.toggle("popup-shown");
 }
 
+function showExpertise() {
+    document.getElementById("expertise-array").classList.toggle("expertise-shown");
+}
+
+var everyone = "all designers";
+var interaction = "interaction designers";
+var ux = "UX/UI designers";
+var product = "product designers";
+var visual = "visual designers";
+
+function changeExpertise(x) {
+    document.getElementById("expertise-button").innerHTML = x;
+    document.getElementById("expertise-array").classList.toggle("expertise-shown");
+}
+
 window.onclick = function(event) {
   if (!event.target.matches('.dropdown-button')) {
 
@@ -37,7 +52,9 @@ window.onclick = function(event) {
       }
     }
   }
+}
 
+window.onclick = function(event) {
   if (!event.target.matches('.popup-body')) {
 
     var popup = document.getElementsByClassName("popup-container");

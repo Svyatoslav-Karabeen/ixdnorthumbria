@@ -1,0 +1,128 @@
+.page-faces {
+    height: auto;
+    max-width: 98rem;
+    margin: 0 auto;
+
+    #container main {
+        .headings {
+            display: flex;
+            flex-flow: column nowrap;
+            margin: 0 2.5rem;
+            padding: 4rem;
+            background: rgba($primary-white, .5);
+
+            .heading-caption .button-text {
+                margin: 0 .25rem;
+                padding: 0 0 .125rem 0;
+                border-bottom: 1px dotted $primary-gray;
+                color: $primary-gray;
+                font-weight: 300;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    border-bottom: 1px dotted $primary-black;
+                    color: $primary-black;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+
+            .expertise-wrapper {
+                display: inline-flex;
+                display: flex;
+                flex-flow: column nowrap;
+                margin: 0 0 -2rem -.5rem;
+                font-weight: 300;
+                opacity: 0;
+                transform: translateY(-3rem);
+                transition: all .6s ease-in-out;
+                z-index: -1;
+
+                &.expertise-shown {
+                    margin-top: 2rem;
+                    margin-bottom: 0;
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all 0.6s ease-in-out;
+                    z-index: 1;
+                }
+
+                ul {
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+
+                    li:not(:last-child) {
+                        margin-right: 2rem;
+                    }
+
+                    .expertise-link {
+                        display: inline-block;
+                        padding: .5rem;
+                        color: $primary-gray;
+                        transition: all 0.3s ease-in-out;
+                        font-weight: 300;
+
+                        &::first-letter {
+                            text-transform: uppercase;
+                        }
+
+                        &:hover {
+                            color: $primary-black;
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        &.active {
+                            color: $primary-black;
+                        }
+                    }
+                }
+            }
+        }
+
+        .students-container {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            margin: 2rem 0;
+
+            .student-single {
+                display: inline-block;
+                max-width: 25%;
+                width: 100%;
+                height: auto;
+
+                .single-collapsed {
+
+                    .single-photo {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .collapsed-name-wrapper {
+                        margin: 1rem 0;
+                        text-align: center;
+
+                        .name {
+                            margin-bottom: 0.25rem;
+                            color: $primary-black;
+                            font-weight: 500;
+                            font-size: 1.5rem;
+                        }
+
+                        .title {
+                            color: $primary-gray;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                .single-expanded {
+                    display: none;
+                }
+            }
+        }
+    }
+}

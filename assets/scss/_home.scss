@@ -1,5 +1,11 @@
-.page-home #container {
-    height: 100%;
+.page-home
+// {
+//     height: auto;
+//     max-width: 98rem;
+//     margin: 0 auto;
+
+    #container {
+        height: 100%;
 
     header {
         margin-top: 0.125rem;
@@ -91,7 +97,7 @@
             justify-content: center;
             padding-top: 8rem;
             height: 100%;
-            color: rgba($white, .6);
+            color: rgba($white, .8);
 
             .heading-main {
                 color: $white;
@@ -219,3 +225,4 @@
         height: 100%;
     }
 }
+// }

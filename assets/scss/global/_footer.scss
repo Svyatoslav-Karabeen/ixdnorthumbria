@@ -13,7 +13,6 @@ footer.footer-on {
         flex-flow: row wrap;
         justify-content: space-between;
         margin: 0 auto;
-        max-width: 60rem;
 
         .ixd-container {
             display: inline-block;
@@ -80,6 +79,7 @@ footer.footer-on {
                     display: inline-block;
                     padding: .5rem;
                     color: $primary-gray;
+                    font-weight: 500;
                     transition: all 0.3s ease-in-out;
 
                     &:hover {
@@ -125,6 +125,7 @@ footer.footer-on {
             width: 100%;
             height: auto;
             text-align: center;
+            font-weight: 500;
             opacity: 0;
             transition: all 1s ease-in-out;
 
