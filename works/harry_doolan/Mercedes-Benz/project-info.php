@@ -8,7 +8,7 @@ $hasMate            = 'no';
 $mateName           = '';
 
 $projectName        = 'Mercedes-Benz Virtual experience';
-$projectType        = 'experiential';
+$projectType        = 'Experiental';
 $projectScope       = array('');
 
 $hasBannerVideo     = 'yes';

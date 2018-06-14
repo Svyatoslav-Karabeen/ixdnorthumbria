@@ -8,7 +8,7 @@ $hasMate            = 'no';
 $mateName           = '';
 
 $projectName        = 'Matchday';
-$projectType        = 'mobile app';
+$projectType        = 'app';
 $projectScope       = array('app design', 'user experience design', 'prototyping' );
 
 $hasBannerVideo     = 'no';

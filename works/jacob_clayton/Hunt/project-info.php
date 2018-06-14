@@ -8,7 +8,7 @@ $hasMate            = 'no';
 $mateName           = '';
 
 $projectName        = 'Hunt';
-$projectType        = 'mobile app';
+$projectType        = 'app';
 $projectScope       = array('');
 
 $hasBannerVideo     = 'no';

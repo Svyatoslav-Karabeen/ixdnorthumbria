@@ -8,7 +8,7 @@ $hasMate            = 'no';
 $mateName           = '';
 
 $projectName        = 'Interactive Showroom';
-$projectType        = 'experiential';
+$projectType        = 'Experiental';
 $projectScope       = array('');
 
 $hasBannerVideo     = 'yes';

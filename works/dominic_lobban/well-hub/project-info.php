@@ -8,7 +8,7 @@ $hasMate            = 'yes';
 $mateName           = 'Sarrah Mohammed';
 
 $projectName        = 'Well Hub';
-$projectType        = 'mobile app';
+$projectType        = 'app';
 $projectScope       = array('Service Design', 'Interface Design', 'User Research', 'Big Data');
 
 $hasBannerVideo     = 'No';

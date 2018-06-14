@@ -31,6 +31,26 @@ function changeExpertise(x) {
     // document.getElementById("students-array").classList.toggle();
 }
 
+function showWork() {
+    document.getElementById("work-array").classList.toggle("work-shown");
+}
+
+var everywork = "all";
+var app = "app";
+var ar = "AR"
+var experiental = "experiental";
+var hybrid = "hybrid";
+var service = "service design";
+var ux = "UX/UI";
+var vr = "VR";
+var web = "web";
+
+function changeWork(x) {
+    document.getElementById("work-button").innerHTML = x + " projects";
+    document.getElementById("work-array").classList.toggle("expertise-shown");
+    // document.getElementById("students-array").classList.toggle();
+}
+
 window.onclick = function(event) {
   if (!event.target.matches('.dropdown-button')) {
 
@@ -82,7 +102,7 @@ window.onclick = function(event) {
 function expandCard(div) {
     var className = div.getAttribute("class");
     document.getElementById("overlay").classList.toggle("overlay-on");
-    
+
     if (className == "student-single collapsed") {
         div.className = "student-single expanded";
     } else{

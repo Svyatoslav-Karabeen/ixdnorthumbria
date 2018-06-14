@@ -8,7 +8,7 @@ $hasMate            = 'no';
 $mateName           = '';
 
 $projectName        = 'Rise';
-$projectType        = 'mobile app';
+$projectType        = 'app';
 $projectScope       = array('UX Design', 'Branding', 'AR', 'Interface Design');
 
 $hasBannerVideo     = 'yes';

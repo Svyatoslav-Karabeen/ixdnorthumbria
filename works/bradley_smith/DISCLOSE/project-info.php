@@ -8,7 +8,7 @@ $hasMate            = 'no';
 $mateName           = '';
 
 $projectName        = 'Dislcose';
-$projectType        = 'mobile app';
+$projectType        = 'app';
 $projectScope       = array('logo design', 'brand identity', 'advertising materials', 'research' , 'web' );
 
 $hasBannerVideo     = 'no';

@@ -8,7 +8,7 @@ $hasMate            = 'yes';
 $mateName           = 'Eleanor Osada';
 
 $projectName        = 'Sage One';
-$projectType        = 'App/Hybrid';
+$projectType        = 'hybrid';
 $projectScope       = array('');
 
 $hasBannerVideo     = 'no';

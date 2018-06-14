@@ -8,7 +8,7 @@ $hasMate            = 'no';
 $mateName           = '';
 
 $projectName        = 'Stage fright';
-$projectType        = 'Experiential';
+$projectType        = 'Experiental';
 $projectScope       = array('Immersive Environment', 'Virtual Reality Therapy', 'Exposure Therapy', 'Design Installation' );
 
 $hasBannerVideo     = 'no';

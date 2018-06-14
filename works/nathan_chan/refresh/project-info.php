@@ -8,7 +8,7 @@ $hasMate            = 'no';
 $mateName           = '';
 
 $projectName        = 'Refresh';
-$projectType        = 'mobile app';
+$projectType        = 'app';
 $projectScope       = array('application design');
 
 $hasBannerVideo     = 'no';

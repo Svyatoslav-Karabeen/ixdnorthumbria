@@ -42,7 +42,8 @@ define('path', __DIR__ . '/');
 // define root folder path (for absolute links)
 define('url', $_SERVER['SERVER_NAME'] == 'localhost'
         ? 'http://localhost/ixd/'
-        : 'https://karabeen.com/p/ixd/'
+        // : 'https://karabeen.com/p/ixd/'
+        : 'https://ixdnorthumbria.co.uk/'
 );
 
 function get_header() {

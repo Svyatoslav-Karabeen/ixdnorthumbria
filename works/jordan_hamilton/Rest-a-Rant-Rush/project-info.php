@@ -21,7 +21,7 @@ $lastName           = 'Hamilton';
 $sex                = 'Male';
 
 $projectName        = 'restARant rush';
-$projectType        = 'AR App';
+$projectType        = 'ar';
 $projectScope       = array('Augmented Reality', 'Game Design', 'Logo design',);
 
 /**

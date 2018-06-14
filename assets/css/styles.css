@@ -1227,4 +1227,115 @@ footer.footer-on {
           transform: translateY(0);
           transition: all 0.2s ease-in-out; }
 
+.page-works {
+  height: auto;
+  max-width: 98rem;
+  margin: 0 auto; }
+  .page-works #container main .headings {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 2.5rem;
+    padding: 4rem;
+    background: rgba(241, 242, 243, 0.5); }
+    .page-works #container main .headings .heading-caption .button-text {
+      margin: 0 .25rem;
+      padding: 0 0 .125rem 0;
+      border-bottom: 1px dotted #959697;
+      color: #959697;
+      font-weight: 300;
+      transition: all 0.3s ease-in-out; }
+      .page-works #container main .headings .heading-caption .button-text:hover {
+        border-bottom: 1px dotted #1d1d1d;
+        color: #1d1d1d;
+        transition: all 0.3s ease-in-out; }
+    .page-works #container main .headings .work-wrapper {
+      display: inline-flex;
+      display: flex;
+      flex-flow: column nowrap;
+      margin: 0 0 -2rem -.5rem;
+      font-weight: 300;
+      opacity: 0;
+      transform: translateY(-3rem);
+      transition: all .6s ease-in-out;
+      z-index: -1; }
+      .page-works #container main .headings .work-wrapper.work-shown {
+        margin-top: 2rem;
+        margin-bottom: 0;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.6s ease-in-out;
+        z-index: 1; }
+      .page-works #container main .headings .work-wrapper ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none; }
+        .page-works #container main .headings .work-wrapper ul li:not(:last-child) {
+          margin-right: 2rem; }
+        .page-works #container main .headings .work-wrapper ul .workType-link {
+          display: inline-block;
+          padding: .5rem;
+          color: #959697;
+          transition: all 0.3s ease-in-out;
+          font-weight: 300; }
+          .page-works #container main .headings .work-wrapper ul .workType-link::first-letter {
+            text-transform: uppercase; }
+          .page-works #container main .headings .work-wrapper ul .workType-link:hover {
+            color: #1d1d1d;
+            transition: all 0.3s ease-in-out; }
+          .page-works #container main .headings .work-wrapper ul .workType-link.active {
+            color: #1d1d1d; }
+  .page-works #container main .projects-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 4rem 2.5rem; }
+    .page-works #container main .projects-container .project-card {
+      display: flex;
+      max-width: 32%;
+      width: 50%;
+      height: auto;
+      margin: .5rem;
+      position: relative;
+      border-radius: .5rem;
+      box-shadow: 0 4px 6px rgba(50, 50, 93, 0), 0 1px 3px rgba(0, 0, 0, 0);
+      transition: all .6s ease-in-out;
+      transform: scale(1);
+      overflow: hidden; }
+      .page-works #container main .projects-container .project-card img {
+        width: 100%;
+        height: auto;
+        border-radius: .5rem; }
+      .page-works #container main .projects-container .project-card .project-name-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 1.5rem 2rem;
+        border-radius: 0 0 .5rem .5rem;
+        opacity: 0;
+        transform: translateY(6rem);
+        transition: all .6s ease-in-out; }
+        .page-works #container main .projects-container .project-card .project-name-wrapper .name {
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: #1d1d1d;
+          margin-bottom: .25rem; }
+        .page-works #container main .projects-container .project-card .project-name-wrapper .type {
+          font-size: .875rem;
+          font-size: 300;
+          color: #959697; }
+      .page-works #container main .projects-container .project-card:hover {
+        z-index: 9;
+        box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+        transform: translateY(-1rem); }
+        .page-works #container main .projects-container .project-card:hover .project-name-wrapper {
+          opacity: 1;
+          transform: translateY(0);
+          transition: all 0.2s ease-in-out; }
+
 /*# sourceMappingURL=styles.css.map */

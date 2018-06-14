@@ -8,7 +8,7 @@ $hasMate            = 'no';
 $mateName           = '';
 
 $projectName        = 'Assure';
-$projectType        = 'mobile app';
+$projectType        = 'app';
 $projectScope       = array('logo design', 'communication concept', 'user experience design');
 
 $hasBannerVideo     = 'no';

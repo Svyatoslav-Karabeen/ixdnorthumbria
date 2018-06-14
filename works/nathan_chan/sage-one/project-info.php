@@ -8,7 +8,7 @@ $hasMate            = 'no';
 $mateName           = '';
 
 $projectName        = 'Sage One live project';
-$projectType        = 'mobile app';
+$projectType        = 'app';
 $projectScope       = array('application design');
 
 $hasBannerVideo     = 'no';
