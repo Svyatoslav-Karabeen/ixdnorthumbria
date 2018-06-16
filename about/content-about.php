@@ -1,11 +1,14 @@
 <?php
 /**
  * ABOUT PAGE >> CONTENT
- * This is the template that displays information about our course on about page
+ *
+ * This is the actual content to display information about our course on
+ * about page
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @version 1.1
- **/
+ * @version 2.0
+ *
+ **==========================================================================**/
 
 global $pageTitle;
 
@@ -33,58 +36,62 @@ $tutorLinks = array(
 ?>
 
     <main>
-        <div class="headings">
-            <h1 class="heading-main">our course</h1>
-            <h2 class="heading-caption">how we felt our journey through Interaction Design</h2>
+        <div class="intro-container">
+            <div class="title-wrapper">
+                <h1 class="title-main">about Interaction Design course</h1>
+                <h2 class="title-caption">this is how our journey into design world began</h2>
+            </div>
         </div>
-        <div class="content">
-            <div class="section section-course">
-                <div class="section-title">
-                    about the course
-                </div>
+
+        <div class="paragraphs-wrapper">
+
+            <div class="section divider">
+                <div class="section-title">about the course</div>
                 <div class="section-content">
-                    <p>This course offers you an opportunity to study and develop the necessary professional skills and confidence to work as a sought-after interaction designer, while recognising the need for your individual growth. You will learn highly relevant and contemporary skills in web design, phone and tablets applications, experience design, game design, tangible interfaces and interactive installations.</p>
-                    <p>Our programme has a national and international reputation for producing innovative and highly creative designers who go on to make directional contributions within the international design and business arena. Through project-based briefs with international corporations such as Intel, Microsoft, Ericsson, Oranfe and Unilever, you will develop a network of contacts as well as knowledge, work-based experience and practical skills to step confidently into this dynamic world.</p>
+                    <p>Interaction Design offers the opportunity to learn industry standard skills and techniques to excel in your chosen area. During your time on the course, you will learn highly-relevant and contemporary skills in web design, phone and tablet applications, experience design, game design, tangible interfaces, interactive installations and much more. </p>
+                    <p>The programme has a national and international reputation for producing innovative and highly creative designers who go on to make a big impact within the international design and business sector. Through project-based briefs with international corporations such as Intel, Microsoft, Ericsson, Orange, and Unilever, you will develop a network of contacts as well as knowledge, work-based experience and practical skills to step confidently into this dynamic world.</p>
                 </div>
             </div>
-            <div class="section section-directions">
-                <div class="section-title">
-                    directions
-                </div>
+
+            <div class="section divider">
+                <div class="section-title">directions</div>
                 <div class="section-content">
                     <div class="content-subsection">
-                        <span class="subsection-title">App</span>
-                        <p>description about app design related modules</p>
+                        <div class="subsection-title">App</div>
+                        <p>From user researching and generating ideas, to formulating wireframes and bringing designs to life through prototypes, application design explores a full range of creative techniques. The application projects don’t just feature great visuals, they are created in a way to enhance a user’s experience, ensuring that the applications serve a purpose.</p>
                     </div>
                     <div class="content-subsection">
-                        <span class="subsection-title">Hybrid</span>
-                        <p>description about hybrid design related modules</p>
+                        <div class="subsection-title">Hybrid</div>
+                        <p>Our hybrid projects feature a wide variety of digital projects. Creating exciting projects from physical interfaces, to voice assistants and wearables. We do it all. </p>
                     </div>
                     <div class="content-subsection">
-                        <span class="subsection-title">Experiental</span>
-                        <p>description about exoeriental design related modules</p>
+                        <div class="subsection-title">Experiential</div>
+                        <p>Looking more towards physical products and user interaction, our experiential projects create a truly unique experience. Working with the latest technology such as VR (Virtual Reality) and AR (Augmented Reality), it allows us to keep on top of industry standards.</p>
                     </div>
                 </div>
             </div>
-            <div class="section section-collaborations">
-                <div class="section-title">
-                    collaborative projects with industry
-                </div>
+
+            <div class="section divider">
+                <div class="section-title">collaborative projects with industry</div>
                 <div class="section-content">
-                    <p>From leading roles in industry to internationally renowned research, our teaching team bring a wealth of experience to the course. You will be able to draw from the expertise of lecturers who are actively involved in projects that range from avatars and the digital revolution and smart environments and digital branding. Our academics also take leading roles in groups such as the Arts and Humanities Research Council, the Economic and Social Research Council and have chaired numerous conferences within the industry.</p>
-                    <p>We have extensive industry contacts across creative agencies, interactive design agencies and game design studios, many of whom have been involved in shaping the course. In addition, industry contacts act as clients for the majority of module projects, which enables you to build your network whilst you study.</p>
+                    <p>From leading roles in industry to internationally renowned research, our teaching team bring a wealth of experience to the course. We have extensive industry contacts across creative agencies, interactive design agencies and game design studios, many of whom have been involved in shaping the course. </p>
+                    <p>Throughout your time on the course, you will work on live projects with companies and agencies from a range of different sectors such as the health sector, the banking sector and many more. The live projects you work on can allow you to network and form connections with companies for when you’re ready to start your journey in the industry.</p>
+                    <p>This year’s graduating students worked with the Department for Work Pensions, UsTwo, Atom Bank, Hedgehog Lab, SageOne and others. The current second year group has worked with Guerrilla Communication and Komodo Digital.</p>
                     <div class="content-logos-wrapper">
-                        <img class="logo-item" src="" alt="">
-                        <img class="logo-item" src="" alt="">
-                        <img class="logo-item" src="" alt="">
-                        <img class="logo-item" src="" alt="">
+
+                        <?php
+
+                            $companyLogo = glob('../assets/companies/*.png');
+                            foreach ($companyLogo as $logo){
+                                echo '<img class="company-logo" src="' . $logo . '" alt="' . basename($logo, ".png") . '">';
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
-            <div class="section section-tutors">
-                <div class="section-title">
-                    tutors
-                </div>
+
+            <div class="section divider">
+                <div class="section-title">course tutors</div>
                 <div class="section-content">
                     <div class="content-tutors-wrapper">
                         <?php
@@ -99,13 +106,13 @@ $tutorLinks = array(
                     </div>
                 </div>
             </div>
-            <div class="section section-contacts">
-                <div class="section-title">
-                    contacts
-                </div>
+
+            <div class="section">
+                <div class="section-title">contacts</div>
                 <div class="section-content">
-                    <p>you can contact us in some way (email?) ....</p>
+                    <p>If you would like to get recommendations or have any questions just <a href="mailto:imdreveal@gmail.com" target="_blank">email us</a> and we will be happy to help.</p>
                 </div>
             </div>
+
         </div>
     </main>

@@ -1,11 +1,14 @@
 <?php
 /**
- * SOCIAL ICON LINKS
- * This is the template that displays social icons wherever it has been called
+ * SOCIAL ICONS
+ *
+ * This is the template to display icons for IxD social media wherever the
+ * template has been called.
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @version 1.1
- **/
+ * @version 2.0
+ *
+ **==========================================================================**/
 
 global $pageTitle;
 global $socialLinks;
@@ -13,8 +16,7 @@ global $socialLinks;
 /**==========================================================================**/
 ?>
 
-
-<div class="social-container">
+<div class="socials-wrapper">
     <ul>
     <?php
         foreach ($socialLinks as $name => $link) {
@@ -25,7 +27,7 @@ global $socialLinks;
                     $link = 'mailto:' . $link;
                 };
 
-                echo '<li><a class="social-link" href="' . $link . '" target="_blank"><img src="' . url . 'assets/img/icon-' . $name . '.svg" alt="' . $name . ' icon "></a></li>';
+                echo '<li><a class="link-social" href="' . $link . '" target="_blank"><img src="' . url . 'assets/img/icon-' . $name . '.svg" alt="' . $name . ' icon "></a></li>';
             };
         };
     ?>

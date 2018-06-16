@@ -1,59 +1,68 @@
 <?php
 /**
  * HOME PAGE
- * This is the template that collects and displays everything from the <html>
- * up to </html> on '/'
+ *
+ * This is the template to collect and display everything from the <html>
+ * up to </html> on home page (/).
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @version 1.2
- **/
+ * @version 2.0
+ *
+ **==========================================================================**/
 
-include_once ('config.php');
+include_once 'config.php';
 
 $pageTitle          = 'home';
-$pageDescription    = 'description goes here';
-$pageKeywords       = 'keywords go here';
+$pageDescription    = '';
+$pageKeywords       = '';
 
 /**==========================================================================**/
 ?>
 
 <?php
-    // include header
-    get_header();
+    // include meta tags
+    get_meta();
 
-    // include content based on the $environment set in config file
-    switch ($environment) {
-        case 'countdown':
-            include path . 'content-countdown.php';
-            break;
+    ?>
+        <div id="background"></div>
+        <div id="container">
+    <?php
 
-        case 'local':
-            include path . 'content-local.php';
-            break;
+        // include header
+        get_header();
 
-        case 'newcastle':
-            include path . 'content-newcastle.php';
-            break;
+        // include content based on the $environment set in config file
+        switch ($environment) {
+            case 'countdown':
+                include path . 'content-countdown.php';
+                break;
 
-        case 'london':
-            include path . 'content-london.php';
-            break;
+            case 'newcastle':
+                include path . 'content-newcastle.php';
+                break;
 
-        case 'past':
-            include path . 'content-past.php';
-            break;
+            case 'london':
+                include path . 'content-london.php';
+                break;
 
-        default:
-            include path . 'content-local.php';
-            break;
-    };
+            default:
+                include path . 'content-past.php';
+                break;
+        };
 
-    // include footer
-    get_footer();
+        // include footer
+        get_footer();
+
+    ?></div><?php
+
+    // include sidebar with event information
+    get_slideshow();
 
     // include sidebar with event information
     get_sidebar();
 
     // include popup with location information
     get_popup();
+
+    get_scripts();
 ?>

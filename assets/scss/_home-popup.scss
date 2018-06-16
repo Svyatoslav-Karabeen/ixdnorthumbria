@@ -1,54 +1,40 @@
-.popup-container {
+#popup-location {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -99;
+    z-index: -999;
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
     justify-content: center;
-    padding: 4rem;
+    padding: 1rem;
     width: 100%;
     height: 100%;
     background: rgba($white, .9);
     color: $primary-black;
     opacity: 0;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     .popup-body {
         margin: 1rem;
-        max-width: 50rem;
+        max-width: 60rem;
         width: 100%;
-        border-radius: .25rem;
         background: $white;
         box-shadow: 0 50px 100px rgba(50,50,93,.1),
                     0 15px 35px rgba(50,50,93,.15),
                     0 5px 15px rgba(0,0,0,.1);
-        transition: all .2s ease-in-out;
+        transition: all 0.3s ease-in-out;
         transform: translateY(200%) scaleY(.6);
 
         .popup-map {
             overflow: hidden;
-            max-width: 50rem;
-            max-height: 25rem;
-
-            #google-map,
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: .25rem .25rem 0 0;
-                filter: grayscale(50%);
-                transition: all .6s ease-in-out;
-
-                &:hover {
-                    filter: grayscale(0);
-                    transition: all 0.2s ease-in-out;
-                }
-            }
+            width: 60rem;
+            height: 30rem;
         }
 
         .popup-info-wrapper {
             display: flex;
+            align-items: center;
             flex-flow: row nowrap;
             justify-content: space-between;
             padding: 2rem;
@@ -58,54 +44,25 @@
                 display: inline-flex;
                 flex-flow: column nowrap;
                 justify-content: center;
-                padding-right: 1rem;
 
                 .caption {
                     display: flex;
                     padding-top: .25rem;
                     color: $primary-gray;
-                    font-size: .75rem;
-                }
-
-                .download {
-                    padding: 1rem;
-                    border-radius: 4rem;
-                    background-color: $primary-app;
-                    box-shadow: 0 4px 6px rgba(50,50,93,.21),
-                                0 1px 3px rgba(0,0,0,.15);
-                    color: rgba($white, .9);
-                    font-weight: 500;
                     font-size: .875rem;
-                    transition: all .6s ease-in-out;
-                    transform: scale(1);
-
-                    &:hover {
-                        background: lighten($primary-app, 5);
-                        box-shadow: 0 7px 14px rgba(50,50,93,.2),
-                                    0 3px 6px rgba(0,0,0,.2);
-                        color: $white;
-                        transition: all 0.2s ease-in-out;
-                        transform: translateY(-.25rem);
-
-                    }
-
-                    &:active {
-                        box-shadow: 0 4px 6px rgba(50,50,93,.21),
-                                    0 1px 3px rgba(0,0,0,.15);
-                        transition: all 0.2s ease-in-out;
-                        transform: scale(.98);
-                    }
                 }
 
-                &:last-child {
-                    padding-right: 0;
+                .button {
+                    background: linear-gradient(45deg, $primary-experiental, $primary-hybrid, $primary-app);
+                    background-size: 400% 400%;
+                    color: $primary-white;
+                    animation: gradient 10s ease infinite;
                 }
             }
         }
     }
 
     #popup-close {
-        padding: 1rem 2rem;
         color: rgba($primary-black, .6);
         font-weight: 700;
         opacity: 0;
@@ -115,15 +72,14 @@
 
         &:hover {
             color: $primary-black;
-            transition: all 0.2s ease-in-out;
-            transform: translateY(-.25rem);
+            transition: all 0.3s ease-in-out;
         }
     }
 
     &.popup-shown {
-        z-index: 99;
+        z-index: 999;
         opacity: 1;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         .popup-body {
             transition: all .6s ease-in-out;
@@ -140,14 +96,13 @@
     }
 }
 
+#slideshow,
 #container {
-    // filter: blur(0);
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     transform: scale(1);
 
     &.popup-active {
-        // filter: blur(5px);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         transform: scale(.96);
     }
 }

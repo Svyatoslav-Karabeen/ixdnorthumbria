@@ -1,110 +1,82 @@
-.page-about {
-    height: auto;
-    max-width: 98rem;
-    margin: 0 auto;
+.page-about main {
 
-    #container main {
-        .headings {
+    .paragraphs-wrapper {
+
+        .content-logos-wrapper {
             display: flex;
-            flex-flow: column nowrap;
-            margin: 0 2.5rem;
-            padding: 4rem;
-            background: rgba($primary-white, .5);
+            flex-flow: row wrap;
+
+            .company-logo {
+                display: inline-block;
+                width: 50%;
+                height: 50%;
+                filter: drop-shadow(0 15px 35px rgba(50,50,93,0));
+                transition: all .6s ease-in-out;
+                transform: scale(1);
+
+                &:hover {
+                    z-index: 9;
+                    filter: drop-shadow(0 15px 35px rgba(50,50,93,.15));
+                    transition: all 0.3s ease-in-out;
+                    transform: translateY(-.25rem);
+                }
+            }
         }
 
-        .content {
+        .content-tutors-wrapper {
             display: flex;
-            flex-flow: column nowrap;
-            margin: 4rem auto;
-            padding: 0 3rem;
-            max-width: 66rem;
-            width: 100%;
-            color: $primary-black;
+            flex-flow: row wrap;
 
-            .section {
+            .tutor-item {
                 display: flex;
-                align-items: flex-start;
-                flex-flow: row wrap;
-                justify-content: space-between;
-                padding-bottom: 4rem;
+                flex-flow: column nowrap;
+                margin-bottom: 1rem;
+                padding: .125rem;
+                width: 50%;
+                text-align: center;
 
-                &:not(:first-child)::before {
-                    position: relative;
-                    top: 0;
-                    padding-bottom: 2rem;
+                .tutor-photo {
+                    display: inline-block;
                     width: 100%;
                     height: auto;
-                    border-top: 1px solid rgba($primary-gray, .25);
-                    content: "";
+                    box-shadow: 0 4px 6px rgba(50,50,93,0),
+                                0 1px 3px rgba(0,0,0,0);
+                    transition: all .6s ease-in-out;
+                    transform: scale(1);
                 }
 
-                .section-title {
-                    width: 50%;
+                .tutor-name {
+                    display: inline-block;
+                    margin-top: .5rem;
+                }
+
+                .tutor-title {
+                    display: inline-block;
                     color: $primary-gray;
                     font-size: .875rem;
                 }
 
-                .section-content {
-                    width: 50%;
-                    font-size: 1rem;
-                    line-height: 1.6;
-
-                    .content-subsection {
-                        margin-bottom: 2rem;
-                    }
-
-                    .subsection-title {
-                        display: block;
-                        margin-bottom: .5rem;
-                        font-weight: 700;
-                    }
-
-                    .content-tutors-wrapper {
-                        display: flex;
-                        flex-flow: row wrap;
-
-
-                        .tutor-item {
-                            display: flex;
-                            flex-flow: column nowrap;
-                            margin-bottom: 1rem;
-                            padding: .0625rem;
-                            width: 33%;
-                            text-align: center;
-
-                            .tutor-photo {
-                                display: inline-block;
-                                width: 100%;
-                                height: auto;
-                                box-shadow: 0 4px 6px rgba(50,50,93,0),
-                                            0 1px 3px rgba(0,0,0,0);
-                                transition: all .6s ease-in-out;
-                                transform: scale(1);
-                            }
-
-                            .tutor-name {
-                                display: inline-block;
-                                margin-top: .5rem;
-                                font-size: .875rem;
-                            }
-
-                            .tutor-title {
-                                display: inline-block;
-                                color: $primary-gray;
-                                font-size: .75rem;
-                            }
-
-                            &:hover .tutor-photo {
-                                z-index: 9;
-                                box-shadow: 0 50px 100px rgba(50,50,93,.1),
-                                            0 15px 35px rgba(50,50,93,.15),
-                                            0 5px 15px rgba(0,0,0,.1);
-                                transition: all 0.2s ease-in-out;
-                                transform: translateY(-.25rem);
-                            }
-                        }
-                    }
+                &:hover .tutor-photo {
+                    z-index: 9;
+                    box-shadow: 0 50px 100px rgba(50,50,93,.1),
+                                0 15px 35px rgba(50,50,93,.15),
+                                0 5px 15px rgba(0,0,0,.1);
+                    transition: all 0.3s ease-in-out;
+                    transform: translateY(-.25rem);
                 }
+            }
+        }
+
+        .section-content a {
+            font-weight: 700;
+            color: $primary-black;
+            padding-bottom: .25rem;
+            border-bottom: 1px dotted rgba($primary-black, .5);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                padding-bottom: .125rem;
+                border-bottom: 1px dotted rgba($primary-black, 1);
             }
         }
     }

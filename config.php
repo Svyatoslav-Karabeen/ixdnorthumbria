@@ -6,7 +6,7 @@
  * next year! @see $previous_now and $environment variables.
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @since 1.2
+ * @since 1.8
  *
  **==========================================================================**/
 ?>
@@ -30,6 +30,7 @@ $socialLinks    = array(
     'twitter'      => 'https://twitter.com/ixdnorthumbria',
     'email'        => 'imdreveal@gmail.com',
 );
+$mapsKey        = 'AIzaSyCGmoE4oh79PwnNVRg_2731V81W3oG1qhw';
 
 /**
  * Functions and other essential things to simplify my life. Don't change
@@ -46,6 +47,16 @@ define('url', $_SERVER['SERVER_NAME'] == 'localhost'
         : 'https://ixdnorthumbria.co.uk/'
 );
 
+// service
+function get_meta() {
+    include path . 'meta.php';
+};
+
+function get_scripts() {
+    include path . 'scripts.php';
+};
+
+// content
 function get_header() {
     include path . 'header.php';
 };
@@ -56,6 +67,12 @@ function get_socials() {
 
 function get_footer() {
     include path . 'footer.php';
+};
+
+// additional
+function get_slideshow() {
+    global $environment;
+    include path . 'content-' . $environment . '-slideshow.php';
 };
 
 function get_sidebar() {

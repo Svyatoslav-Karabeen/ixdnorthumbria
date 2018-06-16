@@ -1,30 +1,43 @@
 <?php
 /**
- * The header for our theme
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * WORKS PAGE
+ *
+ * ...
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @version 1.1
- */
+ * @version 2.0
+ *
+ **==========================================================================**/
 
 include_once '../config.php';
 
 $pageTitle          = 'works';
-$pageDescription    = 'description';
-$pageKeywords       = 'keywords go here';
+$pageDescription    = '';
+$pageKeywords       = '';
 
 $projectInfo        = glob('*/*/project-info.php');
 
+/**==========================================================================**/
 ?>
 
-<?php get_header(); ?>
+<?php
+    // include meta tags
+    get_meta();
+
+    ?><div id="container"><?php
+
+        // include header
+        get_header();
+
+    ?>
 
 <main>
-    <div class="headings">
-        <div class="headings-wrapper">
-            <h1 class="heading-main">our works</h1>
-            <h2 class="heading-caption">show <button class="button-text" id="work-button" onclick="showWork()">all projects</button></h2>
+    <div class="intro-container">
+        <div class="title-wrapper">
+            <h1 class="title-main">our works</h1>
+            <h2 class="title-caption">show <button class="button-none button-select" id="expertise-button" onclick="showExpertise()">all projects</button></h2>
         </div>
+<!--
         <div class="work-wrapper" id="work-array">
             <ul>
                 <?php
@@ -63,10 +76,10 @@ $projectInfo        = glob('*/*/project-info.php');
                     };
                 ?>
             </ul>
-        </div>
+        </div> -->
     </div>
 
-    <div class="projects-container" id="projects-array">
+    <div class="projects-wrapper" id="projects-array">
         <?php
             foreach ($projectInfo as $file) {
                 if (file_exists($file)){
@@ -96,5 +109,12 @@ $projectInfo        = glob('*/*/project-info.php');
         ?>
     </div>
 </main>
+    <?php
 
-<?php get_footer(); ?>
+    // include footer
+    get_footer();
+
+?></div><?php
+
+get_scripts();
+?>

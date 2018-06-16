@@ -1,4 +1,0 @@
-* About section *
-
-Replace the content of this file with a short elevator pitch of your project,
-somewhere between 120 and 160 characters. To start new paragraph use <br> tag.

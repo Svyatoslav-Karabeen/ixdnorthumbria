@@ -1,28 +1,39 @@
 <?php
 /**
  * ABOUT PAGE
- * This is the template that collects and displays everything from the <html>
- * up to </html> on '/about/'
+ *
+ * This is a simple template to display static, not dynamically generated content
+ * about Interaction Design course
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @version 1.2
- **/
+ * @version 2.0
+ *
+ **==========================================================================**/
 
 include_once '../config.php';
 
 $pageTitle          = 'about';
-$pageDescription    = 'description';
-$pageKeywords       = 'keywords go here';
+$pageDescription    = '';
+$pageKeywords       = '';
 
 /**==========================================================================**/
 ?>
 
 <?php
-    // include header
-    get_header();
+    // include meta tags
+    get_meta();
 
-    include 'content-about.php';
+    ?><div id="container"><?php
 
-    // include footer
-    get_footer();
+        // include header
+        get_header();
+
+        include 'content-about.php';
+
+        // include footer
+        get_footer();
+
+    ?></div><?php
+
+    get_scripts();
 ?>

@@ -1,20 +1,23 @@
 /*  Reset, variables and general layout
 --------------------------------------------------------------- */
 @import "utilities/variables";
+@import "utilities/adaptivity";
 @import "utilities/reset";
 
 /*  Header and Footer
 --------------------------------------------------------------- */
 @import "global/header";
-@import "global/main";
+@import "global/body";
 @import "global/socials";
 @import "global/footer";
 
 /*  Pages
 --------------------------------------------------------------- */
 @import "home";
+@import "home-slideshow";
 @import "home-popup";
 @import "about";
 @import "faces";
 @import "faces-profile";
 @import "works";
+@import "works-project";

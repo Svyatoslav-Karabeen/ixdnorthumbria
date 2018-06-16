@@ -1,0 +1,113 @@
+#slideshow {
+    position: absolute;
+    top: 8rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    left: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(100% - 5rem);
+    max-height: calc(100% - 10.5rem);
+    width: 100%;
+    height: 100%;
+
+    .slideshow-body {
+        position: absolute;
+        z-index: 9;
+        width: 100%;
+        height: 100%;
+        background: $white;
+        box-shadow: 0 50px 100px rgba(50,50,93,.1),
+                    0 15px 35px rgba(50,50,93,.15),
+                    0 5px 15px rgba(0,0,0,.1);
+        transition: all .6s ease-in-out;
+        overflow: hidden;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, $primary-experiental, $primary-hybrid, $primary-app);
+            background-size: 400% 400%;
+            content: "";
+            opacity: .9;
+            animation: gradient 10s ease infinite;
+        }
+
+        .slider {
+            display: block;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+
+            li {
+                width: 100%;
+                display: none;
+                margin: 0;
+                padding: 0;
+
+                &:first-child {
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        @-webkit-keyframes gradient {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50%}
+            100% { background-position: 0% 50% }
+        }
+
+        @-moz-keyframes gradient {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #slideshow {
+        top: 6rem;
+        right: 1rem;
+        bottom: 1rem;
+        left: 1rem;
+        max-width: calc(100% - 2rem);
+        max-height: calc(100% - 7rem);
+
+        .slideshow-body .slide img {
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    #slideshow {
+        top: 6rem;
+        right: .5rem;
+        bottom: .5rem;
+        left: .5rem;
+        max-width: calc(100% - 1rem);
+        max-height: calc(100% - 6.5rem);
+    }
+}
