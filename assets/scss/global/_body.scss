@@ -2,287 +2,625 @@
     position: relative;
 }
 
-html,
+
+
+// global – containers
+// =============================================================================
+
 body {
     width: 100%;
     height: 100%;
-    background: $primary-white;
-}
 
-#container {
-    position: sticky;
-    margin: 0 auto;
-    max-width: 98rem;
-    width: 100%;
-    height: auto;
-    background: $white;
-}
-
-.intro-container {
-    margin: 1rem 2rem;
-    padding: 3rem;
-    background: rgba($primary-white, .5);
-
-    @include for-size(tablet-landscape) {
-        margin: 2rem 2.5rem;
-        padding: 5rem;
-    }
-
-    .title-wrapper {
-        display: flex;
-        flex-flow: column nowrap;
-        max-width: 60rem;
+    #container {
+        display: block;
         width: 100%;
-        height: auto;
+        height: 100%;
+        background: $primary-light-gray;
 
-        .title-main {
+        #container-inner {
+            margin: 0 auto;
+            margin-top: 4.125rem;
+            max-width: 98rem;
             width: 100%;
-            color: $primary-black;
-            letter-spacing: -.05rem;
-            font-weight: 300;
-            font-size: 2rem;
+            height: 100%;
+            background: $white;
 
-            @include for-size(tablet){
-                font-size: 3rem;
-            }
-        }
-
-        .title-caption {
-            width: 100%;
-            color: $primary-gray;
-            letter-spacing: .025rem;
-            font-weight: 500;
-            font-size: .875rem;
-            line-height: 1.6;
-
-            @include for-size(tablet){
-                font-size: 1rem;
+            @include for-size(tablet) {
+                margin-top: 5.125rem;
             }
         }
     }
 }
 
-.paragraphs-wrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 0 auto;
-    padding: 0 2rem;
-    max-width: 58rem;
-    width: 100%;
-    height: auto;
 
-    @include for-size(tablet) {
-        padding: 0 2.5rem;
-    }
 
-    .section {
-        display: flex;
-        align-items: flex-start;
-        flex-flow: column wrap;
-        justify-content: space-between;
-        margin-top: 2rem;
-        width: 100%;
+// gloabl – buttons
+// =============================================================================
 
-        @include for-size(tablet){
-            flex-flow: row wrap;
-        }
-
-        &.divider::after {
-            position: relative;
-            top: 0;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            width: 100%;
-            height: auto;
-            border-top: 1px solid rgba($primary-gray, .25);
-
-            @include for-size(tablet){
-                content: "";
-            }
-        }
-
-        .section-title {
-            margin-bottom: 2rem;
-            width: 100%;
-            font-weight: 700;
-            font-size: .875rem;
-
-            @include for-size(tablet){
-                margin-bottom: 1rem;
-                padding-right: 2rem;
-                max-width: 40%;
-                font-weight: 500;
-                font-size: 1rem;
-            }
-
-            &::after {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                margin-top: .5rem;
-                width: 100%;
-                border-top: 1px solid rgba($primary-gray, .25);
-
-                @include for-size(phone) {
-                    content: "";
-                }
-            }
-        }
-
-        .section-content {
-            width: 100%;
-            color: $primary-black;
-            letter-spacing: -.01rem;
-            font-size: 1rem;
-            line-height: 1.6;
-
-            @include for-size(tablet){
-                max-width: 60%;
-                font-size: 1.25rem;
-            }
-
-            p {
-                margin-bottom: 2rem;
-            }
-
-            .subsection-title {
-                margin-bottom: .5rem;
-                font-weight: 700;
-            }
-        }
-    }
+button {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: $primary-black;
+    cursor: pointer;
 }
 
-button,
 .button {
     display: inline-block;
     padding: .75rem 1.25rem;
     outline: none;
     border: none;
-    border-radius: 10rem;
-    background: transparent;
-    box-shadow: 0 4px 6px rgba(50,50,93,.21),
-                0 1px 3px rgba(0,0,0,.15);
-    color: lighten($primary-black, 10);
-    letter-spacing: 0.025rem;
+    border-radius: .125rem;
+    box-shadow: 0 16px 16px 0 rgba($primary-shadow,0.05),
+                0 8px 8px 0 rgba($primary-shadow,0.10),
+                0 2px 2px 0 rgba($primary-shadow,0.20);
+    color: $primary-black;
+    font-weight: 700;
     font-weight: 700;
     font-size: 1rem;
-    line-height: 1;
     cursor: pointer;
-    transition: all .6s ease-in-out;
-    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
 
-    @include for-size(phone){
-        max-width: 20rem;
-        width: max-content;
-    }
-
-    &:active {
+    &:active, &:hover, &:focus {
         outline: none;
-        box-shadow: 0 4px 6px rgba(50,50,93,.21),
-                    0 1px 3px rgba(0,0,0,.15);
-        color: $primary-black;
-        transition: all .3s ease-in-out;
-        transform: scale(.98);
-    }
-
-    &:focus {
-        outline: none;
-        box-shadow: 0 12px 18px rgba(50,50,93,.21),
-                    0 3px 10px rgba(0,0,0,.15);
-        color: $primary-black;
-        transition: all .3s ease-in-out;
-        transform: scale(.99);
     }
 
     &:hover {
-        outline: none;
-        box-shadow: 0 16px 24px rgba(50,50,93,.21),
-                    0 4px 12px rgba(0,0,0,.15);
-        color: $primary-black;
-        transition: all .3s ease-in-out;
+        box-shadow: 0 32px 32px 16px rgba($primary-shadow,0.05),
+                    0 24px 24px 8px rgba($primary-shadow,0.10),
+                    0 16px 16px 0 rgba($primary-shadow,0.20),
+                    0 8px 8px 0 rgba($primary-shadow,0.20),
+                    0 2px 2px 0 rgba($primary-shadow,0.20);
+        transition: all 0.3s ease-in-out;
         transform: translateY(-.25rem);
     }
 
-    &.button-lg {
-        padding: 1.25rem 1.5rem;
-    }
-
-    &.button-m {
-        padding: 1rem 1.25rem;
-    }
-
-    &.button-white {
-        background-color: $primary-white;
-        color: rgba($primary-black, 0.8);
-
-        &:hover {
-            background-color: $white;
-            color: $primary-black;
-        }
-    }
-
-    &.button-select {
-        padding: 0;
-        margin: 0 .25rem;
-        padding: 0 0 .25rem 0;
-        border-bottom: 1px dotted $primary-gray;
-
-        &:hover {
-            border-bottom: 1px dotted $primary-black;
-            color: $primary-black;
-            transition: all 0.3s ease-in-out;
-        }
-    }
-
     &.button-none {
-        background: none;
+        margin: 0;
+        padding: 0;
+        background: transparent;
         box-shadow: none;
+        text-transform: none;
         transform: none;
-        border-radius: 0;
     }
-    //
-    // .button-icon {
-    //     margin-left: 1.5rem;
-    //     width: 3rem;
-    //     height: 3rem;
-    //     border: 1px solid rgba($white, .6);
-    //     border-radius: 4rem;
-    //     box-shadow: 0 4px 6px rgba(50,50,93,0),
-    //                 0 1px 3px rgba(0,0,0,0);
-    //     transition: all .6s ease-in-out;
-    //     transform: scale(1);
-    //
-    //     img {
-    //         width: 1.5rem;
-    //         height: 1.5rem;
-    //         opacity: .8;
-    //         filter: invert(1);
-    //         transition: all 0.6s ease-in-out;
-    //         transform: translateY(1px);
-    //     }
-    //
-    //     &:hover {
-    //         border: 1px solid transparent;
-    //         background: $white;
-    //         box-shadow: 0 50px 100px rgba(50,50,93,.1),
-    //                     0 15px 35px rgba(50,50,93,.15),
-    //                     0 5px 15px rgba(0,0,0,.1);
-    //         transition: all 0.2s ease-in-out;
-    //         transform: translateY(-.25rem);
-    //
-    //         img {
-    //             opacity: 1;
-    //             filter: invert(0);
-    //             transition: all 0.2s ease-in-out;
-    //         }
-    //     }
-    //
-    //     &:active {
-    //         box-shadow: 0 1px 2px rgba(50,50,93,0.11),
-    //                     0 1px 3px rgba(0,0,0,0.05);
-    //         transition: all 0.2s ease-in-out;
-    //         transform: scale(.98);
-    //     }
-    // }
+
+    &.button-gradient {
+        background: linear-gradient(30deg, $primary-app, $primary-experiental, $primary-hybrid);
+        background-size: 200% 200%;
+        color: $primary-white;
+        animation: gradient 10s ease infinite;
+
+        @keyframes gradient {
+            0%{background-position:0% 0%}
+            25%{background-position:0% 100%}
+            50%{background-position:100% 100%}
+            75%{background-position:100% 0%}
+            100%{background-position:0% 0%}
+        }
+    }
+}
+
+
+
+// gloabl – links
+// =============================================================================
+
+.link {
+
+    &:active, &:hover, &:focus {
+        outline: none;
+    }
+
+    &.link-bold {
+        font-weight: 700;
+    }
+
+    &.link-transparent {
+        background: none;
+    }
+
+    &.link-gray {
+        color: $primary-gray;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $primary-black;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+
+
+// global – social icons
+// =============================================================================
+
+.contacts-wrapper {
+    display: inline-flex;
+    line-height: 1;
+
+    ul {
+        display: flex;
+        align-items: center;
+        flex-flow: row nowrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            padding: .5rem 1rem;
+
+            a {
+                display: block;
+                color: $primary-gray;
+                transition: all .3s ease-in-out;
+                transform: none !important;
+
+                i {
+                    margin: 0 !important;
+                    transform: none !important;
+                }
+
+                &:hover {
+                    color: $primary-black;
+                    transition: all .3s ease-in-out;
+                    transform: none !important;
+
+                    i {
+                        margin: 0 !important;
+                        transform: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// global – main content (general paddings)
+// =============================================================================
+
+main {
+    padding: 0 .5rem;
+
+    @include for-size(tablet) {
+        padding: 0 2rem;
+    }
+}
+
+
+
+// global – intro content (intro container)
+// =============================================================================
+
+main .intro-wrapper {
+    padding: 1.5rem;
+    border-radius: .125rem;
+    background: $primary-white;
+
+    @include for-size(tablet) {
+        padding: 2rem 3rem;
+    }
+    @include for-size(tablet-landscape) {
+        padding: 4rem 6rem;
+    }
+
+    h1 {
+        margin-bottom: .5rem;
+        color: $primary-black;
+        letter-spacing: -1px;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.278;
+
+        @include for-size(tablet) {
+            font-size: 2.5rem;
+        }
+
+        span {
+            display: none;
+
+            @include for-size(tablet-landscape) {
+                display: inline-block;
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+        color: $primary-gray;
+        font-size: .875rem;
+        line-height: 1.278;
+
+        @include for-size(tablet) {
+            font-size: 1rem;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        list-style: none;
+        font-size: .875rem;
+
+        @include for-size(tablet) {
+            font-size: 1rem;
+        }
+
+        p {
+            margin-bottom: .25rem;
+            border-bottom: 1px solid transparent;
+        }
+
+        li {
+
+            button {
+                margin-bottom: .25rem;
+                border-bottom: 1px dashed rgba($primary-gray, .2);
+                color: $primary-gray;
+                opacity: .5;
+                transition: opacity .3s ease-in-out;
+
+                span.ending-plural{ display: inline-block; }
+                span.ending-projects { display: none; }
+
+                &.active {
+                    border-bottom-color: transparent;
+                    opacity: 1;
+                    transition: opacity .3s ease-in-out;
+
+                    span.ending-plural { display: none; }
+                    span.ending-projects { display: inline-block; }
+                }
+
+                &#project-type-al span.ending-plural { display: none !important;}
+
+                &:hover {
+                    opacity: 1;
+                    transition: opacity .3s ease-in-out;
+                }
+            }
+
+            &:not(:last-child)::after {
+                display: inline-block;
+                padding: 0 .5rem;
+                color: rgba($primary-gray, .2);
+                content: ' / ';
+            }
+        }
+    }
+}
+
+
+
+// global – main text content (section wrapper)
+// =============================================================================
+main .section-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 .75rem;
+
+    @include for-size(tablet) {
+        padding: 0 3rem;
+    }
+    @include for-size(tablet-landscape) {
+        padding: 0 6rem;
+    }
+
+    .section-title {
+        display: block;
+        margin-top: 2rem;
+        width: 100%;
+        border-bottom: 1px dotted rgba($primary-gray, .2);
+        color: $primary-black;
+        letter-spacing: -.5px;
+        font-size: 1rem;
+        line-height: 1.278;
+
+        @include for-size(desktop) {
+            margin-top: 0;
+            padding-top: 2rem;
+            width: 50%;
+            border-top: 1px dotted rgba($primary-gray, .2);
+            border-bottom: none;
+        }
+
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+    }
+
+    .section-content {
+        padding: .5rem 0;
+        width: 100%;
+
+        @include for-size(desktop) {
+            padding: 2rem 0;
+            width: 50%;
+            border-top: 1px dotted rgba($primary-gray, .2);
+        }
+
+        p {
+            display: block;
+            color: $primary-gray;
+            font-size: 1rem;
+            line-height: 1.6;
+
+            @include for-size(desktop) {
+                margin-bottom: 2rem;
+                color: $primary-black;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            display: inline-block;
+            border-bottom: 1px dotted rgba($primary-gray, .5);
+            color: $primary-black;
+            font-weight: 700;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                border-color: $primary-gray;
+                color: $primary-app;
+                transition: all .3s ease-in-out;
+            }
+        }
+
+        .subsection-content {
+            margin-bottom: 1rem;
+
+            .subsection-title {
+                display: block;
+                color: $primary-black;
+                letter-spacing: -.5px;
+                font-size: 1rem;
+                line-height: 1.278;
+
+                h2,
+                h3,
+                h4 {
+                    font-weight: 900;
+                    font-size: 1rem;
+                }
+            }
+
+            p {
+                display: block;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+                color: $primary-gray;
+                font-size: 1rem;
+                line-height: 1.6;
+
+                @include for-size(desktop) {
+                    margin-bottom: 2rem;
+                    padding-left: 0;
+                    color: $primary-black;
+
+                    &::before {
+                        content: none;
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding-left: .25rem;
+                    width: .5rem;
+                    content: '›';
+
+                    @include for-size(desktop) {
+                        content: none;
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+// home/people/work pages – main content - additional links
+// =============================================================================
+
+main .links-wrapper {
+    margin-top: 2.5rem;
+    text-align: center;
+
+    @include for-size(tablet) {
+        text-align: left;
+    }
+    @include for-size(tablet-landscape) {
+        margin-top: 4rem;
+    }
+
+    a.button {
+        display: block;
+
+        @include for-size(tablet) {
+            display: inline-block;
+        }
+
+        i {
+            margin-right: .5rem;
+        }
+    }
+
+    a.link {
+        display: inline-block;
+        padding: .75rem 0;
+        white-space: nowrap;
+
+        i {
+            margin-left: .25rem;
+            transition: margin-left 0.3s ease-in-out;
+            transform: none;
+
+            &.fa-lg {
+                transform: translateY(0.0625rem);
+            }
+
+        }
+
+        &:hover {
+            transform: translateX(0.25rem);
+
+            i {
+                margin-left: .5rem;
+                transition: margin-left 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+
+
+// home/work pages – main content - work section
+// =============================================================================
+
+main .projects-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+
+    .single-project {
+        overflow: hidden;
+        margin-bottom: .5rem;
+        max-width: 100%;
+        box-shadow: 0 16px 16px 0 rgba(58, 70, 92, 0.05),
+                    0 8px 8px 0 rgba(58, 70, 92, 0.05),
+                    0 2px 2px 0 rgba(58, 70, 92, 0.1);
+        transition: all .3s ease-in-out;
+        transform: translateY(0);
+
+        @include for-size(tablet) {
+            margin-bottom: 0;
+            max-width: 50%;
+            box-shadow: none;
+        }
+        @include for-size(tablet-landscape) {
+            max-width: 33.33%;
+        }
+        @include for-size(desktop) {
+            max-width: 25%;
+        }
+
+        .project-link {
+            display: inline-block;
+            width: 100%;
+            background: $primary-light-gray;
+
+            img {
+                width: 100%;
+                height: auto;
+                transition: all .3s ease-in-out;
+
+                @include for-size(desktop) {
+                    opacity: .8;
+                    filter: grayscale(0.9);
+                }
+            }
+
+            .single-project-name-wrapper {
+                position: absolute;
+                bottom: 0;
+                padding: 0.75rem;
+                width: 100%;
+                height: auto;
+
+                @include for-size(desktop) {
+                    padding: 1rem 1rem;
+                    background: $white;
+                    opacity: 0;
+                    transition: all .3s ease-in-out;
+                    transform: translateY(5rem);
+                }
+
+                h2,
+                h3,
+                h4 {
+                    display: table;
+                    margin-bottom: .125rem;
+                    padding: .25rem .5rem;
+                    background: $white;
+                    color: $primary-black;
+                    font-weight: 700;
+                    font-size: 1.25rem;
+
+                    @include for-size(desktop) {
+                        margin-bottom: 0;
+                        padding: 0;
+                        background: transparent;
+                        font-size: 1rem;
+                    }
+                }
+
+                p,
+                span {
+                    display: inline-block;
+                    margin-bottom: 0;
+                    padding: .25rem .5rem;
+                    background: $white;
+                    color: $primary-gray;
+                    font-size: .75rem;
+
+                    @include for-size(desktop) {
+                        padding: 0;
+                        background: transparent;
+                        font-size: 0.675rem;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 64px 64px 0 rgba(58, 70, 92, 0.20),
+                        0 32px 32px 0 rgba(58, 70, 92, 0.10),
+                        0 16px 16px 0 rgba(58, 70, 92, 0.05),
+                        0 8px 8px 0 rgba(58, 70, 92, 0.10),
+                        0 2px 2px 0 rgba(58, 70, 92, 0.2);
+            transition: all .3s ease-in-out;
+            transform: translateY(-.5rem);
+
+            .project-link {
+
+                img {
+                    opacity: 1;
+                    filter: grayscale(0);
+                    transition: all .3s ease-in-out;
+                }
+
+                .single-project-name-wrapper {
+                    opacity: 1;
+                    transition: all .3s ease-in-out;
+                    transition-delay: .15s;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
 }

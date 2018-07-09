@@ -1,1 +1,0 @@
-The brief informed us that we had to create a new system to manage a businesses payroll for its employees. We wanted to create a sleek and clean looking application for the business and employees to use.

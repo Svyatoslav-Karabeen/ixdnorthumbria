@@ -1,4 +1,0 @@
-* About section *
-
-
-<br> A desktop and mobile phone application which would allow employers and employees to communicate easily about the workplace </br>

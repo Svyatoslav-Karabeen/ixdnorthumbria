@@ -1,6 +1,0 @@
-* Final result section *
-
-Replace the content of this file with the description of your final result and
-explanation how it solves the problem. To start new paragraph use <br> tag.
-
-<br> result- 2:1 </br>

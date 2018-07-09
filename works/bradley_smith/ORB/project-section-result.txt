@@ -1,3 +1,0 @@
-Overall the out come of Orb was how I pictured it to work even though I didn't get the technology to work how I expected I adapted my idea and made it available to test. By using Arduino and Processing I was able to get Orb to work as a fully working prototype, which allowed me to do detailed user testing giving me very beneficial feedback. 
-<br>
-Orb solves the problems with communication issues , feeling socially withdrawn and memory loss as users can view, listen and get drawn in by the use of colour. Which helps focus and make the memories stronger allowing them to open up in conversation.

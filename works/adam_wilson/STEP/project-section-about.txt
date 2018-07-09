@@ -1,6 +1,0 @@
-* About section *
-
-Replace the content of this file with a short elevator pitch of your project,
-somewhere between 120 and 160 characters. To start new paragraph use <br> tag.
-
-<br> A shoe for the visually impaired, which vibrates to warn the wearer, when an object is near to them. The closer the shoe gets, the harder the vibration is. </br>

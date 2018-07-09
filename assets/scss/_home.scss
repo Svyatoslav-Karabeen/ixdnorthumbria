@@ -1,122 +1,362 @@
 .page-home {
-    position: sticky;
-
-    #background {
-        position: fixed;
-        right:0;
-        left:0;
-        z-index: -9;
-        margin-right:auto;
-        margin-left:auto;
-        max-width: 98rem;
-        width: 100%;
-        height: 100%;
-        background: $white;
-    }
-
-    #container {
-        z-index: 99;
-        overflow: hidden;
-        height: 100%;
-        background: transparent;
-    }
-
-    main {
+    #hero-container {
         display: flex;
+        align-items: center;
         flex-flow: column nowrap;
         justify-content: center;
+        padding: 2rem .75rem;
+        min-height: calc(100vh - 8rem);
         width: 100%;
         height: 100%;
 
-        .intro-container {
-            z-index: 99;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
+        @include for-size(tablet) {
+            align-items: flex-start;
             padding: 2rem 0;
-            background: transparent;
-            margin: 0;
+            min-height: calc(100vh - 12rem);
+        }
+        @include for-size(desktop) {
+            align-items: center;
+            flex-flow: row-reverse nowrap;
+        }
 
-            .title-wrapper {
-                padding: 2rem 1rem 2rem 6rem;
-                text-shadow: 0 20px 80px rgba(50,50,93,.21),
-                             0 4px 20px rgba(50,50,93,.1),
-                             0 1px 5px rgba(0,0,0,.15);
+        .image-container {
+            display: inline-block;
 
-                .title-main {
-                    margin-bottom: 2rem;
-                    color: $white;
-                    font-weight: 700;
-                    font-size: 4rem;
-                    line-height: 1;
-                }
+            @include for-size(tablet) {
+                padding: 0 3rem;
+                width: 100%;
 
-                .title-caption {
-                    max-width: 40rem;
-                    color: $primary-white;
-                    font-size: 1.25rem;
-                }
+            }
+            @include for-size(desktop) {
+                padding-right: 6rem;
+                max-width: 50%;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
             }
         }
 
-        .info-buttons-wrapper {
-            padding: 2rem 1rem 2rem 5.5rem;
-
-            .socials-wrapper {
-                padding-left: 1rem;
-
-                img {
-                    filter: invert(1);
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 1366px) {
-
-    .page-home main {
-        .intro-container {
-            margin-top: -10rem;
-
-            .title-wrapper {
-                .title-main { font-size: 3rem; }
-                .title-caption { font-size: 1rem; }
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .page-home main {
-
-        .intro-container {
-            margin-top: 2rem;
-        }
-
-        .intro-container .title-wrapper {
-            .title-main { font-size: 2.5rem; }
-            .title-caption { font-size: 1rem; }
-        }
-
-        .info-buttons-wrapper {
+        .hero-container {
             display: flex;
-            flex-flow: column nowrap;
-            margin-top: 4rem;
+            flex-flow: column wrap;
+            width: 100%;
+            height: auto;
 
-            button { padding: .875 1.25rem; }
+            @include for-size(tablet) {
+                padding-right: 3rem;
+                padding-left: 3rem;
+            }
+            @include for-size(tablet-landscape) {
+                padding-left: 6rem;
+            }
 
-            .socials-wrapper { padding: 1rem 0 0 0; }
+            .text-wrapper{
+                display: flex;
+                flex-flow: column wrap;
+                width: 100%;
+
+                h1 {
+                    margin-bottom: 1rem;
+                    color: $primary-black;
+                    letter-spacing: -1px;
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    line-height: 1.278;
+
+                    @include for-size(tablet-landscape) {
+                        margin-bottom: 2rem;
+                        font-size: 4rem;
+                    }
+                }
+
+                p {
+                    display: inline-flex;
+                    margin-bottom: 0;
+
+                    @include for-size(tablet) {
+                        max-width: 75%;
+                    }
+                    @include for-size(tablet-landscape) {
+                        max-width: 50%;
+                    }
+                    @include for-size(desktop) {
+                        max-width: 100%;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            .links-wrapper {
+
+                .button {
+                    padding: .75rem 1.5rem;
+                }
+
+                .contacts-wrapper {
+                    margin-top: 1rem;
+
+                    @include for-size(tablet) {
+                        margin-top: 0;
+                        margin-left: 2rem;
+                    }
+                }
+            }
         }
     }
-}
 
+    #work-container {
+        margin: 0 -.5rem;
+        padding: 2rem 0 1.5rem;
+        background: $primary-white;
 
-@media only screen and (max-width: 640px) {
-    .page-home main {
-        justify-content: flex-start;
+        @include for-size(tablet) {
+            margin: 0;
+            padding: 3rem 0 2rem;
+        }
+        @include for-size(tablet-landscape) {
+            padding: 4rem 0 2rem;
+        }
 
-        .intro-container .title-wrapper { padding: 2rem;  }
-        .info-buttons-wrapper { margin: 0; padding: 2rem; }
+        .hero-container {
+            display: flex;
+            flex-flow: column wrap;
+            margin-bottom: 2rem;
+            width: 100%;
+            height: auto;
+
+            @include for-size(phone) {
+                margin-bottom: 1rem;
+                padding: 0 1.25rem;
+            }
+            @include for-size(tablet) {
+                padding-right: 3rem;
+                padding-left: 3rem;
+            }
+            @include for-size(tablet-landscape) {
+                padding-left: 6rem;
+            }
+
+            .text-wrapper {
+
+                h3 {
+                    color: $primary-black;
+                    letter-spacing: -.5px;
+                    font-weight: 700;
+                    font-size: 1.75rem;
+                    line-height: 1.278;
+
+                    @include for-size(tablet-landscape) {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    flex-flow: row wrap;
+                    margin: 0;
+                    padding: 0;
+                    width: auto;
+                    list-style: none;
+                    font-size: .875rem;
+
+                    @include for-size(tablet) {
+                        font-size: 1rem;
+                    }
+
+                    p {
+                        margin-bottom: .25rem;
+                        border-bottom: 1px solid transparent;
+                    }
+
+                    li {
+
+                        button {
+                            margin-bottom: .25rem;
+                            border-bottom: 1px dashed rgba($primary-gray, .2);
+                            color: $primary-gray;
+                            opacity: .5;
+                            transition: opacity .3s ease-in-out;
+
+                            span.ending-plural{ display: inline-block; }
+                            span.ending-projects { display: none; }
+
+                            &.active {
+                                border-bottom-color: transparent;
+                                opacity: 1;
+                                transition: opacity .3s ease-in-out;
+
+                                span.ending-plural { display: none; }
+                                span.ending-projects { display: inline-block; }
+                            }
+
+                            &#project-type-al span.ending-plural { display: none !important;}
+
+                            &:hover {
+                                opacity: 1;
+                                transition: opacity .3s ease-in-out;
+                            }
+                        }
+
+                        &:not(:last-child)::after {
+                            display: inline-block;
+                            padding: 0 .5rem;
+                            color: rgba($primary-gray, .2);
+                            content: ' / ';
+                        }
+                    }
+                }
+            }
+        }
+
+        .projects-container {
+
+            .projects-wrapper {
+                display: flex;
+                flex-flow: row wrap;
+                padding: 0 .5rem;
+                width: 100%;
+
+                @include for-size(tablet) {
+                    padding: 0 2rem;
+                }
+            }
+
+            .links-wrapper {
+                margin-top: 1rem;
+                text-align: center;
+
+                @include for-size(tablet) {
+                    margin-top: 2rem;
+                    padding: 0 3rem;
+                    text-align: left;
+                }
+                @include for-size(tablet-landscape) {
+                    padding: 0 6rem;
+                }
+            }
+        }
+    }
+
+    #hire-container {
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        justify-content: center;
+        padding: 4rem .75rem;
+        width: 100%;
+        height: 100%;
+
+        @include for-size(tablet) {
+            align-items: flex-start;
+            padding: 8rem 0;
+            min-height: calc(100vh - 12rem);
+        }
+        @include for-size(desktop) {
+            align-items: center;
+            flex-flow: row-reverse nowrap;
+            padding: 10rem 0;
+        }
+
+        .image-container {
+            display: inline-block;
+
+            @include for-size(tablet) {
+                padding: 0 3rem;
+                width: 100%;
+
+            }
+            @include for-size(desktop) {
+                padding-right: 6rem;
+                max-width: 50%;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .hero-container {
+            display: flex;
+            flex-flow: column wrap;
+            width: 100%;
+            height: auto;
+
+            @include for-size(tablet) {
+                padding-right: 3rem;
+                padding-left: 3rem;
+            }
+            @include for-size(tablet-landscape) {
+                padding-left: 6rem;
+            }
+
+            .text-wrapper {
+                display: flex;
+                flex-flow: column wrap;
+                width: 100%;
+
+                h2 {
+                    margin-bottom: 1rem;
+                    color: $primary-black;
+                    letter-spacing: -.5px;
+                    font-weight: 700;
+                    font-size: 1.75rem;
+                    line-height: 1.278;
+
+                    @include for-size(tablet-landscape) {
+                        margin-bottom: 2rem;
+                        font-size: 2.5rem;
+                    }
+                }
+
+                p {
+                    display: inline-flex;
+                    margin-bottom: 0;
+
+                    @include for-size(tablet) {
+                        max-width: 75%;
+                    }
+                    @include for-size(tablet-landscape) {
+                        max-width: 50%;
+                    }
+                    @include for-size(desktop) {
+                        max-width: 100%;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            .links-wrapper {
+
+                .button {
+                    padding: .75rem 1.5rem;
+                }
+
+                .link {
+                    margin-top: 1rem;
+
+                    @include for-size(tablet) {
+                        margin-left: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.environment-past {
+        #work-container {
+            margin-bottom: 4rem;
+
+            @include for-size(tablet) {
+                margin-bottom: 8rem;
+            }
+        }
     }
 }

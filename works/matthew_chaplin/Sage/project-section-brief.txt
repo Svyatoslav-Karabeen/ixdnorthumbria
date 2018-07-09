@@ -1,3 +1,0 @@
-Introduce a concept for the next generation of Sage One employee management and payroll software. Identify the key user needs, based on the given scenario, consider a number of features and solutions, then determine which are the most desirable to users.
-<br>
-The solution should be fresh thinking and get the most from the latest technology and combine multiple features into a central, easy to use service. It should work for both an employer and employee perspective. The solution could be an app, website, a physical computing solution or any of these combined.

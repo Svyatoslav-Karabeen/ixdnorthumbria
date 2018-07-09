@@ -1,0 +1,18 @@
+.page-work {
+
+    #intro-container {
+        padding-top: 1rem;
+
+        @include for-size(tablet-landscape) {
+            padding-top: 2rem;
+        }
+    }
+
+    #projects-container {
+        padding: 1rem 0;
+
+        @include for-size(tablet-landscape) {
+            padding: 4rem 3rem;
+        }
+    }
+}

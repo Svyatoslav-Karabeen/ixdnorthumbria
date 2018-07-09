@@ -1,35 +1,52 @@
 header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
     display: flex;
     align-items: center;
     flex-flow: row wrap;
     justify-content: space-between;
+    max-width: 98rem;
     width: 100%;
     height: auto;
-    font-weight: 700;
+    background: $white;
+    box-shadow: none;
     line-height: 1;
+    transition: all 0.3s ease-in-out;
+    transition-delay: .3s;
+
+    &.on-scroll,
+    &.menu-shown {
+        box-shadow: 0 16px 16px 0 rgba($primary-shadow,0.05),
+                    0 8px 8px 0 rgba($primary-shadow,0.10),
+                    0 2px 2px 0 rgba($primary-shadow,0.20);
+        transition: all 0.3s ease-in-out;
+    }
 
     .logo-wrapper {
         display: inline-block;
-        margin-left: .5rem;
-        padding: 1rem;
+        margin-left: .75rem;
+        padding: .5rem;
 
         @include for-size(tablet) {
             margin-left: 1rem;
+            padding: 1rem;
         }
         @include for-size(tablet-landscape) {
-            padding: 2rem 2.5rem;
+            padding: 1rem 4rem;
         }
 
-        .link {
-            display: block;
+        #nav-logo {
+            display: inline-flex;
 
             svg {
+                padding: 0;
                 width: auto;
                 height: 3rem;
 
                 @include for-size(tablet-landscape){
                     padding: .125rem;
-                    height: 4rem;
+                    height: 3.25rem;
                 }
 
                 #app, #experiental, #hybrid {
@@ -37,56 +54,57 @@ header {
                 }
 
                 &:hover #app {
-                    transition: all 0.2s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                     transform: translate(-1px,1px);
                 }
 
                 &:hover #experiental {
-                    transition: all 0.2s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                     transform: translate(1px,1px);
                 }
 
                 &:hover #hybrid {
-                    transition: all 0.2s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                     transform: translate(0,-1px);
                 }
             }
         }
 
-        .dates {
-            position: absolute;
+        #nav-dates {
             display: none;
-            margin-top: -.5rem;
-            margin-left: 3rem;
-            width: 100%;
-            color: $primary-gray;
-            letter-spacing: -0.01rem;
-            font-size: .75rem;
 
             @include for-size(tablet) {
+                position: absolute;
                 display: inline-block;
-            }
-            @include for-size(tablet-landscape) {
-                margin-left: 4rem;
+                margin-top: -.5rem;
+                margin-left: 3rem;
+                width: 100%;
+                color: rgba($primary-gray, .5);
+                letter-spacing: -0.01rem;
+                font-size: .625rem;
             }
         }
     }
 
-    #nav-burger {
+    .burger-wrapper {
         display: inline-flex;
-        padding: 2rem;
+        margin-right: .5rem;
+        padding: .75rem;
 
+        @include for-size(tablet) {
+            margin-right: 1rem;
+            padding: 1rem;
+        }
         @include for-size(tablet-landscape) {
             display: none;
         }
 
-        .burger-icon {
+        #nav-burger {
             position: relative;
-            width: 1.75rem;
-            height: 1.25rem;
+            width: 1.5rem;
+            height: 1rem;
             cursor: pointer;
             transition: all .6s ease-in-out;
-            transform: rotate(0deg);
 
             span {
                 position: absolute;
@@ -101,83 +119,110 @@ header {
 
                 &:nth-child(1) {
                     top: 0;
+                    transition-delay: .1s;
                 }
 
                 &:nth-child(2),
                 &:nth-child(3) {
                     top: 45%;
+
                 }
 
                 &:nth-child(4) {
                     bottom: 0;
+                    transition-delay: .1s;
                 }
             }
+        }
 
-            &.open span {
-                color: $primary-black;
+        &.shown #nav-burger span {
+            color: $primary-black;
+            transition: all .3s ease-in-out;
 
-                &:nth-child(1) {
-                    top: 45%;
-                    left: 50%;
-                    width: 0%;
-                }
+            &:nth-child(1) {
+                top: 45%;
+                opacity: 0;
+            }
 
-                &:nth-child(2) {
-                    transform: rotate(45deg);
-                }
+            &:nth-child(2) {
+                transition-delay: .1s;
+                transform: rotate(45deg);
+            }
 
-                &:nth-child(3) {
-                    transform: rotate(-45deg);
-                }
+            &:nth-child(3) {
+                transition-delay: .1s;
+                transform: rotate(-45deg);
+            }
 
-                &:nth-child(4) {
-                    top: 45%;
-                    left: 50%;
-                    width: 0%;
-                }
+            &:nth-child(4) {
+                bottom: 45%;
+                opacity: 0;
             }
         }
     }
 
-    .menu-wrapper {
+    .navigation-wrapper {
         position: fixed;
-        top: 5rem;
-        z-index: -99;
-        display: inline-block;
-        padding: 1rem 2rem;
+        top: 4rem;
+        z-index: 999;
+        z-index: 999;
+        display: block;
+        padding: 1rem 1.25rem;
         width: 100%;
+        height: auto;
+        border-top: 1px solid $primary-light-gray;
         background-color: $primary-white;
-        box-shadow: 0 10px 25px rgba(50,50,93,.15),
-                    0 5px 15px rgba(0,0,0,.1);
         letter-spacing: .025rem;
         opacity: 0;
         transition: all .3s ease-in-out;
-        transform: translateX(100%) scaleY(.5);
+        transition-delay: .1s;
+        transform: scaleY(0);
+        transform-origin: top center;
 
+        @include for-size(tablet) {
+            top: 5rem;
+            padding: 1rem 2rem;
+        }
         @include for-size(tablet-landscape) {
             position: relative;
             top: 0;
-            z-index: 99;
-            padding: 2rem 2.5rem;
+            padding: .5rem 4rem;
             width: auto;
+            border: none;
             background: transparent;
             box-shadow: none;
             opacity: 1;
             transform: none;
         }
 
-        &.open {
+        &::after {
+            position: absolute;
+            top: 100%;
+            left: 0;
             z-index: 999;
+            width: 100%;
+            height: 100vh;
+            background: rgba($primary-shadow, .50);
+            content: '';
+
+            @include for-size(tablet-landscape) {
+                display: none;
+            }
+        }
+
+        &.shown {
+            box-shadow: 0 16px 16px 0 rgba($primary-shadow,0.05),
+                        0 8px 8px 0 rgba($primary-shadow,0.10),
+                        0 2px 2px 0 rgba($primary-shadow,0.20);
             opacity: 1;
-            transform: translateX(0) scaleY(1);
+            transition: all .3s ease-in-out;
+            transition-delay: .1s;
+            transform: scaleY(1);
         }
 
         #nav-global {
-            padding-bottom: .5rem;
-
             @include for-size(tablet-landscape) {
                 display: inline-flex;
-                padding: 0;
             }
 
             ul {
@@ -193,14 +238,14 @@ header {
 
                 a {
                     display: block;
-                    padding: .5rem 0;
+                    padding: .75rem 0;
                     color: rgba($primary-black, .6);
+                    font-weight: 700;
                     transition: all 0.3s ease-in-out;
 
                     @include for-size(tablet-landscape) {
                         margin: .5rem 0;
                         padding: 1rem;
-                        color: $primary-gray;
                     }
 
                     &.current {
@@ -221,83 +266,88 @@ header {
             }
 
             button {
-                padding: .5rem 0;
-                color: $primary-gray;
-                font-weight: 400;
+                margin: .5rem 0;
+                padding: .75rem 0;
+                color: rgba($primary-gray, .6);
+                font-weight: 500;
                 font-size: .75rem;
                 transition: all .3s ease-in-out;
 
                 @include for-size(tablet-landscape) {
                     padding: 1rem;
+                    color: rgba($primary-black, .6);
                     font-weight: 700;
                     font-size: 1rem;
+                }
 
-                    &::after {
-                        display: none;
-                    }
-
-                    &:hover,
-                    &.active {
-                        color: $primary-black;
-                        transition: all 0.3s ease-in-out;
-                    }
+                &:hover,
+                &.active {
+                    color: $primary-black;
+                    transition: all 0.3s ease-in-out;
                 }
 
                 &::after {
                     position: absolute;
                     top: 50%;
                     overflow: hidden;
-                    margin: 0 .5rem;
-                    width: 1000%;
-                    height: 100%;
+                    margin: 0 1rem;
+                    width: calc(100vw - 100% - 3rem);
+                    height: 1px;
                     border-top: 1px solid rgba($primary-gray, .25);
                     content: "";
+
+                    @include for-size(tablet-landscape) {
+                        display: none;
+                    }
                 }
             }
 
             .dropdown-body {
                 display: flex;
-                padding-top: .5rem;
                 transition: all 0.3s ease-in-out;
 
                 @include for-size(tablet-landscape) {
                     position: absolute;
                     top: 100%;
-                    right: 10%;
-                    z-index: 999;
-                    display: none;
+                    left: 10%;
+                    z-index: 9999;
+                    display: flex;
+                    visibility: hidden;
                     flex-flow: column nowrap;
-                    padding-bottom: .5rem;
+                    padding: .5rem 0;
                     background: $white;
-                    box-shadow: 0 50px 100px rgba(50,50,93,.1),
-                                0 15px 35px rgba(50,50,93,.15),
-                                0 5px 15px rgba(0,0,0,.1);
+                    box-shadow: none;
+                    box-shadow: 0 64px 64px 0 rgba($primary-shadow,0.05),
+                                0 32px 32px 0 rgba($primary-shadow,0.10),
+                                0 16px 16px 0 rgba($primary-shadow,0.20),
+                                0 8px 8px 0 rgba($primary-shadow,0.20),
+                                0 2px 2px 0 rgba($primary-shadow,0.20);
                     opacity: 0;
-                    transform: scaleY(0.8) translateY(-3rem);
+                    transition: all 0.3s ease-in-out;
+                    transition-delay: .3s;
+                    transform: rotateX(-15deg) skewX(-1deg);
+                    transform-origin: 50% 0px;
 
-
-                    &.open {
-                        display: flex;
+                    &.shown {
+                        visibility: visible;
                         opacity: 1;
                         transition: all 0.3s ease-in-out;
-                        transform: scaleY(1) translateY(0);
-                    }
-                }
+                        transform: rotateX(0) skewX(0);
+                        transform-origin: 50% 0px;
 
-                .dropdown-arrow {
-                    position: absolute;
-                    top: -.4rem;
-                    left: calc(50% - .4rem);
-                    display: none;
-                    width: .8rem;
-                    height: .8rem;
-                    border-radius: .125rem 0 0 0;
-                    background: #ffffff;
-                    box-shadow: -3px -3px 5px rgba(82, 95, 127, 0.04);
-                    transform: rotate(45deg);
-
-                    @include for-size(tablet-landscape) {
-                        display: block;
+                        .dropdown-arrow {
+                            position: absolute;
+                            top: -.4rem;
+                            left: calc(50% - .4rem);
+                            display: block;
+                            width: .8rem;
+                            height: .8rem;
+                            border-radius: .125rem 0 0 0;
+                            background: $white;
+                            box-shadow: -2px -2px 4px rgba($primary-shadow, 0.05);
+                            transition: all 0.3s ease-in-out;
+                            transform: rotate(45deg);
+                        }
                     }
                 }
 
@@ -306,17 +356,21 @@ header {
                     flex-flow: column nowrap;
                     margin: 0;
                     padding: 0;
+                    width: 100%;
                     list-style-type: none;
 
                     a {
                         display: block;
-                        padding: .5rem 0;
+                        padding: .75rem 0;
+                        width: 100%;
+                        background: transparent;
                         color: rgba($primary-black, .6);
+                        font-weight: 700;
                         transition: all 0.3s ease-in-out;
 
                         @include for-size(tablet-landscape) {
                             padding: .875rem 4rem .875rem 1.5rem;
-                            color: $primary-gray;
+                            color: rgba($primary-black, .6);
                         }
 
                         &.current {
@@ -328,22 +382,12 @@ header {
                             transition: all 0.3s ease-in-out;
 
                             @include for-size(tablet-landscape) {
-                                background: rgba($primary-white, .5);
-
+                                background: $primary-white;
                             }
                         }
                     }
                 }
             }
         }
-    }
-
-    @media only screen and (max-width: 1366px) {
-    }
-
-    @media only screen and (max-width: 768px) {
-    }
-
-    @media only screen and (max-width: 640px) {
     }
 }

@@ -1,5 +1,0 @@
-The primary goal of this concept, is not to develop tools for normal daily tasks, but rather to offer therapeutic expression through movement and connectivity.
-<br>
-Patients receiving virtual reality therapy navigate through digitally created environments and complete specially designed tasks often tailored to treat a specific ailment.
-<br>
-Virtual reality has been used for decades as a tool for therapists to administer virtual reality exposure therapy in a safe and controlled manner. Due to cost and technology limitations, it has not been widely available, to date. This is where my concept grew from, to create an accessible and stimulating DIY CAVE experience.

@@ -1,5 +1,0 @@
-Overall both me and Nathan were very pleased with the outcome of Lumo, as we learnt a variety of information that we both had never looked into before. It was very interesting to learn about the different type of psoriasis as well as the effects it has on people. 
-<br>
-The biggest result for both of us was to get a working prototype which we adapted multiple times to suit the user's needs, then finally taking it into the hospital to gain feedback from dermatologists and nurses.
-<br>
-The way that Lumo solves mild to mid cases of psoriasis is done by allowing users to use the treatment in the comfort of their own homes as this was one of the biggest boundaries that we faced, due to people not feeling comfortable with their skin.

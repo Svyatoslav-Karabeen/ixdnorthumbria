@@ -4,20 +4,18 @@
 @import "utilities/adaptivity";
 @import "utilities/reset";
 
-/*  Header and Footer
+/*  Global elements
 --------------------------------------------------------------- */
 @import "global/header";
 @import "global/body";
-@import "global/socials";
 @import "global/footer";
 
 /*  Pages
 --------------------------------------------------------------- */
 @import "home";
-@import "home-slideshow";
-@import "home-popup";
+// @import "home-popup";
+@import "work";
+// @import "works-project";
+@import "people";
+@import "people-profile";
 @import "about";
-@import "faces";
-@import "faces-profile";
-@import "works";
-@import "works-project";

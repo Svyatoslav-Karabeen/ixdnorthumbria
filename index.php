@@ -2,15 +2,18 @@
 /**
  * HOME PAGE
  *
- * This is the template to collect and display everything from the <html>
+ * This is the template to collect all parts and display everything from the <html>
  * up to </html> on home page (/).
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @version 2.0
+ * @version 3.0
+ * @since 1.0
  *
  **==========================================================================**/
 
-include_once 'config.php';
+include_once 'global-config.php';
+
+global $debugging;
 
 $pageTitle          = 'home';
 $pageDescription    = '';
@@ -20,49 +23,64 @@ $pageKeywords       = '';
 ?>
 
 <?php
+
     // include meta tags
     get_meta();
 
     ?>
-        <div id="background"></div>
         <div id="container">
+            <div id="container-inner">
+
+                <?php
+
+                // include header
+                get_header();
+
+                // include content based on the environmentType set in
+                // global-config.php file
+                $content = 'index-content-' . environmentType . '.php';
+
+                if (file_exists($content)) {
+
+                    include $content;
+
+                } else {
+
+                    if ($debugging == 'on') {
+                        echo '<pre>ooops! looks like someone messed up with environmentType</pre>';
+                        echo '<pre>file ' . $content . ' does not exist</pre>';
+                    }
+
+                }
+
+                // include footer
+                get_footer();
+
+                ?>
+
+            </div>
+        </div>
+
     <?php
+    /*
+    // include popup based on the environmentType set in global-config.php file
+    $popup = 'index-popup-' . environmentType . '.php';
 
-        // include header
-        get_header();
+    if (file_exists($popup)) {
 
-        // include content based on the $environment set in config file
-        switch ($environment) {
-            case 'countdown':
-                include path . 'content-countdown.php';
-                break;
+        include $popup;
 
-            case 'newcastle':
-                include path . 'content-newcastle.php';
-                break;
+    } else {
 
-            case 'london':
-                include path . 'content-london.php';
-                break;
+        if ($debugging == 'on') {
+            echo '<pre>ooops! looks like someone messed up with environmentType</pre>';
+            echo '<pre>file ' . $popup . ' does not exist</pre>';
+        }
 
-            default:
-                include path . 'content-past.php';
-                break;
-        };
+    }
+    */
 
-        // include footer
-        get_footer();
-
-    ?></div><?php
-
-    // include sidebar with event information
-    get_slideshow();
-
-    // include sidebar with event information
-    get_sidebar();
-
-    // include popup with location information
-    get_popup();
-
+    // include scripts
     get_scripts();
+
 ?>

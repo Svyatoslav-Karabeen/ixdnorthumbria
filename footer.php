@@ -5,23 +5,23 @@
  * This is the template to display all of the <footer> section
  *
  * @author Svyatoslav Polishchuk (year 2018)
- * @version 2.0
+ * @version 3.0
+ * @since 1.0
  *
  **==========================================================================**/
 
 global $pageTitle;
 
-$navPages = array('home', 'about', 'faces', 'works');
+$navPages = array('work', 'people', 'about');
 
 /**==========================================================================**/
 ?>
 
-<?php if ($pageTitle != 'home'){ ?>
 <footer>
-    <div class="foolter-container">
+    <div class="navigation-wrapper">
 
         <div class="logo-wrapper">
-            <a class="link" href="<?php echo url ?>">
+            <a id="footer-logo" class="link link-img" href="<?php echo absolutURL ?>">
     			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     				 viewBox="0 0 104 40" style="enable-background:new 0 0 104 40;" xml:space="preserve">
     				<style type="text/css">
@@ -113,35 +113,49 @@ $navPages = array('home', 'about', 'faces', 'works');
     		</a>
         </div>
 
-        <div class="footer-nav">
-            <div id="nav-footer">
-                <span>navigation</span>
+        <div class="links-wrapper">
+            <div id="footer-nav">
                 <ul>
-                    <li><a class="nav-link" href="<?php echo url ?>">home</a></li>
-                    <li><a class="nav-link" href="<?php echo url . 'about' ?>">about</a></li>
-                    <li><a class="nav-link" href="<?php echo url . 'faces' ?>">faces</a></li>
-                    <li><a class="nav-link" href="<?php echo url . 'works' ?>">works</a></li>
-                </ul>
+                    <li><a class="link nav-link footer-link" href="<?php echo absolutURL ?>">home</a></li>
+        	        <?php
+        	            foreach ($navPages as $page) {
+                            echo '<li><a class="link nav-link footer-link" href="' . absolutURL . $page . '">' . $page . '</a></li>';
+        	            };
+        	        ?>
+    	        </ul>
+    	    </div>
+
+            <div id="footer-divider">
+                <svg height="6" width="6">
+                    <circle cx="3" cy="3" r="3" fill="#F5F7F9" />
+                </svg>
             </div>
 
-            <div id="nav-years-footer">
-                <span>previous years</span>
-                <ul>
-                    <li><a class="year-link" href="<?php echo url . '2017' ?>">2017</a></li>
-                    <li><a class="year-link" href="<?php echo url . '2016' ?>">2016</a></li>
-                    <li><a class="year-link" href="<?php echo url . '2015' ?>">2015</a></li>
-                    <li><a class="year-link" href="<?php echo url . '2014' ?>">2014</a></li>
-                </ul>
+            <div id="footer-years">
+
+                <?php
+					// insert previous years links
+					insert_previous_years();
+				?>
+
             </div>
         </div>
 
-        <?php get_socials(); ?>
+        <?php
+            // inser social icons in large size (instead of 2x default size)
+            insert_ixd_socials();
+        ?>
 
     </div>
 
-    <div id="copyright">
-        <div class="link">crafted by <a href="https://karabeen.com/?ref=ixd-footer" target="_blank">Svyatoslav Polishchuk</a></div>
-        <div class="dots">•••</div>
+    <div class="copyright-wrapper" >
+        <a class="link link-text" href="https://karabeen.com/?ref=ixd-footer" target="_blank">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="24px"
+            	 viewBox="0 0 18 24" style="enable-background:new 0 0 18 24;" xml:space="preserve">
+                 <path id="k-logo" d="M0,0h5.2v17.3L0,22.5V0z M10.2,12.3l-3.4,3.4l5.6,8.3H18L10.2,12.3z M11.7,10.8L15,7.5l-0.7,0h-4
+            	                      C11.2,8.3,11.7,9.5,11.7,10.8C11.7,10.8,11.7,10.8,11.7,10.8z"/>
+            </svg>
+            <div class="signature-wrapper">proudly designed and built by <div class="name">Svyatoslav Polishchuk</div></div>
+        </a>
     </div>
 </footer>
-<?php }; ?>

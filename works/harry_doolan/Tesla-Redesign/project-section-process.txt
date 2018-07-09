@@ -1,1 +1,0 @@
-The biggest part of development was finding the most efficient routes for users to get from one part of the application to the next. Refining user choices with prototype testing really pushed my application to the next level. 

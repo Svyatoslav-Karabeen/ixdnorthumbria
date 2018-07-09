@@ -1,5 +1,0 @@
-I initially began considering a digital companion that would teach beginners how to skateboard and perform different tricks. This companion was originally a projection, before I considered Augmented Reality. This is where the idea for a new app platform developed, teaching people to skate as well as provide a community feed where latest achievements can be shared.
-
-<br>
-
-After the reaction towards a digital teacher concept, it was apparent that this wasn’t a suitable use of the AR feature. Instead, I shifted the AR element towards a new social campaign that enforced the challenge and excitement of skateboarding. The content within the app put emphasis on challenging each other around the world, creating inspiring content and interactive challenges to build up a skater profile.

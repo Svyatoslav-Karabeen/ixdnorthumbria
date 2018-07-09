@@ -1,7 +1,0 @@
-This project, from beginning to end, was driven by user research. As UI designers, we love to make an interface look pretty, however because gov.uk's design guidelines are so strict, this project was almost completely focussed on the users experience.
-<br>
-After conducting initial competitor and primary research, we went on to refine what our service was going to be. We initially defined our key user, who in our case was the travelling business man. Our goal was to create a fast track through border control using simply ones facial biometrics, without the need of a physical passport.
-<br>
-We realised that we are trying to tackle a technologically challenging subject where we asked ourself questions such as, ‘would users feel comfortable using block chain technology to store their biometrics?’ and ‘how reliable is facial recognition technology?’ Interview feedback however proved that users would feel comfortable about having their biometrics secured online.
-<br>
-After defining our service, we decided to create the online application form for an Enhanced Biometric Passport. To begin this process we printed out the full current online application form to see which areas we could take out information from. Through doing this it is was interesting to see in some areas questions had been repeated twice, only worded slightly differently. For our application form, we managed to get all the important information down to 17 steps, including a progress indicator to show how far along in the process the user is.

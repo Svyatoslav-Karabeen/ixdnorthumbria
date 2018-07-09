@@ -1,0 +1,259 @@
+.page-people {
+
+    main {
+        padding: 0 !important;
+        overflow: hidden;
+    }
+
+    #intro-container {
+        padding: 1rem .5rem;
+
+        @include for-size(tablet-landscape) {
+            padding: 2rem;
+        }
+    }
+
+    #students-container {
+        padding: 1rem 0;
+
+        @include for-size(tablet-landscape) {
+            padding: 4rem 0;
+        }
+
+        .stundets-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+
+            .single-student {
+                margin-bottom: .5rem;
+                max-width: 50%;
+                box-shadow: none;
+                transition: all .3s ease-in-out;
+                transform: translateY(0);
+
+                @include for-size(tablet) {
+                    margin-bottom: 0;
+                    max-width: 50%;
+                }
+                @include for-size(tablet-landscape) {
+                    max-width: 33.33%;
+                }
+                @include for-size(desktop) {
+                    max-width: 25%;
+                }
+
+                .profile-link {
+                    display: inline-block;
+                    width: 100%;
+
+                    .single-student-userpic-wrapper {
+                        position: relative;
+
+                        &::after {
+                            display: inline-block;
+                            position: absolute;
+                            content: '';
+                            left: 0;
+                            bottom: 0;
+                            width: 100vw;
+                            height: 40%;
+                            background: $primary-white;
+                            z-index: -1;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                            transition: all .3s ease-in-out;
+                            z-index: 9;
+
+                            @include for-size(desktop) {
+                                filter: grayscale(.8);
+                            }
+                        }
+                    }
+
+                    .single-student-name-wrapper {
+                        padding: 1rem;
+                        width: 100%;
+                        text-align: center;
+
+                        h2,
+                        h3,
+                        h4 {
+                            display: block;
+                            margin-bottom: 0.125rem;
+                            color: $primary-black;
+                            font-weight: 700;
+                            font-size: 1rem;
+                        }
+
+                        p,
+                        span {
+                            display: block;
+                            margin-bottom: 0;
+                            color: $primary-gray;
+                            font-size: .875rem;
+                            opacity: 1;
+                            transition: all .3s ease-in-out;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+
+                .contacts-wrapper {
+                    position: absolute;
+                    bottom: .75rem;
+                    left: 0;
+                    width: 100%;
+                    opacity: 0;
+                    transition: all .3s ease-in-out;
+                    transform: translateY(2rem);
+
+                    ul {
+                        justify-content: center;
+                        width: 100%;
+                        li {
+                            padding: .25rem .5rem;
+                        }
+                    }
+                }
+
+                &:hover {
+
+                    .profile-link {
+
+                        .single-student-userpic-wrapper img {
+                            filter: grayscale(0);
+                            transition: all .3s ease-in-out;
+                        }
+
+                        .single-student-name-wrapper p,
+                        .single-student-name-wrapper span {
+                            opacity: 0;
+                            transition: all .3s ease-in-out;
+                            transform: translateY(2rem);
+                        }
+                    }
+
+                    .contacts-wrapper {
+                        opacity: 1;
+                        transition: all .3s ease-in-out;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// .page-faces main {
+//
+//     .expertise-wrapper {
+//         display: inline-flex;
+//         display: flex;
+//         flex-flow: column nowrap;
+//         margin: 0 0 -2rem -.5rem;
+//         font-weight: 300;
+//         opacity: 0;
+//         transform: translateY(-3rem);
+//         transition: all .6s ease-in-out;
+//         z-index: -1;
+//
+//         &.expertise-shown {
+//             margin-top: 2rem;
+//             margin-bottom: 0;
+//             opacity: 1;
+//             transform: translateY(0);
+//             transition: all 0.6s ease-in-out;
+//             z-index: 1;
+//         }
+//
+//         ul {
+//             display: flex;
+//             margin: 0;
+//             padding: 0;
+//             list-style-type: none;
+//
+//             li:not(:last-child) {
+//                 margin-right: 2rem;
+//             }
+//
+//             .expertise-link {
+//                 display: inline-block;
+//                 padding: .5rem;
+//                 color: $primary-gray;
+//                 transition: all 0.3s ease-in-out;
+//                 font-weight: 300;
+//
+//                 &::first-letter {
+//                     text-transform: uppercase;
+//                 }
+//
+//                 &:hover {
+//                     color: $primary-black;
+//                     transition: all 0.3s ease-in-out;
+//                 }
+//
+//                 &.active {
+//                     color: $primary-black;
+//                 }
+//             }
+//         }
+//     }
+//
+//     .students-wrapper {
+//         position: relative;
+//         display: flex;
+//         align-items: flex-start;
+//         flex-flow: row wrap;
+//         justify-content: flex-start;
+//         margin: 2rem 0;
+//
+//         .student-single {
+//             display: inline-block;
+//             max-width: 33%;
+//             width: 100%;
+//             height: auto;
+//
+//             .single-collapsed {
+//
+//                 .single-photo {
+//                     width: 100%;
+//                     height: auto;
+//                 }
+//
+//                 .collapsed-name-wrapper {
+//                     margin: 1rem 0;
+//                     text-align: center;
+//
+//                     .name {
+//                         margin-bottom: 0.25rem;
+//                         color: $primary-black;
+//                         font-weight: 500;
+//                         font-size: 1.5rem;
+//                     }
+//
+//                     .title {
+//                         color: $primary-gray;
+//                         font-weight: 300;
+//                     }
+//                 }
+//             }
+//
+//             .single-expanded {
+//                 display: none;
+//             }
+//         }
+//
+//         .student-single.collapsed {
+//
+//         }
+//
+//         .student-single.expanded {
+//
+//         }
+//     }
+// }
