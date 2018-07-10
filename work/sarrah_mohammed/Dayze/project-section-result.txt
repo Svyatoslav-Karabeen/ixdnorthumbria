@@ -1,5 +1,2 @@
-We created an application where the user inputs their deadlines and social events, Dayze introduces a schedule and acts like a personal assistant. The user must log in when they are starting a task, then the app will suggest and appropriate ‘break’. While you sleep the app monitors your breathing and bodily patterns, displaying your sleep quality the next day.
-
-<br>
-
-A physical personal assistant, known as ‘Dayzie’ was also created which stays at home to manage your schedule. She adds or changes tasks through voice recognition. Dayzie’s focus is to promote meditation at night or morning without the need for mobile devices.
+<p>We created an application where the user inputs their deadlines and social events, Dayze introduces a schedule and acts like a personal assistant. The user must log in when they are starting a task, then the app will suggest and appropriate ‘break’. While you sleep the app monitors your breathing and bodily patterns, displaying your sleep quality the next day.</p>
+<p>A physical personal assistant, known as ‘Dayzie’ was also created which stays at home to manage your schedule. She adds or changes tasks through voice recognition. Dayzie’s focus is to promote meditation at night or morning without the need for mobile devices.</p>

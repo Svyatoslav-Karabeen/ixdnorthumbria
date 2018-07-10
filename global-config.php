@@ -49,7 +49,7 @@ $ixdContacts        = array(
  * CSS and JS scripts.
  **/
 
-$debugging  = 'on';
+$debugging  = 'off';
 
 
 

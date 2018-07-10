@@ -11,12 +11,9 @@
         padding-top: 1rem;
 
         @include for-size(tablet) {
-            align-items: flex-start;
+            align-items: flex-end;
             flex-flow: row nowrap;
             padding-top: 2rem;
-        }
-        @include for-size(tablet-landscape) {
-            align-items: flex-end;
         }
 
         .photo-wrapper {
@@ -149,14 +146,46 @@
                     margin-top: 2rem;
                 }
 
-                .contacts-wrapper {
+                .button {
                     @include for-size(tablet) {
-                        margin-left: 1rem;
+                        margin-right: 1rem;
                     }
                     @include for-size(desktop) {
-                            margin-left: 2rem;
+                        margin-right: 2rem;
                     }
                 }
+
+                .contacts-wrapper {
+                    @include for-size(phone) {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #work-container {
+
+        .intro-wrapper {
+            @include for-size(tablet) {
+                padding: 2rem 5rem;
+                background: $white;
+            }
+            @include for-size(tablet-landscape) {
+                padding: 4rem 8rem;
+            }
+        }
+
+        .projects-wrapper {
+            padding: 0 .5rem 1rem;
+            background: $primary-white;
+
+            @include for-size(tablet) {
+                padding: 0 2rem 2rem;
+                background: $white;
+            }
+            @include for-size(tablet-landscape) {
+                padding: 0 5rem 4rem;
             }
         }
     }

@@ -1,0 +1,1 @@
+<p>The task was to design and create an online magazine using the Wordpress platform. We would need to create content for a featured article on the topic of the chosen sector. Additional content can be sourced from external websites but must be credited. A target audience should also be considered and the content should be engaging towards that target audience.</p>

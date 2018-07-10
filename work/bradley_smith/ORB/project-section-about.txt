@@ -1,0 +1,1 @@
+<p>Orb is a stand-alone product that uses Arduino and Processing to help people with early to mid-stage dementia capture and share their memories within a friendly environment.</p>

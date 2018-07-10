@@ -7,7 +7,7 @@ $sex                = 'female';
 $hasMate            = 'no';
 $mateName           = '';
 
-$projectPriority    = '1';
+$danadReady         = true;
 $projectName        = 'PlonkiiPlay';
 $projectType        = 'Hybrid';
 $projectScope       = array('brand identity', 'product design', 'child psychology');
@@ -19,7 +19,7 @@ $hasFinalSlider     = 'yes';
 $hasFinalVideo      = 'yes';
 $FinalVideoURL      = 'https://vimeo.com/274760105';
 
-$hasDesDoc          = 'no';
+$hasDesDoc          = '';
 $DesDocLink         = '';
 
 ?>

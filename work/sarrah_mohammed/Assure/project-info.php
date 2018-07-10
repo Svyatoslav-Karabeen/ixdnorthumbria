@@ -7,7 +7,7 @@ $sex                = 'female';
 $hasMate            = 'no';
 $mateName           = '';
 
-$projectPriority    = '1';
+$danadReady         = true;
 $projectName        = 'Assure';
 $projectType        = 'app';
 $projectScope       = array('logo design', 'communication concept', 'user experience design');

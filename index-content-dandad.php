@@ -63,15 +63,14 @@ $projectInfo = glob('*/*/*/project-info.php');
                             include $file;
 
                             // check if this project can be placed on home page
-                            if ($projectPriority < 1) {
-                                continue;
-                            }
+                            if ($danadReady == true) {
 
-                            // if project type is not in array yet
-                            if (!in_array( strtolower($projectType), $projectTypeArray)) {
+                                // if project type is not in array yet
+                                if (!in_array( strtolower($projectType), $projectTypeArray)) {
 
-                                // add this type to array
-                                $projectTypeArray[]=strtolower($projectType);
+                                    // add this type to array
+                                    $projectTypeArray[]=strtolower($projectType);
+                                }
                             }
                         };
 
@@ -86,7 +85,7 @@ $projectInfo = glob('*/*/*/project-info.php');
                                 $optionName = strtoupper($option);
                             } else {
                                 // else leave it as is
-                                $optionName = $option;
+                                $optionName = $option . '<span class="ending-plural">s</span>';
                             };
 
                             if ($option == 'all') {
@@ -96,7 +95,7 @@ $projectInfo = glob('*/*/*/project-info.php');
                             }
 
                             // and print a button with a unique id
-                            echo '<li><button class="link link-transparent link-project-type ' . $visibilityClass . '" id="project-type-' . substr($option,0,2) . '">' . $optionName . '<span class="ending-plural">s</span> <span class="ending-projects">projects</span></button></li>';
+                            echo '<li><button class="link link-transparent link-project-type ' . $visibilityClass . '" id="project-type-' . substr($option,0,2) . '">' . $optionName . ' <span class="ending-projects">projects</span></button></li>';
                         };
                     ?>
                 </ul>
@@ -114,40 +113,39 @@ $projectInfo = glob('*/*/*/project-info.php');
                         include $file;
 
                         // check if this project can be placed on home page
-                        if ($projectPriority < 1) {
-                            continue;
+                        if ($danadReady == true) {
+
+                            // find project cover image
+                            $cover = dirname($file) . '/assets/cover.jpg';
+
+                            // check if the file exist, if not replace with default one
+                            if ( file_exists($cover) ) {
+                                $projectCover = $cover;
+                            } else {
+                                $projectCover = absolutURL . 'assets/img/default-cover.jpg';
+                            };
+
+                            // check project type
+                            if (($projectType == 'ux/ui') || ($projectType == 'ar') || ($projectType == 'vr')) {
+                                // if it's abbreviation than make it uppercase
+                                $projectType = strtoupper($projectType);
+                            } else {
+                                // else leave it as is
+                                $projectType = $projectType;
+                            };
+
+                            // echo all information
+                            echo '<div class="single-project project-type-' . substr(strtolower($projectType),0,2) . '">';
+                                echo '<a class="link project-link" href="' . dirname($file) . '" target="_self">';
+                                    echo '<img src="' . $projectCover . '" alt="' . ucfirst($projectName) . '">';
+
+                                    echo '<div class="single-project-name-wrapper">';
+                                        echo '<h4>' . ucfirst($projectName) . '</h4>';
+                                        echo '<span>' . ucfirst($projectType) . ' project by ' . ucfirst($firstName) . ' ' . ucfirst($lastName) . '</span>';
+                                    echo '</div>';
+                                echo '</a>';
+                            echo '</div>';
                         }
-
-                        // find project cover image
-                        $cover = dirname($file) . '/assets/cover.jpg';
-
-                        // check if the file exist, if not replace with default one
-                        if ( file_exists($cover) ) {
-                            $projectCover = $cover;
-                        } else {
-                            $projectCover = absolutURL . 'assets/img/default-cover.jpg';
-                        };
-
-                        // check project type
-                        if (($projectType == 'ux/ui') || ($projectType == 'ar') || ($projectType == 'vr')) {
-                            // if it's abbreviation than make it uppercase
-                            $projectType = strtoupper($projectType);
-                        } else {
-                            // else leave it as is
-                            $projectType = $projectType;
-                        };
-
-                        // echo all information
-                        echo '<div class="single-project project-type-' . substr(strtolower($projectType),0,2) . '">';
-                            echo '<a class="link project-link" href="' . dirname($file) . '" target="_self">';
-                                echo '<img src="' . $projectCover . '" alt="' . ucfirst($projectName) . '">';
-
-                                echo '<div class="single-project-name-wrapper">';
-                                    echo '<h4>' . ucfirst($projectName) . '</h4>';
-                                    echo '<span>' . ucfirst($projectType) . ' project by ' . ucfirst($firstName) . ' ' . ucfirst($lastName) . '</span>';
-                                echo '</div>';
-                            echo '</a>';
-                        echo '</div>';
                     };
                 ?>
             </div>

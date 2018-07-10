@@ -1,1 +1,1 @@
-A simplified and logical property application for tenants to complete their inventory, report maintenance and complete their checkout report.
+<p>A simplified and logical property application for tenants to complete their inventory, report maintenance and complete their checkout report.</p>

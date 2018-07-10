@@ -1,0 +1,3 @@
+<p>We started the project by researching into existing payroll applications by noting down pros and cons. We then began decided what content we wanted to include within the app.</p>
+<p>After the content was decided, we moved onto the visuals and started designing how the app would look on screen.</p>
+<p>We ensured the app included important information that the employees would want to see such as scheduled shifts and payslips.</p>

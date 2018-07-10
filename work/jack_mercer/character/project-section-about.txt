@@ -1,0 +1,1 @@
+<p>A Wordpress website based on the topic of typography. Taking a bare, base template and creating a bespoke, responsive website.</p>

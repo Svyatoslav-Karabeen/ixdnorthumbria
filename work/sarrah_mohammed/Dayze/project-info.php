@@ -7,7 +7,7 @@ $sex                = 'female';
 $hasMate            = 'yes';
 $mateName           = 'Emily Wilkinson';
 
-$projectPriority    = '1';
+$danadReady         = true;
 $projectName        = 'Dayze';
 $projectType        = 'hybrid';
 $projectScope       = array('brand identity', 'voice recognition', 'communication concept' );

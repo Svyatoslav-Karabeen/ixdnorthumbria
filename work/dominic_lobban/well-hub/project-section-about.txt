@@ -1,0 +1,1 @@
+<p>A personal health diary application for Well customers to log and review their medication and health activity. Using Big Data, Well can offer localised and personal content to communities.</p>

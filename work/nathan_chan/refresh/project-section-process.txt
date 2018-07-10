@@ -1,0 +1,6 @@
+<p>When food shopping, I always forget what items I still have at home as well as remembering when they go out of date.</p>
+<p>The idea was to create an app which kept track of all this data and would be accessible on your phone.</p>
+<p>At the start of this brief I struggled to decided on a solid idea, I found myself changing ideas after a couple of days, this was frustrating but eventually I found an idea that i was happy with.</p>
+<p>The app Refresh works by the user scanning the barcode on the bottom of their shopping receipt which would update their inventory on their phone. This makes it easier for users to keep track of the important data about the food in their home.</p>
+<p>Also within the app there is a recipe and budget section. The app tells the users what recipes they can make with the ingredients they have, meaning it is tailored differently to each user.</p>
+<p>For students, we all know how hard it is to budget your money when you first get your student loan. Refresh keeps track of your spending on food so you can budget for next time.</p>

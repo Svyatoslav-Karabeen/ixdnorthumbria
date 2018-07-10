@@ -108,6 +108,30 @@ $projectInfo        = glob('../../work/' . strtolower($firstName) . '_' . strtol
                                 </p>
                             </div>
 
+                            <?php
+                                // if it's a local website, include only the portfolio button
+                                if (environmentType == 'local') {
+
+                                    // check if resume file exists
+                                    $remuse = 'resume.pdf';
+                                    if ( file_exists($remuse) ) {
+                            ?>
+
+                            <div class="links-wrapper">
+                                <a class="button button-gradient" href="resume.pdf" target="_blank">
+                                    <i class="fas fa-file-download"></i>
+                                    resume
+                                </a>
+                            </div>
+
+                            <?php
+                                    }
+                                }
+
+                                // if it's online environment, then include all links
+                                else {
+                            ?>
+
                             <div class="links-wrapper">
                                 <?php
 
@@ -159,6 +183,7 @@ $projectInfo        = glob('../../work/' . strtolower($firstName) . '_' . strtol
                                     </ul>
                                 </div>
                             </div>
+                            <?php } ?>
                         </div>
                     </div>
 
@@ -172,7 +197,7 @@ $projectInfo        = glob('../../work/' . strtolower($firstName) . '_' . strtol
 
                             <?php
 
-                            if ($sex = 'male') {
+                            if ($sex == 'male') {
                                 $herOrHis = 'his';
                             } else {
                                 $herOrHis = 'her';
@@ -180,11 +205,11 @@ $projectInfo        = glob('../../work/' . strtolower($firstName) . '_' . strtol
 
                             ?>
 
-                            <h3><?php echo ucfirst($firstName) . 's  work' ?></h3>
+                            <h3><?php echo ucfirst($firstName) . "'s  work" ?></h3>
                             <p>get a feeling for <?php echo $herOrHis ?> work in different fields</p>
                         </div>
 
-                        <div class="project-wrapper">
+                        <div class="projects-wrapper">
                             <?php
 
                                 // import all projects from work folder

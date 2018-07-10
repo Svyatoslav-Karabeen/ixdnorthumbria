@@ -1,9 +1,3 @@
-This was my final major project for my last semester at university. The aim of the module was to create two deliverables, a prototype and design document. A very open brief allowing me to create something unique to contribute to the design world.
-
-<br>
-
-I have always been interested in how a toy can capture the attention of a child engaging them through the form of ‘play’. The toy industry is immense and competitive for all ages but my aim is to focus on the younger generation, specifically babies 9 months to 2 year old toddlers.
-
-<br>
-
-Could I create a toy that complements this age range? Tackling this young demographic requires to conduct slightly different user research. I cannot generate user personas on younger children as they are going through brain growth development, therefore cannot assume their user needs. At that point in time, a key theme of ‘engagement’ should be included within the toy.
+<p>This was my final major project for my last semester at university. The aim of the module was to create two deliverables, a prototype and design document. A very open brief allowing me to create something unique to contribute to the design world.</p>
+<p>I have always been interested in how a toy can capture the attention of a child engaging them through the form of ‘play’. The toy industry is immense and competitive for all ages but my aim is to focus on the younger generation, specifically babies 9 months to 2 year old toddlers.</p>
+<p>Could I create a toy that complements this age range? Tackling this young demographic requires to conduct slightly different user research. I cannot generate user personas on younger children as they are going through brain growth development, therefore cannot assume their user needs. At that point in time, a key theme of ‘engagement’ should be included within the toy.</p>

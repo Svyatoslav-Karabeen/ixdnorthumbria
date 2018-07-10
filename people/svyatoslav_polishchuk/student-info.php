@@ -13,6 +13,7 @@ $links = array(
     'dribbble'      => '',
     'twitter'       => '',
     'facebook-f'    => '',
+    'github'        => 'https://github.com/Svyatoslav-Karabeen',
     'envelope'      => 'hello@karabeen.com',
 );
 

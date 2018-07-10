@@ -1,0 +1,1 @@
+<p>A seamless monitoring wearable system to identify, intercept and advise on muscular cramp in athletes, using micro sensors and real time data.</p>

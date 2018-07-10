@@ -15,6 +15,8 @@ global $pageTitle;
 global $pageDescription;
 global $pageKeywords;
 
+global $projectName;
+
 /**==========================================================================**/
 ?>
 
@@ -28,7 +30,7 @@ global $pageKeywords;
 	<meta http-equiv="cache-control" content="public">
 
 	<!-- a bit of SEO -->
-	<title>Interaction Design &mdash; <?php echo ucfirst($pageTitle); ?> &mdash; <?php echo currentYear ?></title>
+	<title>Interaction Design &mdash; <?php echo ucfirst($projectName) . ' ' . ucfirst($pageTitle); ?> &mdash; <?php echo currentYear ?></title>
     <meta name="description" content="<?php echo ucfirst($pageDescription); ?>">
 	<meta name="keywords" content="<?php echo ucfirst($pageKeywords); ?>">
 	<meta name="author" content="Svyatoslav Polishchuk">

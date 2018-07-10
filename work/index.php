@@ -76,7 +76,7 @@ $projectInfo        = glob('*/*/project-info.php');
                                             $optionName = strtoupper($option);
                                         } else {
                                             // else leave it as is
-                                            $optionName = $option;
+                                            $optionName = $option . '<span class="ending-plural">s</span>';
                                         };
 
                                         if ($option == 'all') {
@@ -86,7 +86,7 @@ $projectInfo        = glob('*/*/project-info.php');
                                         }
 
                                         // and print a button with a unique id
-                                        echo '<li><button class="link link-transparent link-project-type ' . $visibilityClass . '" id="project-type-' . substr($option,0,2) . '">' . $optionName . '<span class="ending-plural">s</span> <span class="ending-projects">projects</span></button></li>';
+                                        echo '<li><button class="link link-transparent link-project-type ' . $visibilityClass . '" id="project-type-' . substr($option,0,2) . '">' . $optionName . ' <span class="ending-projects">projects</span></button></li>';
                                     };
                                 ?>
                             </ul>

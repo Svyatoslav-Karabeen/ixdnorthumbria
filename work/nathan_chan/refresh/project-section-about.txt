@@ -1,0 +1,2 @@
+<p>Refresh is a digital inventory for the food stored in your home.</p>
+<p>It keeps track of all the information you find hard to remember such as the quantity of each item and expiry dates.</p>

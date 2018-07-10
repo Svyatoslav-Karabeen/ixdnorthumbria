@@ -1,0 +1,2 @@
+<p>Create a sensor-based interface to allow users to interact with an audio-visual environment. This could be based on a physical- computing model using tools such as the Arduino system or a motion-tracking experience using the Gesture and Media System “
+From the outset I was fascinated with the endless possibilities that came with Arduino. Although my skills were limited when it came to using Arduino, I felt I needed to push my self for this project. </p>
