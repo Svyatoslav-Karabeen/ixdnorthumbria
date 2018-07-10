@@ -1,0 +1,21 @@
+/*  Reset, variables and general layout
+--------------------------------------------------------------- */
+@import "utilities/variables";
+@import "utilities/adaptivity";
+@import "utilities/reset";
+
+/*  Global elements
+--------------------------------------------------------------- */
+@import "global/header";
+@import "global/body";
+@import "global/footer";
+
+/*  Pages
+--------------------------------------------------------------- */
+@import "home";
+// @import "home-popup";
+@import "work";
+@import "work-project";
+@import "people";
+@import "people-profile";
+@import "about";

@@ -1,0 +1,1 @@
+<p>Boost is a fitness community based around a mobile application. The aim of Boost is to encourage people to engage in physical activity, whatever it may be. Through a range of research methods and user testing, I managed to create a user centric application that works for everyone.</p>

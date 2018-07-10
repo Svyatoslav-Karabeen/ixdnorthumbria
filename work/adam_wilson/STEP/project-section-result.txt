@@ -1,0 +1,2 @@
+<p>The goal at the start of the project was to create a shoe in which would help the visual impaired feel safer when they are walking in the streets. I feel that I have successfully met my goal because the final product, “Step”, allows any user to walk around in the street, knowing full well they are safe. The sensor tracks any object that is within 50cm in front of the user, giving the micro motor enough time to vibrate and making the user aware. </p>
+<p>Result- 1st </p>

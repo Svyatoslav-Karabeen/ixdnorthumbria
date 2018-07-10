@@ -1,0 +1,1 @@
+<p>My final project solution included two assets, my virtual try on stand, which I mocked up to trigger a video once a makeup product was placed down using arduino and processing code. Also my Mac assistant iPad, where the prototype can be viewed from the following link: https://pr.to/YBF81W/</p>

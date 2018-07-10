@@ -1,0 +1,1 @@
+<p>Stage Fright is an immersive environment built to deliver Exposure Therapy where users interact with harmless virtual representations of traumatic stimuli in order to reduce fear responses.</p>

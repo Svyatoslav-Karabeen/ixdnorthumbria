@@ -1,0 +1,106 @@
+.page-about {
+
+    #intro-container {
+        padding-top: 1rem;
+
+        @include for-size(tablet-landscape) {
+            padding-top: 2rem;
+        }
+    }
+
+    #paragraphs-container {
+        padding-bottom: 2rem;
+
+        @include for-size(tablet-landscape) {
+            padding: 2rem 0 4rem;
+        }
+
+        .company-logos-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+
+            .company-logo {
+                display: inline-block;
+                width: 50%;
+                height: 100%;
+                filter: drop-shadow(0 16px 16px rgba($primary-shadow,0));
+                transition: all .6s ease-in-out;
+                transform: scale(1);
+
+                @include for-size(tablet) {
+                    width: 33%;
+                }
+
+                &:hover {
+                    z-index: 9;
+                    filter: drop-shadow(0 16px 16px rgba($primary-shadow,.20));
+                    transition: all 0.3s ease-in-out;
+                    transform: translateY(-.25rem);
+                }
+            }
+        }
+
+        .tutors-cards-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+
+            .single-tutor-card {
+                display: flex;
+                flex-flow: column nowrap;
+                margin-bottom: 1rem;
+                width: 50%;
+                height: auto;
+                text-align: center;
+
+                @include for-size(tablet) {
+                    width: 33%;
+                }
+
+                .tutor-photo {
+                    display: inline-block;
+                    padding: .5px;
+                    width: 100%;
+                    height: auto;
+                    box-shadow: none;
+                    transition: all .6s ease-in-out;
+                    transform: translateY(0);
+                }
+
+                .tutor-name {
+                    display: inline-block;
+                    margin-top: .5rem;
+                    color: $primary-black;
+                    font-size: .875rem;
+
+                    @include for-size(tablet) {
+                        font-weight: 700;
+                        font-size: 1rem;
+                    }
+                }
+
+                .tutor-title {
+                    display: inline-block;
+                    color: $primary-gray;
+                    font-size: .75rem;
+
+                    @include for-size(desktop) {
+                        font-size: .875rem;
+                    }
+                }
+
+                &:hover {
+                    .tutor-photo {
+                        z-index: 9;
+                        box-shadow: 0 64px 64px 0 rgba(58, 70, 92, 0.20),
+                                    0 32px 32px 0 rgba(58, 70, 92, 0.10),
+                                    0 16px 16px 0 rgba(58, 70, 92, 0.05),
+                                    0 8px 8px 0 rgba(58, 70, 92, 0.10),
+                                    0 2px 2px 0 rgba(58, 70, 92, 0.2);
+                        transition: all .3s ease-in-out;
+                        transform: translateY(-.25rem);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,2 @@
+<p>The final result of my project was a finished application with a working prototype. I created all of the visuals and created content for the app.</p>
+<p>My project tackles the problem of students not knowing what to make with the food they already have as well as budgeting their money.</p>

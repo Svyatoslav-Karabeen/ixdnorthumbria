@@ -1,0 +1,3 @@
+<p>The final result of the website is very successful. It met the original requirements from the brief as it is a full working Wordpress site. However, I took it a step further and built a fully custom website that features different design on each page, all built myself. </p>
+<p>Overall, a very successful project that tested my coding abilities.</p>
+<p>You can find the website at <a href="http://awp.jackmercerdesign.co.uk/">awp.jackmercerdesign.co.uk</a></p>

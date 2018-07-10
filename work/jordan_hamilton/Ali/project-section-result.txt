@@ -1,0 +1,4 @@
+<p>As the result of this I was able to create the Prototype for Ali the digital learning assistant. By using my research insights, user feedback and my design skills. I was able to create a hybrid project that is educational and fun for children. By creating the parent application, the parents can be at ease when the child is using the device as they are able to monitor the device usage and are notified if something inappropriate is said to the device.</p>
+<p>I set out with the idea to create a device that would help the target audience organise something with in their life and have achieved this as Ali can be used a personal assistant but also allows for the children to learn in a fun and engaging way. </p>
+<p>Try the application yourself ! - https://invis.io/6CJ3XXC72B5</p>
+<p>Below is the prototype demo for the Ali.</p>

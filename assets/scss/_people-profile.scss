@@ -1,0 +1,192 @@
+.page-profile {
+
+    main {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #profile-container {
+        display: flex;
+        flex-flow: column nowrap;
+        padding-top: 1rem;
+
+        @include for-size(tablet) {
+            align-items: flex-end;
+            flex-flow: row nowrap;
+            padding-top: 2rem;
+        }
+
+        .photo-wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            width: 100%;
+
+            @include for-size(tablet) {
+                max-width: 20rem;
+            }
+            @include for-size(tablet-landscape) {
+                max-width: 30rem;
+            }
+            @include for-size(desktop) {
+                max-width: 50%;
+            }
+
+            .backlink-wrapper {
+                display: none;
+
+                @include for-size(desktop) {
+                    display: inline-block;
+                    padding-left: 8rem;
+                    width: 100%;
+                }
+
+                button {
+                    transform: translateX(0);
+
+                    i {
+                        margin-right: .5rem;
+                        transform: translateY(.0625rem);
+                    }
+
+                    &:hover {
+                        transform: translateX(-.5rem);
+
+                        i {
+                            transform: transitionX(-1rem) translateY(.0625rem);
+                        }
+                    }
+                }
+            }
+
+            .photo-content {
+                display: block;
+                width: 100%;
+
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: inline-block;
+                    width: 100vw;
+                    height: 40%;
+                    background: $primary-white;
+                    content: '';
+                }
+
+                img {
+                    z-index: 9;
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    filter: grayscale(.8);
+                    transition: all .3s ease-in-out;
+                }
+
+                &:hover img {
+                    filter: grayscale(0);
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+            padding: 2rem 1.25rem;
+            width: 100%;
+
+            @include for-size(tablet) {
+                padding: 2rem 5rem 2rem 0;
+            }
+            @include for-size(tablet-landscape) {
+                padding: 4rem 8rem 4rem 0;
+            }
+
+            .name-wrapper {
+                margin-bottom: 2rem;
+                width: 100%;
+
+                h1 {
+                    display: block;
+                    margin-bottom: 0.25rem;
+                    color: $primary-black;
+                    font-weight: 700;
+                    font-size: 2rem;
+                }
+
+                p {
+                    display: block;
+                    margin-bottom: 0;
+                    color: $primary-gray;
+                    font-size: 1rem;
+                }
+            }
+
+            .bio-wrapper,
+            .employment-wrapper {
+                p {
+                    display: block;
+                    color: $primary-gray;
+                    font-size: 1rem;
+                    line-height: 1.6;
+
+                    @include for-size(desktop) {
+                        margin-bottom: 2rem;
+                        max-width: 30rem;
+                        color: $primary-black;
+                    }
+                }
+            }
+
+            .links-wrapper {
+                margin-top: 1rem;
+
+                @include for-size(desktop) {
+                    margin-top: 2rem;
+                }
+
+                .button {
+                    @include for-size(tablet) {
+                        margin-right: 1rem;
+                    }
+                    @include for-size(desktop) {
+                        margin-right: 2rem;
+                    }
+                }
+
+                .contacts-wrapper {
+                    @include for-size(phone) {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #work-container {
+
+        .intro-wrapper {
+            @include for-size(tablet) {
+                padding: 2rem 5rem;
+                background: $white;
+            }
+            @include for-size(tablet-landscape) {
+                padding: 4rem 8rem;
+            }
+        }
+
+        .projects-wrapper {
+            padding: 0 .5rem 1rem;
+            background: $primary-white;
+
+            @include for-size(tablet) {
+                padding: 0 2rem 2rem;
+                background: $white;
+            }
+            @include for-size(tablet-landscape) {
+                padding: 0 5rem 4rem;
+            }
+        }
+    }
+}
