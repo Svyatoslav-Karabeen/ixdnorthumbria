@@ -7,7 +7,7 @@ $sex                = 'female';
 $hasMate            = 'no';
 $mateName           = '';
 
-$danadReady         = true;
+$danadReady         = false;
 $projectName        = 'Return of the Rhino';
 $projectType        = 'hybrid';
 $projectScope       = array('game design');

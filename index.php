@@ -39,16 +39,19 @@ $pageKeywords       = '';
                 // include content based on the environmentType set in
                 // global-config.php file
                 $content = 'index-content-' . environmentType . '.php';
+                $popup = 'index-popup-' . environmentType . '.php';
 
                 if (file_exists($content)) {
 
                     include $content;
+                    include $popup;
 
                 } else {
 
                     if ($debugging == 'on') {
                         echo '<pre>ooops! looks like someone messed up with environmentType</pre>';
                         echo '<pre>file ' . $content . ' does not exist</pre>';
+                        echo '<pre>file ' . $popup . ' does not exist</pre>';
                     }
 
                 }

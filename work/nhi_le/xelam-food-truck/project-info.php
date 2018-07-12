@@ -7,7 +7,7 @@ $sex                = 'female';
 $hasMate            = 'no';
 $mateName           = '';
 
-$danadReady         = true;
+$danadReady         = false;
 $projectName        = 'Xelam Food Truck';
 $projectType        = 'hybrid';
 $projectScope       = array('brand identity', 'web design');

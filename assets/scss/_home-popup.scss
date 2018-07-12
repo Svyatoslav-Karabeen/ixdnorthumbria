@@ -1,108 +1,67 @@
-#popup-location {
+#popup-container {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -999;
+    z-index: 999;
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
     justify-content: center;
-    padding: 1rem;
+    padding: 1.25rem;
     width: 100%;
     height: 100%;
-    background: rgba($white, .9);
+    background: rgba($primary-white, .9);
     color: $primary-black;
     opacity: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    transform: translateY(125vh) scale(0);
 
-    .popup-body {
-        margin: 1rem;
-        max-width: 60rem;
-        width: 100%;
-        background: $white;
-        box-shadow: 0 50px 100px rgba(50,50,93,.1),
-                    0 15px 35px rgba(50,50,93,.15),
-                    0 5px 15px rgba(0,0,0,.1);
-        transition: all 0.3s ease-in-out;
-        transform: translateY(200%) scaleY(.6);
+    @include for-size(tablet) {
+        padding: 2rem;
+    }
+    @include for-size(tablet-landscape) {
+        padding: 6rem;
+    }
 
-        .popup-map {
-            overflow: hidden;
-            width: 60rem;
-            height: 30rem;
-        }
+    &.shown {
+        opacity: 1;
+        transition: all 0.6s ease-in-out;
+        transform: translateY(0) scale(1);
+    }
 
-        .popup-info-wrapper {
-            display: flex;
-            align-items: center;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            padding: 2rem;
+    .showreel-container {
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        .showreel-wrapper {
+            display: block;
             width: 100%;
+            height: 100%;
+            background: $white;
+            box-shadow: 0 16px 16px 0 rgba($primary-shadow,0.05),
+                        0 8px 8px 0 rgba($primary-shadow,0.10),
+                        0 2px 2px 0 rgba($primary-shadow,0.20);
 
-            .info-item {
-                display: inline-flex;
-                flex-flow: column nowrap;
-                justify-content: center;
+            @include for-size(tablet-landscape) {
+                margin-top: 2rem;
+            }
 
-                .caption {
-                    display: flex;
-                    padding-top: .25rem;
-                    color: $primary-gray;
-                    font-size: .875rem;
-                }
-
-                .button {
-                    background: linear-gradient(45deg, $primary-experiental, $primary-hybrid, $primary-app);
-                    background-size: 400% 400%;
-                    color: $primary-white;
-                    animation: gradient 10s ease infinite;
-                }
+            video {
+                display: block;
+                width: 100%;
+                height: auto;
             }
         }
-    }
 
-    #popup-close {
-        color: rgba($primary-black, .6);
-        font-weight: 700;
-        opacity: 0;
-        transition: all .6s ease-in-out;
-        transition-delay: 0.1s;
-        transform: translateY(50rem);
+        button {
+            display: block;
+            padding: 1rem;
 
-        &:hover {
-            color: $primary-black;
-            transition: all 0.3s ease-in-out;
+            @include for-size(tablet-landscape) {
+                padding: 2rem 1rem;
+            }
         }
-    }
-
-    &.popup-shown {
-        z-index: 999;
-        opacity: 1;
-        transition: all 0.3s ease-in-out;
-
-        .popup-body {
-            transition: all .6s ease-in-out;
-            transition-delay: 0.1s;
-            transform: translateY(0) scaleY(1);
-        }
-
-        #popup-close {
-            opacity: 1;
-            transition: all 0.6s ease-in-out;
-            transition-delay: 0.1s;
-            transform: translateY(0);
-        }
-    }
-}
-
-#slideshow,
-#container {
-    transition: all 0.3s ease-in-out;
-    transform: scale(1);
-
-    &.popup-active {
-        transition: all 0.3s ease-in-out;
-        transform: scale(.96);
     }
 }
