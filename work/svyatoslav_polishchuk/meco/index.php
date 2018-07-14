@@ -22,7 +22,7 @@ $heroMedia          = glob('assets/hero-*.{jpg,png,gif,mp4}', GLOB_BRACE);
 $imgAboutArray      = glob('assets/section-about-*.{jpg,png,gif}', GLOB_BRACE);
 $imgBriefArray      = glob('assets/section-brief-*.{jpg,png,gif}', GLOB_BRACE);
 $imgProcessArray    = glob('assets/section-process-*.{jpg,png,gif}', GLOB_BRACE);
-$videoProcessArray    = glob('assets/section-process-*.mov', GLOB_BRACE);
+$videoProcessArray  = glob('assets/section-process-*.mp4', GLOB_BRACE);
 $imgResultArray     = glob('assets/section-result-*.{jpg,png,gif}', GLOB_BRACE);
 
 /**==========================================================================**/
@@ -230,16 +230,19 @@ $imgResultArray     = glob('assets/section-result-*.{jpg,png,gif}', GLOB_BRACE);
                                 echo '</div>';
                             }
 
-                            echo '<div class="images-wrapper img-col-3">';
+                            if ((count($videoProcessArray) > 0)) {
 
-                                foreach ($videoProcessArray as $video) {
-                                    echo '<video width="33.33%" height="100%" style="padding: .25rem;" autoplay loop controls>
-                                            <source src="' . $video . '" type="video/mp4">
-                                            Your browser does not support HTML5 video.
-                                          </video>';
-                                }
+                                echo '<div class="images-wrapper img-col-1 video">';
 
-                            echo '</div>';
+                                    foreach ($videoProcessArray as $video) {
+                                        echo '<video width="33.33%" height="100%" style="padding: .25rem;" autoplay loop controls>
+                                                <source src="' . $video . '" type="video/mp4">
+                                                Your browser does not support HTML5 video.
+                                              </video>';
+                                    }
+
+                                echo '</div>';
+                            }
                         ?>
                     </div>
                     <?php endif; ?>
@@ -284,7 +287,7 @@ $imgResultArray     = glob('assets/section-result-*.{jpg,png,gif}', GLOB_BRACE);
                                         // if it includes video, put it in the first place
                                         if ($hasFinalVideo == 'yes') {
 
-                                            if ((environmentType == 'local') && (file_exists('assets/section-result-video.mov'))) {
+                                            if ((environmentType == 'local') && (file_exists('assets/section-result-video.mp4'))) {
                                             ?>
                                                 <li class="video">
                                                     <button id="video-final-btn" class="button button-none" onclick="finalPlayPause()">
@@ -293,7 +296,7 @@ $imgResultArray     = glob('assets/section-result-*.{jpg,png,gif}', GLOB_BRACE);
                                                         </div>
                                                     </button>
                                                     <video id="video-final-result" width="100%" height="100%">
-                                                        <source src="assets/section-result-video.mov" type="video/mp4">
+                                                        <source src="assets/section-result-video.mp4" type="video/mp4">
                                                         Your browser does not support HTML5 video.
                                                     </video>
                                                 </li>
@@ -328,7 +331,7 @@ $imgResultArray     = glob('assets/section-result-*.{jpg,png,gif}', GLOB_BRACE);
 
                                     echo '<div class="images-wrapper img-col-1 video">';
 
-                                        if ((environmentType == 'local') && (file_exists('assets/section-result-video.mov'))) {
+                                        if ((environmentType == 'local') && (file_exists('assets/section-result-video.mp4'))) {
                                         ?>
                                             <button id="video-final-btn" class="button button-none" onclick="finalPlayPause()">
                                                 <div class="play-button-wrapper">
@@ -336,7 +339,7 @@ $imgResultArray     = glob('assets/section-result-*.{jpg,png,gif}', GLOB_BRACE);
                                                 </div>
                                             </button>
                                             <video id="video-final-result" width="100%" height="100%">
-                                                    <source src="assets/section-result-video.mov" type="video/mp4">
+                                                    <source src="assets/section-result-video.mp4" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                             </video>
                                         <?php
