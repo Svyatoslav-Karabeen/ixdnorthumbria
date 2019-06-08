@@ -32,10 +32,10 @@ $projectInfo = glob('*/*/*/project-info.php');
             </div>
 
             <div class="links-wrapper">
-                <a class="button button-gradient" href="#">
+                <button class="button button-gradient" onclick="showPopup()">
                     <i class="fas fa-play fa-sm"></i>
                     our showreel
-                </a>
+                </button>
             </div>
         </div>
     </div>

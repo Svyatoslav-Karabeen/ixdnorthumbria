@@ -19,7 +19,7 @@ $hasFinalSlider     = 'no';
 $hasFinalVideo      = 'yes';
 $FinalVideoURL      = 'https://youtu.be/SysU6ghEc3w';
 
-$hasDesDoc          = 'no';
+$hasDesDoc          = 'yes';
 $DesDocLink         = '';
 
 ?>

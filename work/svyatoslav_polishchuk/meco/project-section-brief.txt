@@ -1,0 +1,3 @@
+<p>For the final project, we have been asked to come up with an idea, create a working prototype and write a document critically justifying the approach and methodology taken. So basically, the task was to create whatever.</p>
+<p>However, I decided to create not just whatever, but to create something useful. So I began considering a solution that would help manage the most valuable resource – time – better than before.</p>
+<p>Apparently, there are tons of different time tracker, calendar and agenda management apps on the market, so I decided to narrow my intent to one specific niche. After brief market research, I decided to focus on habits as this is something, that we unconsciously spend much time on and not all of these habits are effective or useful.</p>

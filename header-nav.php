@@ -161,6 +161,10 @@ $navPages = array('work', 'people', 'about');
 	        </ul>
 	    </nav>
 
+		<?php
+			// don't show previous years link in local environment
+			if (environmentType != 'local'):
+		?>
 		<div id="nav-years">
 			<button class="button button-none button-link" id="nav-years-button">previous years</button>
 			<div class="dropdown-body" id="nav-years-list">
@@ -172,6 +176,7 @@ $navPages = array('work', 'people', 'about');
 
 			</div>
 		</div>
+		<?php endif; ?>
 	</div>
 
 	<?php endif ?>

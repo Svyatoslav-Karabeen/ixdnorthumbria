@@ -1,3 +1,33 @@
+// show popup
+function showPopup() {
+
+    var popup = document.getElementById("popup-container");
+    var showreelVideo = document.getElementById("video-showreel");
+
+    $(popup).addClass('shown');
+
+    if (showreelVideo.paused) {
+        showreelVideo.play();
+    } else {
+        showreelVideo.pause();
+    }
+}
+
+// hide popup
+function hidePopup() {
+
+    var popup = document.getElementById("popup-container");
+    var showreelVideo = document.getElementById("video-showreel");
+
+    $(popup).removeClass('shown');
+
+    if (showreelVideo.paused) {
+        // do nothing
+    } else {
+        showreelVideo.pause();
+    }
+}
+
 // filter work
 $('.link-project-type').on('click', function() {
 

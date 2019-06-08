@@ -20,7 +20,7 @@
  * Current options are 'countdown' 'reveal', 'dandad', 'local' and 'past'.
  **/
 
-define( environmentType ,   'dandad' );
+define( environmentType ,   'local' );
 define( environmentDates ,  '11th - 14th July 2018' );
 define( currentYear,        '2018' );
 

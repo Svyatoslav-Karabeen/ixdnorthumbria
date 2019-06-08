@@ -4,8 +4,8 @@ $firstName          = 'Matthew';
 $lastName           = 'Chaplin';
 $sex                = 'male';
 
-$hasMate            = 'no';
-$mateName           = '';
+$hasMate            = 'yes';
+$mateName           = 'Adam Pitt';
 
 $danadReady         = true;
 $projectName        = 'Sage One';

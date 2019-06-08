@@ -7,7 +7,7 @@ $sex                = 'male';
 $hasMate            = 'no';
 $mateName           = '';
 
-$danadReady         = false;
+$danadReady         = true;
 $projectName        = 'Hunt';
 $projectType        = 'app';
 $projectScope       = array('');

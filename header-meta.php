@@ -54,7 +54,8 @@ global $projectName;
 		/**
 		 * Don't use Google Analytics if it's a dev environment
 		 **/
-		 if ($_SERVER['SERVER_NAME'] != 'localhost') : ?>
+		 if (environmentType != 'local') :
+	?>
 
 	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120677393-1"></script>
